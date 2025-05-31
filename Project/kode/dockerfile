@@ -1,0 +1,15 @@
+ARG BASE_IMAGE=python:3.10
+FROM ${BASE_IMAGE}
+
+RUN apt-get update && apt-get install -y  build-essential  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY . .
+
+ARG NUMPY_VERSION=numpy
+RUN pip install --upgrade pip && pip install ${NUMPY_VERSION}
+
+RUN pip install -e .
+
+CMD ["python", "./test/run_test.py"]

@@ -1,0 +1,146 @@
+%==================================================================
+% Ini adalah bab 2
+% Silahkan edit sesuai kebutuhan, baik menambah atau mengurangi \section, \subsection
+%==================================================================
+
+\chapter[TINJAUAN PUSTAKA]{\\ TINJAUAN PUSTAKA}
+
+\section{Kajian Penelitian Terdahulu}
+Penelitian ini merujuk pada hasil-hasil studi sebelumnya yang dilakukan oleh para peneliti dan praktisi di bidang yang relevan. Penelitian tersebut dipilih karena memiliki kesamaan dalam objek atau fokus penelitian. Berikut ini adalah beberapa penelitian yang menjadi referensi.
+
+Van Thieu mengembangkan library Opfunu \citep{Van_Thieu_2024}, sebuah library Python yang mencakup semua fungsi uji kompetisi CEC dari tahun 2005 hingga 2022, serta lebih dari 300 fungsi tradisional dengan berbagai dimensi. Opfunu dikembangkan untuk menyediakan serangkaian fungsi uji yang komprehensif bagi algoritma optimasi. Library ini bertujuan untuk meningkatkan penelitian dan pengembangan algoritma optimasi dengan menyediakan platform yang serbaguna dan mudah diakses untuk eksperimen fungsi uji, analisis mendalam, dan perbandingan algoritma optimasi.
+
+Bliek dkk mengembangkan library EXPOBench \citep{Bliek_2023}. EXPOBench merupakan sebuah library
+benchmark algoritma optimasi yang berisikan permasalahan dunia nyata. Kurangnya permasalahan
+dunia nyata pada kerangka uji algoritma optimasi yang sudah ada sebelumnya menjadi permasalahan
+yang diangkat oleh Bliek dkk. Mereka berpendapat bahwa kekurangan ini menyulitkan para peneliti
+dalam membandingkan algoritma mereka dengan tantangan sebenarnya yang ada di dunia nyata.
+
+Ma dkk mengembangkan library MetaBox \citep{ma_zeyan_guo_chen_jiacheng_zhenrui_peng_gong_ma_cao_2023}. MetaBox adalah library yang berfungsi sebagai benchmark untuk algoritma meta black box dengan reinforcement learning (meta black box with reinforcement learning atau MetaBBO-RL). MetaBox diciptakan untuk mengatasi kebutuhan akan benchmark terpadu di bidang MetaBBO-RL. Para peneliti menemukan bahwa kurangnya benchmark standar menghambat proses perbandingan dan evaluasi berbagai pendekatan yang ada.
+
+Van Rijn dan Schmitt mengembangkan library MF2 \citep{van_Rijn_2020}. MF2 adalah library benchmark yang mengevaluasi algoritma optimasi multi-fidelitas. Library benchmark yang sudah ada sebelumnya kebanyakan hanya berfokus pada fungsi fidelitas-tunggal, yang kemungkinan tidak cukup mewakili kompleksitas masalah optimasi di dunia nyata yang melibatkan berbagai tingkat akurasi dalam fungsi evaluasi. Dengan memperkenalkan serangkaian fungsi benchmark multi-fidelitas, MF2 bertujuan untuk mengatasi keterbatasan benchmark fidelitas-tunggal yang ada dan menyediakan serangkaian fungsi terstandarisasi bagi para peneliti untuk mengevaluasi dan membandingkan algoritma baru secara efisien.
+
+Al-Dujaili dan Suresh mengembangkan library BMOBench \citep{al-dujaili_2016}. BMOBench adalah sebuah library benchmark untuk mengevaluasi algoritma optimasi black box multi-tujuan. Library ini berisi serangkaian permasalahan uji standar yang dikelompokkan berdasarkan dimensi, separabilitas, dan modalitas. BMOBench diciptakan untuk mengatasi masalah kurangnya metode standar dalam mengevaluasi dan membandingkan algoritma optimasi multi-tujuan. Tanpa adanya benchmark dan prosedur evaluasi yang umum, para peneliti menghadapi kesulitan dalam menilai kinerja algoritma secara konsisten, yang berpotensi menghasilkan hasil yang bias atau tidak jelas.
+
+Penelitian terdahulu yang telah dijelaskan sebelumnya, yaitu penelitian \citep{Bliek_2023}, \citep{ma_zeyan_guo_chen_jiacheng_zhenrui_peng_gong_ma_cao_2023}, \citep{van_Rijn_2020}, \citep{al-dujaili_2016}, mengembangkan library benchmark dengan menggunakan basis kerangka uji COCO \citep{hansen2021coco}, yang mencakup fungsi matematika yang menyerupai karakteristik masalah di dunia nyata. Meskipun berbasis COCO, library benchmark tersebut hanya menggunakannya sebagai acuan dasar \citep{ma_zeyan_guo_chen_jiacheng_zhenrui_peng_gong_ma_cao_2023} dan tidak sepenuhnya menggunakan semua fungsi uji yang terdapat dalam COCO. Hanya penelitian \citep{Van_Thieu_2024} yang menggunakan kerangka uji CEC.
+
+\newpage
+\begin{landscape}
+\begin{longtable}[c]{|p{2cm}|p{2cm}|p{10cm}|p{8cm}|}
+\caption{Kajian Penelitian Terdahulu}
+\label{tab:kajian-penelitian-terdahulu}\\
+\hline
+Peneliti &
+  Nama Library &
+  Fungsi uji yang terdapat dalam library &
+  hasil \\ \hline
+\endfirsthead
+%
+\endhead
+%
+Van Thieu &
+  Opfunu &
+  CEC 2005-2022 &
+  Opfunu berisi lebih dari 300 fungsi uji yang digunakan dalam kompetisi CEC untuk mengevaluasi algoritma optimasi. Library ini dirancang dengan fleksibilitas dan ekstensibilitas, memungkinkan peneliti untuk memodifikasi atau memperluas fungsionalitasnya sesuai kebutuhan. \\ \hline
+Bliek dkk &
+  EXPOBench &
+  Optimisasi tata letak ladang angin (kincir angin), optimisasi bentuk pipa (pitzdaly), presipitator elektrostatis (esp), optimisasi hiperparameter dan prapemrosesan untuk XGBoost (HPO) &
+  EXPObench menyediakan dataset yang menjalankan berbagai algoritma optimasi berbasis surrogate pada beberapa masalah dengan biaya tinggi. Dataset ini dapat digunakan untuk membuat benchmark tabular atau surrogate, meta-learning, dan training model surrogate secara offline. Dengan EXPObench, peneliti dapat menguji dan membandingkan kinerja algoritma dalam berbagai skenario, serta mengembangkan model prediktif untuk memecahkan masalah optimasi yang kompleks tanpa harus menjalankan evaluasi mahal secara langsung. \\ \hline
+Ma dkk &
+  MetaBox &
+  COCO, Protein-Docking &
+  MetaBox menyediakan platfrom untuk melakukan pengujian pada algoritma MetaBBO-RL dengan menawarkan templat skrip, masalah uji yang berangam, dan koleksi ekstensif algoritma dasar yang terintegrasi. Agregat Evaluasi Indikator (Aggregated Evaluation Indicator atau AEI) diperkenalkan untuk memberikan pandangan holistik tentang kinerja optimasi dan efektifitas pembelajaran dalam pendekatan MetaBBO-RL. \\ \hline
+van Rijn dkk &
+  MF2 &
+  1D bi-fidelity, Bi-fidelity versi Bohachevsky, Booth, Branin, Himmelblau, dan Six-hump Camelback, Correlation-adjustable multi-fidelity versi Branin, Paciorek, Hartmann3, dan Trid, Borehole, Currin, dan Park91 A dan B &
+  Library MF2 menyediakan fungsi uji berbagai tingkat fidelitas. MF2 memungkinkan peneliti untuk membandingkan dan mengevaluasi algoritma optimasi dengan sistematis dan efisien. \\ \hline
+Al-Dujaili dkk &
+  BMOBench &
+  BK1, CL1, Deb41, Deb512a, Deb512b, Deb512c, Deb513, Deb521a, Deb521b, Deb53, DG01, DPAM1, DTLZ1, DTLZ1n2, DTLZ2, DTLZ2n2, DTLZ3, DTLZ3n2, DTLZ4, DTLZ4n2, DTLZ5, DTLZ5n2, DTLZ6, DTLZ6n2, ex005, Far1, FES1, FES2, FES3, Fonseca, I1, I2, I3, I4, I5, IKK1, IM1, Jin1, Jin2, Jin3, Jin4, Kursawe, L1ZDT4, L2ZDT1, L2ZDT2, L2ZDT3, L2ZDT4, L2ZDT6, L3ZDT1, L3ZDT2, L3ZDT3, L3ZDT4, L3ZDT6, LE1, lovison1, lovison2, lovison3, lovison4, lovison5, lovison6, LRS1, MHHM1, MHHM2, MLF1, MLF2, MOP1, MOP2, MOP3, MOP4, MOP5, MOP6, MOP7, OKA1, OKA2, QV1, Sch1, SK1, SK2, SP1, SSFYY1, SSFYY2, TKLY1, VFM1, VU1, VU2, WFG1, WFG2, WFG3, WFG4, WFG5, WFG6, WFG7, WFG8, WFG9, ZDT1, ZDT2, ZDT3, ZDT4, ZDT6, ZLT1 &
+  BMOBench menyediakan beragam fungsi uji multi-objektif yang memiliki karakteristik seperti separabilitas, modalitas, dan multimodalitas. Platform ini menggunakan berbagai indikator kualitas seperti hypervolume, jarak generasi, jarak generasi terbalik, dan Indikator ε Aditif untuk menilai kinerja algoritma dalam mencapai kumpulan referensi yang sesuai dengan Pareto. \\ \hline
+\end{longtable}
+\end{landscape}
+
+\newpage
+\section{Landasan Teori}
+\subsection{Library Benchmark}
+\textit{Library} adalah kumpulan kode yang digunakan untuk pengembangan program, menawarkan \textit{function}, \textit{method}, dan \textit{class} yang dapat digunakan secara langsung tanpa perlu membuatnya dari awal, sehingga menghemat waktu dan tenaga dalam proses pengembangan. \textit{Benchmarking} melibatkan penilaian kinerja program, operasi, perangkat keras, dan elemen lainnya. Dalam konteks algoritma optimasi, \textit{benchmarking} mengukur kinerja dan kemampuan algoritma dalam menemukan solusi dalam ruang pencarian, dengan menyadari bahwa algoritma tersebut mungkin tidak selalu berhasil. Kerangka pengujian algoritma optimasi adalah struktur atau platform yang menyediakan alat, komponen, dan pedoman untuk menguji dan mengevaluasi kinerja algoritma optimasi. Kerangka kerja yang umum digunakan untuk menguji algoritma optimasi termasuk CEC dan COCO.
+\subsection{Congress on Evolutionary Computation}
+\textit{Congress on evolutionary computation} (CEC) adalah konferensi tahunan yang diselenggarakan oleh \textit{Institute of Electrical and Electronics Engineers} (IEEE) yang berfokus pada bidang komputasi evolusioner. CEC menampilkan berbagai program termasuk \textit{call for paper, call for competition, call for workshops}, dan lain-lain. Para peneliti dari seluruh dunia diundang untuk berpartisipasi dalam program-program yang ditawarkan pada konferensi CEC. \textit{Call for paper} memungkinkan para peneliti untuk mengirimkan temuan mereka di bidang yang berhubungan dengan komputasi evolusioner. Sementara itu, \textit{call for competition} memungkinkan para peneliti untuk mengirimkan algoritma optimasi mereka untuk bersaing dalam pengujian menggunakan fungsi \textit{benchmark} CEC, yang mencakup kategori seperti optimasi objektif tunggal, optimasi multi-objektif, dan aplikasi dunia nyata.
+\subsection{Comparing Continuous Optimizers}
+\textit{Comparing Continuous Optimizers} (COCO) adalah platform sumber terbuka yang dirancang untuk mengotomatisasi pengujian algoritma optimasi numerik dalam konteks \textit{black-box}. COCO bertujuan untuk menyederhanakan dan menstandarisasi proses perbandingan berbagai metode optimasi, termasuk solusi deterministik dan stokastik, baik untuk masalah optimasi tunggal maupun multiobjektif \citep{hansen2021coco}. COCO menyediakan \textit{testbed} fungsi \textit{benchmark}, templat eksperimen yang mudah diparalelkan, dan alat untuk memproses dan memvisualisasikan data yang dihasilkan oleh satu atau beberapa algoritma optimasi. COCO telah digunakan dalam lokakarya \textit{Black-Box Optimization Benchmarking} (BBOB) yang berlangsung selama \textit{Genetic and Evolutionary Computation Conference} (GECCO) pada tahun 2009, 2010, 2012, 2013, 2015-2019, 2021, 2022 dan pada tahun 2023 \citep{numbboWhatCOCO}.
+\subsection{Fungsi Uji}
+Fungsi uji adalah fungsi matematika yang digunakan untuk mengevaluasi kinerja algoritma optimasi. Fungsi ini biasanya direpresentasikan dalam bentuk grafik dua dimensi atau tiga dimensi. Fungsi uji memiliki titik solusi, yang umumnya merupakan titik terendah pada grafik tersebut. Dalam konteks fungsi uji, terdapat dua jenis utama: \textit{unimodal} dan \textit{multimodal}. Fungsi \textit{unimodal} memiliki hanya satu titik solusi terbaik atau \textit{global optimum}, yang merupakan titik terendah di seluruh grafik. Sebaliknya, fungsi \textit{multimodal} memiliki dua atau lebih titik solusi. \textit{Local optima} adalah titik pada grafik fungsi uji yang lebih baik dibandingkan area sekitarnya, tetapi bukan merupakan titik solusi terbaik secara keseluruhan pada grafik fungsi uji.\\
+Fungsi uji dapat memiliki variasi seperti \textit{shifted}, \textit{rotated}, dan \textit{biased}.
+\subsubsection{Shifted}
+\textit{Shifted} merupakan pengeseran titik solusinya dari titik asalnya yang \textit{unshifted} (tidak bergeser) dalam
+ruang pencarian.\\
+Berikut contoh fungsi rastringin dasar dan perhitungannya:
+\begin{flalign*}
+  &f(x)=10D+\sum_{i=1}^{D}x_i^2-10\cos(2\pi x_i)&&\\
+  &x = [2,4]&&\\
+  &D = 2&&
+\end{flalign*}
+\vspace{-2.5\baselineskip}
+\begin{flalign*}
+f(x)&=10*2+((2^2-10\cos(2\pi 2))+(4^2-10\cos(2\pi 4)))&&\\
+& = 10 * 2 + ((-6) + 6)&&\\
+& = 10 * 2 + 0&&\\
+& = 20&&
+\end{flalign*}
+Berikut contoh fungsi \textit{shifted} rastringin dan perhitungannya:
+\begin{flalign*}
+  &f(x)=10D+\sum_{i=1}^{D}x_i^2-10\cos(2\pi x_i)&&\\
+  &x = [2,4]&&\\
+  &D = 2&&\\
+  &o = [0.5, 0.5]&&\\
+  &z = [2-0.5, 4-0.5]&&\\
+  &z = [1.5, 3.5]&&
+\end{flalign*}
+\vspace{-2.5\baselineskip}
+\begin{flalign*}
+f(x)&=10*2+((1.5^2-10\cos(2\pi 1.5))+(3.5^2-10\cos(2\pi 3.5)))&&\\
+& = 10 * 2 + (12.25 + 22.25)&&\\
+& = 10 * 2 + 34.5&&\\
+& = 20 + 34.5&&\\
+& = 54.5&&
+\end{flalign*}
+\subsubsection{Rotated}
+\textit{Rotated} merupakan pemutaran atau rotasi titik solusinya dari titik asalnya yang \textit{unrotated} (tidak diputar atau dirotasi) dalam ruang pencarian.\\
+Berikut contoh fungsi \textit{rotated} rastringin dan perhitungannya:
+\begin{flalign*}
+  &f(x)=10D+\sum_{i=1}^{D}x_i^2-10\cos(2\pi x_i)&&\\
+  &x = [2,4]&&\\
+  &D = 2&&\\
+  &\theta = 45&&\\
+  &R = \begin{bmatrix}
+    \cos(45) & -\sin(45)\\
+    \sin(45) & \cos(45)
+  \end{bmatrix}&&\\
+  &z = R \times x&&\\
+  &z \approx [2.35, 3.80]&&
+\end{flalign*}
+\vspace{-2.5\baselineskip}
+\begin{flalign*}
+f(x)&=10*2+((2.35^2-10\cos(2\pi 2.35))+(3.80^2-10\cos(2\pi 3.80)))&&\\
+& \approx 10 * 2 + (11.40 + 11.34)&&\\
+& \approx 10 * 2 + 22.74&&\\
+& \approx 20 + 34.5&&\\
+& \approx 42.74&&
+\end{flalign*}
+\subsubsection{Biased}
+\textit{Biased} merupakan kecenderungan untuk menemukan solusi tertentu dengan mengacuhkan area tertentu dalam pencarian. Bias dapat terdapat pada algoritma optimasi itu sendiri atau dalam fungsi uji.\\
+Berikut contoh \textit{biased} rastringin dan perhitungannya:
+\begin{flalign*}
+  &f(x)=10D+\sum_{i=1}^{D}x_i^2-10\cos(2\pi x_i)+f_{\text{bias}}&&\\
+  &f_{\text{bias}} = 10&&\\
+  &x = [2,4]&&\\
+  &D = 2&&
+\end{flalign*}
+\vspace{-2.5\baselineskip}
+\begin{flalign*}
+f(x)&=10*2+((2^2-10\cos(2\pi 2))+(4^2-10\cos(2\pi 4)))+f_{\text{bias}}&&\\
+& = 10 * 2 + ((-6) + 6)+f_{\text{bias}}&&\\
+& = 10 * 2 + 10&&\\
+& = 30&&
+\end{flalign*}
