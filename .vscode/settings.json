@@ -16,6 +16,21 @@
       "command": "bibtex",
       "args": ["%DOCFILE%"],
       "env": {}
+    },
+    {
+      "name": "ghostscript",
+      "command": "gswin64c.exe",
+      "args": [
+        "-sDEVICE=pdfwrite",
+        "-dCompatibilityLevel=1.4",
+        "-dPDFSETTINGS=/ebook",
+        "-dNOPAUSE",
+        "-dQUIET",
+        "-dBATCH",
+        "-sOutputFile=%DIR%/%DOCFILE%-compressed.pdf",
+        "%DIR%/%DOCFILE%.pdf"
+      ],
+      "env": {}
     }
   ],
   "latex-workshop.latex.recipes": [
@@ -26,6 +41,14 @@
     {
       "name": "xelatex ➞ bibtex ➞ xelatex`×2",
       "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]
+    },
+    {
+      "name": "Quick xelatex ➞ compress",
+      "tools": ["xelatex", "ghostscript"]
+    },
+    {
+      "name": "xelatex ➞ bibtex ➞ xelatex`×2 ➞ compress",
+      "tools": ["xelatex", "bibtex", "xelatex", "xelatex", "ghostscript"]
     }
   ],
   "editor.formatOnSave": true,
