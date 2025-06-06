@@ -7,7 +7,7 @@
 
 \section{Fungsi \textit{Benchmark}}
 Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi yang tersedia di CECO.\ Fungsi-fungsi tersebut dirancang untuk digunakan dalam proses \textit{benchmarking} dan pengujian performa berbagai algoritma optimasi. Pada bagian selanjutnya, fungsi-fungsi ini akan digunakan sebagai fungsi evaluasi untuk mengukur efektivitas dan efisiensi algoritma yang diuji dalam menyelesaikan berbagai permasalahan optimasi.
-\subsection{Fungsi CEC}
+\subsection{Fungsi Congress on Evolutionary Computation}
 \vspace*{-4.5em}
 \begin{flalign*}
   &D: \text{dimensi}&&\\
@@ -43,9 +43,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Ackley pada dimensi dua (\cref{fig:ackley-2d}) dan tiga (\cref{fig:ackley-3d})}
 	\label{fig:ackley}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Ackley}}(\mathrm{x})=-20\exp\left(-0.2\sqrt{\frac{1}{D}\sum_{i=1}^{D}z_i^2} \right)-\exp\left( \frac{1}{D}\sum_{i=1}^{D}\cos\left(2\pi z_i \right) \right) + 20 + e +f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Ackley}}(\mathrm{x})=-20\exp\left(-0.2\sqrt{\frac{1}{D}\sum_{i=1}^{D}z_i^2} \right)-\exp\left( \frac{1}{D}\sum_{i=1}^{D}\cos\left(2\pi z_i \right) \right) + 20 + e +f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Bent Cigar}
 \noindent Properti:
@@ -72,9 +72,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Bent Cigar pada dimensi dua (\cref{fig:bentcigar-2d}) dan tiga (\cref{fig:bentcigar-3d})}
 	\label{fig:bentcigar}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Bent cigar}}(\mathrm{x})=z_1^2+10^6\sum_{i=2}^{D}z_i^2+f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Bent cigar}}(\mathrm{x})=z_1^2+10^6\sum_{i=2}^{D}z_i^2+f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Different Power}
 \noindent Properti:
@@ -101,9 +101,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Different Power pada dimensi dua (\cref{fig:diffpower-2d}) dan tiga (\cref{fig:diffpower-3d})}
 	\label{fig:diffpower}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Different power}}(\mathrm{x})=\sqrt{\sum_{i=1}^{D}\left| z_i \right|^{2+4\frac{i-1}{D-1}} }+f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Different power}}(\mathrm{x})=\sqrt{\sum_{i=1}^{D}\left| z_i \right|^{2+4\frac{i-1}{D-1}} }+f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Discus}
 \noindent Properti:
@@ -130,9 +130,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Discus pada dimensi dua (\cref{fig:discus-2d}) dan tiga (\cref{fig:discus-3d})}
 	\label{fig:discus}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Discus}}(\mathrm{x})=10^6z_1^2+\sum_{i=2}^{D}z_i^2+f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Discus}}(\mathrm{x})=10^6z_1^2+\sum_{i=2}^{D}z_i^2+f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Ellipsoid}
 \noindent Properti:
@@ -158,9 +158,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Ellipsoid pada dimensi dua (\cref{fig:ellipsoid-2d}) dan tiga (\cref{fig:ellipsoid-3d})}
 	\label{fig:ellipsoid}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Ellipsoid}}(\mathrm{x})=\sum_{i=1}^{D}iz_i^2  +f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Ellipsoid}}(\mathrm{x})=\sum_{i=1}^{D}iz_i^2  +f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Elliptic}
 \noindent Properti:
@@ -189,9 +189,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Elliptic pada dimensi dua (\cref{fig:elliptic-2d}) dan tiga (\cref{fig:elliptic-3d})}
 	\label{fig:elliptic}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Elliptic}}(\mathrm{x})= \sum_{i=1}^{D} \left( 10^6\right)^{\frac{i-1}{D-1}} z_i^2 +f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Elliptic}}(\mathrm{x})= \sum_{i=1}^{D} \left( 10^6\right)^{\frac{i-1}{D-1}} z_i^2 +f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Expanded schaffer f6}
 \noindent Properti:
@@ -218,10 +218,12 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Expanded schaffer f6 pada dimensi dua (\cref{fig:schaffer-2d}) dan tiga (\cref{fig:schaffer-3d})}
 	\label{fig:schaffer}
 \end{figure}
-\begin{flalign*}
-  &g\left(x,y \right)=0.5+\frac{\sin^2\left(\sqrt{x^2+y^2} \right)-0.5 }{\left( 1+0.0001\left(x^2+y^2 \right) \right)^2 }&&\\
-  &f_{\text{Expanded schaffer f6}}(\mathrm{x})=g\left(z_1,z_2 \right)+g\left(z_2,z_3 \right)+\ldots+g\left(z_{D-1},z_D \right)+g\left(z_D,z_1 \right)+f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  \begin{split}
+    g\left(x,y \right) &= 0.5+\frac{\sin^2\left(\sqrt{x^2+y^2} \right)-0.5 }{\left( 1+0.0001\left(x^2+y^2 \right) \right)^2 }\\
+    f_{\text{Expanded schaffer f6}}(\mathrm{x}) &= g\left(z_1,z_2 \right)+\cdots+g\left(z_D,z_1 \right)+f_{\text{bias}}
+  \end{split}
+\end{equation}
 
 \subsubsection{Griewank}
 \noindent Properti:
@@ -249,9 +251,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Griewank pada dimensi dua (\cref{fig:griewank-2d}) dan tiga (\cref{fig:griewank-3d})}
 	\label{fig:griewank}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Griewank}}(\mathrm{x})=\sum_{i=1}^{D}\frac{z_i^2}{4000}-\prod_{i=1}^{D}\cos\left( \frac{z_i}{\sqrt{i}}\right)+1 +f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Griewank}}(\mathrm{x})=\sum_{i=1}^{D}\frac{z_i^2}{4000}-\prod_{i=1}^{D}\cos\left( \frac{z_i}{\sqrt{i}}\right)+1 +f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Happycat}
 \noindent Properti:
@@ -278,9 +280,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Happycat pada dimensi dua (\cref{fig:happycat-2d}) dan tiga (\cref{fig:happycat-3d})}
 	\label{fig:happycat}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Happycat}}(\mathrm{x})=\left|\sum_{i=1}^{D}z_i^2-D \right|^{1/4}+\left(0.5\sum_{i=1}^{D}z_i+\sum_{i=1}^{D}z_i \right)/D+0.5+f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Happycat}}(\mathrm{x})=\left|\sum_{i=1}^{D}z_i^2-D \right|^{1/4}+\left(0.5\sum_{i=1}^{D}z_i+\sum_{i=1}^{D}z_i \right)/D+0.5+f_{\text{bias}}
+\end{equation}
 
 \subsubsection{HGbat}
 \noindent Properti:
@@ -307,9 +309,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi HGbat pada dimensi dua (\cref{fig:hgbat-2d}) dan tiga (\cref{fig:hgbat-3d})}
 	\label{fig:hgbat}
 \end{figure}
-\begin{flalign*}
-  f_{\text{HGbat}}(\mathrm{x})=\left|\left( \sum_{i=1}^{D}z_i^2\right)^2-\left(\sum_{i=1}^{D}z_i \right)^2  \right|^{1/2}+\left(0.5\sum_{i=1}^{D}z_i+\sum_{i=1}^{D}z_i \right)/D+0.5+f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{HGbat}}(\mathrm{x})=\left|\left( \sum_{i=1}^{D}z_i^2\right)^2-\left(\sum_{i=1}^{D}z_i \right)^2  \right|^{1/2}+\left(0.5\sum_{i=1}^{D}z_i+\sum_{i=1}^{D}z_i \right)/D+0.5+f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Katsuura}
 \noindent Properti:
@@ -337,9 +339,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Katsuura pada dimensi dua (\cref{fig:katsuura-2d}) dan tiga (\cref{fig:katsuura-3d})}
 	\label{fig:katsuura}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Katsuura}}(\mathrm{x})=\frac{10}{D^2}\prod_{i=1}^{D}\left( 1+i\sum_{j=1}^{32}\frac{\left|2^j z_i-\text{round}\left( 2^jz_i\right)  \right| }{2^j}\right)^{\frac{10}{D^{1.2}}}+f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Katsuura}}(\mathrm{x})=\frac{10}{D^2}\prod_{i=1}^{D}\left( 1+i\sum_{j=1}^{32}\frac{\left|2^j z_i-\text{round}\left( 2^jz_i\right)  \right| }{2^j}\right)^{\frac{10}{D^{1.2}}}+f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Levy}
 \noindent Properti:
@@ -367,10 +369,10 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Levy pada dimensi dua (\cref{fig:levy-2d}) dan tiga (\cref{fig:levy-3d})}
 	\label{fig:levy}
 \end{figure}
-\begin{flalign*}
-  &f_{\text{Levy}}(\mathrm{x})=\sin^2\left(\pi w_1 \right)+\sum_{i=1}^{D-1}\left(w_i-1 \right)^2\left[1+10\sin^2\left( \pi w_i+1\right)\right]+\left(w_D-1 \right)\left[1+\sin^2\left( 2\pi w_D\right)  \right]+f_{\text{bias}}&&\\
-  &\text{dimana}\ w_i=1+\frac{z_i-1}{4},\forall i=1,\ldots,D&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Levy}}(\mathrm{x})=\sin^2\left(\pi w_1 \right)+\sum_{i=1}^{D-1}\left(w_i-1 \right)^2\left[1+10\sin^2\left( \pi w_i+1\right)\right]+\left(w_D-1 \right)\left[1+\sin^2\left( 2\pi w_D\right)  \right]+f_{\text{bias}}
+\end{equation}
+dimana $w_i=1+\frac{z_i-1}{4},\forall i=1,\ldots,D$
 
 \subsubsection{Rastrigin}
 \noindent Properti:
@@ -398,9 +400,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Rastrigin pada dimensi dua (\cref{fig:rastrigin-2d}) dan tiga (\cref{fig:rastrigin-3d})}
 	\label{fig:rastrigin}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Rastrigin}}(\mathrm{x})=\sum_{i=1}^{D}\left(z_i^2-10\cos\left(2\pi z_i \right)+10\right) +f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Rastrigin}}(\mathrm{x})=\sum_{i=1}^{D}\left(z_i^2-10\cos\left(2\pi z_i \right)+10\right) +f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Rosenbrock}
 \noindent Properti:
@@ -428,9 +430,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Rosenbrock pada dimensi dua (\cref{fig:rosenbrock-2d}) dan tiga (\cref{fig:rosenbrock-3d})}
 	\label{fig:rosenbrock}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Rosenbrock}}(\mathrm{x})=\sum_{i=1}^{D-1}\left(100\left(z_i^2-z_{i+1} \right)^2+\left( z_i-1\right)^2 \right) +f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Rosenbrock}}(\mathrm{x})=\sum_{i=1}^{D-1}\left(100\left(z_i^2-z_{i+1} \right)^2+\left( z_i-1\right)^2 \right) +f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Schwefel 1.2 Problem}
 \noindent Properti:
@@ -458,9 +460,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Schwefel 1.2 Problem pada dimensi dua (\cref{fig:schwefel1_2-2d}) dan tiga (\cref{fig:schwefel1_2-3d})}
 	\label{fig:schwefel1_2}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Schwefel 1.2}}(\mathrm{x})=\sum_{i=1}^{D}\left(\sum_{j=1}^{i}z_j \right)^2 +f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Schwefel 1.2}}(\mathrm{x})=\sum_{i=1}^{D}\left(\sum_{j=1}^{i}z_j \right)^2 +f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Schwefel 2.13 Problem}
 \noindent Properti:
@@ -488,12 +490,12 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Schwefel 2.13 Problem pada dimensi dua (\cref{fig:schwefel2_13-2d}) dan tiga (\cref{fig:schwefel2_13-3d})}
 	\label{fig:schwefel2_13}
 \end{figure}
-\begin{flalign*}
-  &f_{\text{Schwefel 2.13}}(\mathrm{x})=\sum_{i=1}^{D}\left(\mathrm{A}_i-\mathrm{B}_i\left(z \right)\right)^2 +f_{\text{bias}}&&\\
-  &\mathrm{A}_i=\sum_{j=1}^{D}\left(a_{ij}\sin\alpha_j+b_{ij}\cos\alpha_j \right),\mathrm{B}_i\left(z \right)=\sum_{j=1}^{D}\left(a_{ij}\sin z_j+b_{ij}\cos z_j \right), \text{untuk}\ i=1,\ldots,D&&\\
-  &\mathrm{A}, \mathrm{B}\text{ adalah dua}\ D*D\ \text{matriks}, a_{ij},b_{ij}\ \text{adalah bilangan bulat acak dalam rentang}\left[-100,100 \right]&&\\
-  &\alpha=\left[\alpha_1,\alpha_2,\ldots,\alpha_D \right],\alpha_j\ \text{adalah angka acak dalam rentang}\left[ -\pi,\pi\right]&&
-\end{flalign*}
+\begin{flalign}
+  f_{\text{Schwefel 2.13}}(\mathrm{x})=\sum_{i=1}^{D}\left(\mathrm{A}_i-\mathrm{B}_i\left(z \right)\right)^2 +f_{\text{bias}}
+\end{flalign}
+$\mathrm{A}_i=\sum_{j=1}^{D}\left(a_{ij}\sin\alpha_j+b_{ij}\cos\alpha_j \right),\mathrm{B}_i\left(z \right)=\sum_{j=1}^{D}\left(a_{ij}\sin z_j+b_{ij}\cos z_j \right)$, untuk $i=1,\ldots,D$\\
+$\mathrm{A}, \mathrm{B}$ adalah dua $D*D$ matriks, $a_{ij}$, $b_{ij}$ adalah bilangan bulat acak dalam rentang $\left[-100,100 \right]$\\
+$\alpha=\left[\alpha_1,\alpha_2,\ldots,\alpha_D \right],\alpha_j$ adalah angka acak dalam rentang $\left[ -\pi,\pi\right]$
 
 \subsubsection{Shubert}
 \noindent Properti:
@@ -519,9 +521,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Shubert pada dimensi dua (\cref{fig:shubert-2d}) dan tiga (\cref{fig:shubert-3d})}
 	\label{fig:shubert}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Shubert}}(\mathrm{x})=-\prod_{i=1}^{D}\sum_{j=i}^{5}j\cos\left[\left(j+1 \right)z_i+j  \right]  +f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Shubert}}(\mathrm{x})=-\prod_{i=1}^{D}\sum_{j=i}^{5}j\cos\left[\left(j+1 \right)z_i+j  \right]  +f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Sphere}
 \noindent Properti:
@@ -548,9 +550,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Sphere pada dimensi dua (\cref{fig:sphere-2d}) dan tiga (\cref{fig:sphere-3d})}
 	\label{fig:sphere}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Sphere}}(\mathrm{x})=\sum_{i=1}^{D}z_i^2+f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Sphere}}(\mathrm{x})=\sum_{i=1}^{D}z_i^2+f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Step Function}
 \noindent Properti:
@@ -576,9 +578,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Step Function pada dimensi dua (\cref{fig:step-2d}) dan tiga (\cref{fig:step-3d})}
 	\label{fig:step-function}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Step function}}(\mathrm{x})=\sum_{i=1}^{D}\left(\left\lfloor z_i + 0.5 \right\rfloor \right)^2+f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Step function}}(\mathrm{x})=\sum_{i=1}^{D}\left(\left\lfloor z_i + 0.5 \right\rfloor \right)^2+f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Vincent}
 \noindent Properti:
@@ -604,9 +606,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Vincent pada dimensi dua (\cref{fig:vincent-2d}) dan tiga (\cref{fig:vincent-3d})}
 	\label{fig:vincent}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Vincent}}(\mathrm{x})=\frac{1}{D}\sum_{i=1}^{D}\sin\left(10 \log\left(z_i \right)  \right) +f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Vincent}}(\mathrm{x})=\frac{1}{D}\sum_{i=1}^{D}\sin\left(10 \log\left(z_i \right)  \right) +f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Weierstrass}
 \noindent Properti:
@@ -634,9 +636,9 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Weierstrass pada dimensi dua (\cref{fig:weierstrass-2d}) dan tiga (\cref{fig:weierstrass-3d})}
 	\label{fig:weierstrass}
 \end{figure}
-\begin{align*}
-  f_{\text{Weierstrass}}(\mathrm{x})=\sum_{i=1}^{D}\left(\sum_{k=0}^{k\ \text{max}}\left[a^k\cos\left(2\pi b^k\left( z_i+0.5\right)  \right)  \right]  \right)-D\sum_{i=0}^{k \text{max}}\left[ a^k\cos\left(2\pi b^k\cdot0.5 \right) \right]  +f_{\text{bias}}&&
-\end{align*}
+\begin{equation}
+  f_{\text{Weierstrass}}(\mathrm{x})=\sum_{i=1}^{D}\left(\sum_{k=0}^{k\ \text{max}}\left[a^k\cos\left(2\pi b^k\left( z_i+0.5\right)  \right)  \right]  \right)-D\sum_{i=0}^{k \text{max}}\left[ a^k\cos\left(2\pi b^k\cdot0.5 \right) \right]  +f_{\text{bias}}
+\end{equation}
 
 \subsubsection{Zakharov}
 \noindent Properti:
@@ -663,12 +665,12 @@ Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi y
 	\caption{Tampilan grafik fungsi Zakharov pada dimensi dua (\cref{fig:zakharov-2d}) dan tiga (\cref{fig:zakharov-3d})}
 	\label{fig:zakharov}
 \end{figure}
-\begin{flalign*}
-  f_{\text{Zakharov}}(\mathrm{x})=\sum_{i=1}^{D}z_i^2+\left(\sum_{i=1}^{D}0.5z_i \right)^2+\left(\sum_{i=1}^{D}0.5z_i \right)^4+f_{\text{bias}}&&
-\end{flalign*}
+\begin{equation}
+  f_{\text{Zakharov}}(\mathrm{x})=\sum_{i=1}^{D}z_i^2+\left(\sum_{i=1}^{D}0.5z_i \right)^2+\left(\sum_{i=1}^{D}0.5z_i \right)^4+f_{\text{bias}}
+\end{equation}
 
-\subsection{Fungsi COCO}
-simbol dan definisi yang digunakan dalam fungsi COCO:\\
+\subsection{Fungsi COmparing Continuous Optimizers}
+Simbol dan definisi yang digunakan dalam fungsi COCO:\\
 Lokasi optimal $\mathrm{x}^{\text{opt}}$ dan $f_{\text{opt}} = f(\mathrm{x}^{\text{opt}})$: Semua fungsi memiliki optimum global dalam $[-5, 5]^D$. Sebagian besar fungsi memiliki optimum global dalam $[-4, 4]^D$, dan untuk banyak di antaranya, $\mathrm{x}^{\text{opt}}$ diambil secara seragam dari kompak ini.\\
 \noindent$\otimes$ menunjukkan perkalian per elemen antara dua vektor berdimensi $D$, $\otimes:R^D\times R^D\to R^D, (\mathrm{x},\mathrm{y})\mapsto \text{diag}(\mathrm{x})\times\mathrm{y}=(x_i\times y_i)_{i=1},\ldots,D$\\
 $||\cdot||$ menunjukkan Euclidean norm, $||\mathrm{x}||^2=\sum_{i}x^2_i$\\
@@ -677,7 +679,7 @@ $\textbf{0}=(0,\ldots,0)^{\mathrm{T}}$ vektor yang semuanya bernilai 0\\
 $\textbf{1}=(1,\ldots,1)^{\mathrm{T}}$ vektor yang semuanya bernilai 1\\
 $\Lambda^{\alpha}$ adalah sebuah matriks diagonal berdimensi $D$ dengan elemen diagonal ke-$i$ sebagai $\lambda_{ii}=\alpha^{\frac{1}{2}\frac{i-1}{D-1}}$, untuk $i=1,\ldots,D$\\
 $f_{\text{pen}}:\mathcal{R}^D\to \mathcal{R}, \mathrm{x}\mapsto\sum_{i=1}^{D}\max(0,\left|x_i\right|-5)^2$\\
-$\textbf{1}\pm$ sebuah vektor berdimensi $D$ dengan entri bernilai $-1$ atau $1$ yang diambil secara independen dengan peluang yang sama\\
+$\textbf{1}\pm$ sebuah vektor berdimensi $D$ dengan entri bernilai $-1$ atau $1$ yang diambil secara independen dengan peluang yang sama.\\
 $\bf{Q, R}$ matriks ortogonal (matriks rotasi). Untuk satu fungsi dalam satu dimensi, realisasi yang berbeda untuk $Q$ dan $R$ masing-masing digunakan untuk setiap perwujudan fungsi tersebut. Ortogonal matriks dihasilkan dari entri berdistribusi normal standar melalui ortonormalisasi gram-schmidt. Kolom dan baris pada matriks ortogonal membentuk basis ortonormal.\\
 $\bf{R}$ lihat $\bf{Q}$\\
 $T_{\text{asy}}^{\beta}:\mathcal{R}^D\to \mathcal{R}^D,x_i\mapsto \begin{cases}
@@ -727,11 +729,9 @@ fungsi dengan asimetris tingkat tinggi, di mana hanya terdapat satu \textit{hype
 	\caption{Tampilan grafik fungsi Attractive sector pada dimensi dua (\cref{fig:attr-2d}) dan tiga (\cref{fig:attr-3d}) tanpa transformasi input}
 	\label{fig:atrr}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Attractive sector}}(\mathrm{x})=\mathrm{T}_{\text{osz}}(\sum_{i=1}^{D}(s_iz_i)^2)^{0.9}+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Attractive sector}}(\mathrm{x})=\mathrm{T}_{\text{osz}}(\sum_{i=1}^{D}(s_iz_i)^2)^{0.9}+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\mathrm{z}=Q\Lambda^{10}R(\mathrm{x}-\mathrm{x}^{\text{opt}})$
     \item $s_i\begin{cases}
@@ -764,11 +764,9 @@ fungsi dengan asimetris tingkat tinggi, di mana hanya terdapat satu \textit{hype
 	\caption{Tampilan grafik fungsi Bent cigar pada dimensi dua (\cref{fig:bent-cigar-coco-2d}) dan tiga (\cref{fig:bent-cigar-coco-3d}) tanpa transformasi input}
 	\label{fig:bent_cigar_coco}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Bent cigar}}(\mathrm{x})=\sum_{i=1}^{D-1}(100(z_i^2-z_{i+1})^2+(z_i-1)^2)+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Bent cigar}}(\mathrm{x})=\sum_{i=1}^{D-1}(100(z_i^2-z_{i+1})^2+(z_i-1)^2)+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\mathrm{z}=\max(1,\frac{\sqrt{D}}{8})(\mathrm{x}-\mathrm{x}^{\text{opt}})+1$
     \item $\mathrm{z}^{\text{opt}}=1$
@@ -797,11 +795,9 @@ fungsi dengan asimetris tingkat tinggi, di mana hanya terdapat satu \textit{hype
 	\caption{Tampilan grafik fungsi Büche-Rastrigin pada dimensi dua (\cref{fig:buche-rastrigin-2d}) dan tiga (\cref{fig:buche-rastrigin-3d}) tanpa transformasi input}
 	\label{fig:buche_rastrigin}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Büche-Rastrigin}}(\mathrm{x})=10(D-\sum_{i=1}^{D}\cos(2\pi z_i))+\sum_{i=1}^{D}z_i^2+100f_{\text{pen}}(\mathrm{x})+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Büche-Rastrigin}}(\mathrm{x})=10(D-\sum_{i=1}^{D}\cos(2\pi z_i))+\sum_{i=1}^{D}z_i^2+100f_{\text{pen}}(\mathrm{x})+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $z_i=s_iT_{\text{osz}}(\mathrm{x}-\mathrm{x}^{\text{opt}})$ untuk $i=1,\ldots,D$
     \item $s_i=\begin{cases}
@@ -831,11 +827,9 @@ menyerupai fungsi rosenbrock dengan dalam sifat yang sangat multimodal
 	\caption{Tampilan grafik fungsi Composite griewank-rosenbrock function F8F2 pada dimensi dua (\cref{fig:griewank-rosenbrock-2d}) dan tiga (\cref{fig:griewank-rosenbrock-3d}) tanpa transformasi input}
 	\label{fig:griewank_rosenbrock}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Büche-Rastrigin}}(\mathrm{x})=\frac{10}{D-1}\sum_{i=1}^{D-1}(\frac{s_i}{4000}-\cos(s_i))+10+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Büche-Rastrigin}}(\mathrm{x})=\frac{10}{D-1}\sum_{i=1}^{D-1}(\frac{s_i}{4000}-\cos(s_i))+10+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\mathrm{z}=\max(1,\frac{\sqrt{D}}{8})R\mathrm{x}+0.5$
     \item $s_i=100(z_i^2-z_{i+1})^2+(z_i-1)^2$ untuk $i=1,\ldots,D$
@@ -863,11 +857,9 @@ karena perbedaan exponen, sensitivitas variabel $z_i$ menjadi semakin berbeda ke
 	\caption{Tampilan grafik fungsi Different power pada dimensi dua (\cref{fig:dp_2d}) dan tiga (\cref{fig:dp_3d}) tanpa transformasi input}
 	\label{fig:different_power_coco}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Different power}}(\mathrm{x})=\sqrt{\sum_{i=1}^{D}|z_i|^{2+4\frac{i-1}{D-1}}}+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Different power}}(\mathrm{x})=\sqrt{\sum_{i=1}^{D}|z_i|^{2+4\frac{i-1}{D-1}}}+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\mathrm{z}=R(\mathrm{x}-\mathrm{x}^{\text{opt}})$
 \end{packed_item}
@@ -896,11 +888,9 @@ Fungsi yang secara global kuadratik namun memiliki penyimpangan lokal. Terdapat 
 	\caption{Tampilan grafik fungsi Discus pada dimensi dua (\cref{fig:discus_coco_2d}) dan tiga (\cref{fig:discus_coco_3d}) tanpa transformasi input}
 	\label{fig:discus_coco}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Discus}}(\mathrm{x})=10^6z_1^2+\sum_{i=2}^{D}z_i^2+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Discus}}(\mathrm{x})=10^6z_1^2+\sum_{i=2}^{D}z_i^2+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\mathrm{z}=T_{\text{osz}}(R(\mathrm{x}-\mathrm{x}^{\text{opt}}))$
 \end{packed_item}
@@ -931,11 +921,9 @@ Fungsi yang secara global kuadratik namun memiliki penyimpangan lokal. Terdapat 
 	\caption{Tampilan grafik fungsi Ellipsoidal pada dimensi dua (\cref{fig:ellipsoidal_2d}) dan tiga (\cref{fig:ellipsoidal_3d}) tanpa transformasi input}
 	\label{fig:ellipsoidal}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Ellipsoidal}}(\mathrm{x})=\sum_{i=2}^{D}10^{6\frac{i-1}{D-1}}+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Ellipsoidal}}(\mathrm{x})=\sum_{i=2}^{D}10^{6\frac{i-1}{D-1}}+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\mathrm{z}=T_{\text{osz}}(\mathrm{x}-\mathrm{x}^{\text{opt}})\text{ (separable)}$\\
     \item $\mathrm{z}=T_{\text{osz}}(R(\mathrm{x}-\mathrm{x}^{\text{opt}}))\text{ (with high conditioning and unimodal)}$
@@ -962,11 +950,9 @@ Fungsi dengan tingkat kekasaran dan repetisi tinggi yang memiliki lebih dari $10
 	\caption{Tampilan grafik fungsi Katsuura pada dimensi dua (\cref{fig:katsuura_coco_2d}) dan tiga (\cref{fig:katsuura_coco_3d}) tanpa transformasi input}
 	\label{fig:katsuura_coco}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Sphere}}(\mathrm{x})=\frac{10}{D}\prod_{i=1}^{D}(1+i\sum_{j=1}^{32}\frac{|2^jz_i-[2^jz_i]|}{2^j})^{\frac{10}{D^{1.2}}}+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Sphere}}(\mathrm{x})=\frac{10}{D}\prod_{i=1}^{D}(1+i\sum_{j=1}^{32}\frac{|2^jz_i-[2^jz_i]|}{2^j})^{\frac{10}{D^{1.2}}}+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\mathrm{z}=Q\Lambda^{100}R(\mathrm{x}-\mathrm{x}^{\text{opt}})$
 \end{packed_item}
@@ -995,11 +981,9 @@ Fungsi linear sepenuhnya yang bertujuan menguji apakah proses pencarian mampu ke
 	\caption{Tampilan grafik fungsi Linear slope pada dimensi dua (\cref{fig:linear_slope_2d}) dan tiga (\cref{fig:linear_slope_3d}) tanpa transformasi input}
 	\label{fig:linear_slope}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Linear Slope}}(\mathrm{x})=\sum_{i=1}^{D}5|s_i|-s_iz_i+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Linear Slope}}(\mathrm{x})=\sum_{i=1}^{D}5|s_i|-s_iz_i+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $z_i=x_i$ jika $x_i^{\text{opt}}x_i < 5^2$ dan selain itu $z_i=x_i^{\text{opt}}$, untuk $i=1,\ldots,D$. Dengan kata lain, apabila $x_i$ melebihi $x_i^{\text{opt}}$, nilai ini akan dikembalikan ke dalam domain dan fungsi akan tampak konstan pada arah ini.
     \item $s_i=\sign(x_i^{\text{opt}})10^{\frac{i-1}{D-1}}$ untuk $i=1,\ldots,D$
@@ -1033,11 +1017,9 @@ Fungsi linear sepenuhnya yang bertujuan menguji apakah proses pencarian mampu ke
 	\caption{Tampilan grafik fungsi Rastrigin pada dimensi dua (\cref{fig:rastrigin_coco_2d}) dan tiga (\cref{fig:rastrigin_coco_3d}) tanpa transformasi input}
 	\label{fig:rastrigin_coco}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Rastrigin}}(\mathrm{x})=10(D-\sum_{i=1}^{D}\cos(2\pi z_i))+\|\mathrm{z}\|^2+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Rastrigin}}(\mathrm{x})=10(D-\sum_{i=1}^{D}\cos(2\pi z_i))+\|\mathrm{z}\|^2+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\mathrm{z}=\Lambda^{10}T_{\text{asy}}^{0.2}T_{\text{osz}}(\mathrm{x}-\mathrm{x}^{\text{opt}})\text{ (separable)}$\\
     \item $\mathrm{z}=R\Lambda^{10}Q T_{\text{asy}}^{0.2}(T_{\text{osz}}(R(\mathrm{x}-\mathrm{x}^{\text{opt}})))\\\text{(Multi-modal function with adequate global structure)}$
@@ -1068,11 +1050,9 @@ Fungsi linear sepenuhnya yang bertujuan menguji apakah proses pencarian mampu ke
 	\caption{Tampilan grafik fungsi Rosenbrock pada dimensi dua (\cref{fig:rosenbrock_coco_2d}) dan tiga (\cref{fig:rosenbrock_coco_3d}) tanpa transformasi input}
 	\label{fig:rosenbrock_coco}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Rosenbrock}}(\mathrm{x})=\sum_{i=1}^{D-1}(100(z_i^2-z_{i+1})^2+(z_i-1)^2)+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Rosenbrock}}(\mathrm{x})=\sum_{i=1}^{D-1}(100(z_i^2-z_{i+1})^2+(z_i-1)^2)+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\mathrm{z}=\max(1,\frac{\sqrt{D}}{8})(\mathrm{x}-\mathrm{x}^{\text{opt}})+1\text{ (original)}$\\
     \item $\mathrm{z}=\max(1,\frac{\sqrt{D}}{8})R\mathrm{x}+\frac{1}{2}\text{ (rotated)}$
@@ -1106,11 +1086,9 @@ Fungsi linear sepenuhnya yang bertujuan menguji apakah proses pencarian mampu ke
 	\caption{Tampilan grafik fungsi Schaffer f7 pada dimensi dua (\cref{fig:schaffer_2d}) dan tiga (\cref{fig:schaffer_3d}) tanpa transformasi input}
 	\label{fig:schaffer_f7}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Schaffer f7}}(\mathrm{x})=(\frac{1}{D-1}\sum_{i=1}^{D-1}\sqrt{s_i}+\sqrt{s_i}\sin^2(50s_i^{\frac{1}{5}}))^2+10f_{\text{pen}}(\mathrm{x})+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Schaffer f7}}(\mathrm{x})=(\frac{1}{D-1}\sum_{i=1}^{D-1}\sqrt{s_i}+\sqrt{s_i}\sin^2(50s_i^{\frac{1}{5}}))^2+10f_{\text{pen}}(\mathrm{x})+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
   \item $\mathrm{z}=\Lambda^{10}QT_{\text{asy}}^{0.5}(R(\mathrm{x}-\mathrm{x}^{\text{opt}}))\text{ (original)}$\\
   \item $\mathrm{z}=\Lambda^{1000}QT_{\text{asy}}^{0.5}(R(\mathrm{x}-\mathrm{x}^{\text{opt}}))\text{ (moderately ill-conditioned)}$\\
@@ -1141,11 +1119,9 @@ Titik minimum 2D yang paling signifikan berada cukup dekat dengan pojok area pen
 	\caption{Tampilan grafik fungsi Schwefel pada dimensi dua (\cref{fig:schwefel_coco_2d}) dan tiga (\cref{fig:schwefel_coco_3d}) tanpa transformasi input}
 	\label{fig:schwefel_coco}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Schwefel}}(\mathrm{x})=-\frac{1}{100D}\sum_{i=1}^{D}z_i\sin(\sqrt{|z_i|})+4.189828872724339+100f_{\text{pen}}(\frac{\mathrm{z}}{100})+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Schwefel}}(\mathrm{x})=-\frac{1}{100D}\sum_{i=1}^{D}z_i\sin(\sqrt{|z_i|})+4.189828872724339+100f_{\text{pen}}(\frac{\mathrm{z}}{100})+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\hat{\mathrm{x}}=2\times 1\pm\otimes\mathrm{x}$
     \item $\hat{z_i}=\hat{x_i},\hat{z_{i+1}}=\hat{x_{i+1}}+0.25(\hat{x_i}-[x_i^{\text{opt}}\to]2|x_i^{\text{opt}}|)$ untuk $i=1,\ldots,D-1$
@@ -1174,11 +1150,9 @@ Seperti pada fungsi Bent Cigar, sebuah punggungan (\textit{ridge}) yang didefini
 	\caption{Tampilan grafik fungsi Sharp ridge pada dimensi dua (\cref{fig:sharp_ridge_2d}) dan tiga (\cref{fig:sharp_ridge_3d}) tanpa transformasi input}
 	\label{fig:sharp_ridge}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Sharp ridge}}(\mathrm{x})=z_1^2+100\sqrt{\sum_{i=2}^{D}z_i^2}+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Sharp ridge}}(\mathrm{x})=z_1^2+100\sqrt{\sum_{i=2}^{D}z_i^2}+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\mathrm{z}=Q\Lambda^{10}R(\mathrm{x}-\mathrm{x}^{\text{opt}})$
 \end{packed_item}
@@ -1208,11 +1182,9 @@ Kemungkinan merupakan masalah pencarian dalam domain kontinu yang paling sederha
 	\caption{Tampilan grafik fungsi Sphere pada dimensi dua (\cref{fig:sphere-coco-2d}) dan tiga (\cref{fig:sphere-coco-3d}) tanpa transformasi input}
 	\label{fig:sphere_coco}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Sphere}}(\mathrm{x})=\|\mathrm{x}\|^2+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Sphere}}(\mathrm{x})=\|\mathrm{x}\|^2+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\mathrm{z}=\mathrm{x}-\mathrm{x}^{\text{opt}}$
 \end{packed_item}
@@ -1229,23 +1201,21 @@ Fungsi ini terdiri dari banyak plateau dengan berbagai ukuran. Kecuali di area k
 		\centering
 		\includegraphics[width=\linewidth]{coco/step_ellipsoidal_2d.png}
 		\caption{Dimensi 2}
-		\label{fig:step_ellipsoidal_2d}
+		\label{fig:step_ellipsoidal_coco_2d}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.4\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{coco/step_ellipsoidal_3d.png}
 		\caption{Dimensi 3}
-		\label{fig:step_ellipsoidal_3d}
+		\label{fig:step_ellipsoidal_coco_3d}
 	\end{subfigure}
-	\caption{Tampilan grafik fungsi Step Ellipsoidal pada dimensi dua (\cref{fig:step_ellipsoidal_2d}) dan tiga (\cref{fig:step_ellipsoidal_3d}) tanpa transformasi input}
-	\label{fig:step_ellipsoidal}
+	\caption{Tampilan grafik fungsi Step Ellipsoidal pada dimensi dua (\cref{fig:step_ellipsoidal_coco_2d}) dan tiga (\cref{fig:step_ellipsoidal_coco_3d}) tanpa transformasi input}
+	\label{fig:step_ellipsoidal_coco}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Step Ellipsoidal}}(\mathrm{x})=0.1\max(|\hat{z_1}|/10^4,\sum_{i=1}^{D}10^{2\frac{i-1}{D-1}}z_i^2)+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Step Ellipsoidal}}(\mathrm{x})=0.1\max(|\hat{z_1}|/10^4,\sum_{i=1}^{D}10^{2\frac{i-1}{D-1}}z_i^2)+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\hat{\mathrm{z}}=\Lambda^{10}R(\mathrm{x}-\mathrm{x}^{\text{opt}})$
     \item $\tilde{z_i}=\begin{cases}
@@ -1279,11 +1249,9 @@ Lanskap yang sangat kasar dan cukup repetitif, di mana optimum globalnya tidak u
 	\caption{Tampilan grafik fungsi Weierstrass pada dimensi dua (\cref{fig:weierstrass_coco_2d}) dan tiga (\cref{fig:weierstrass_coco_3d}) tanpa transformasi input}
 	\label{fig:weierstrass_coco}
 \end{figure}
-\vspace*{-2.5em}
-\begin{flalign*}
-  f_{\text{Weierstrass}}(\mathrm{x})=10(\frac{1}{D}\sum_{i=1}^{D}\sum_{k=0}^{11}1/2^k\cos(2\pi 3^k(z_i+1/2))-f_{0})^3+\frac{10}{D}f_{\text{pen}}(\mathrm{x})+f_{\text{opt}}&&\\
-\end{flalign*}
-\vspace*{-6.5em}
+\begin{equation}
+  f_{\text{Weierstrass}}(\mathrm{x})=10(\frac{1}{D}\sum_{i=1}^{D}\sum_{k=0}^{11}1/2^k\cos(2\pi 3^k(z_i+1/2))-f_{0})^3+\frac{10}{D}f_{\text{pen}}(\mathrm{x})+f_{\text{opt}}
+\end{equation}
 \begin{packed_item}
     \item $\mathrm{z}=R\Lambda^{1/100}QT_{\text{osz}}(R(\mathrm{x}-\mathrm{x}^{\text{opt}}))$
     \item $f_0=\sum_{k=0}^{11}1/2^k\cos(2\pi 3^k1/2)$
@@ -1294,47 +1262,218 @@ Fungsi-fungsi \textit{benchmark} yang telah dikumpulkan dan dijelaskan pada bagi
 
 \subsection{\textit{Super Class}}
 Kelas induk (\textit{superclass/parent class}) dalam sistem ini diberi nama \textit{Benchmark}, yang berperan sebagai basis untuk seluruh kelas turunan (\textit{child classes}). Kelas ini dirancang dengan pendekatan modular untuk mengintegrasikan berbagai fungsi dasar yang bersifat generik dan sering digunakan berulang kali oleh kelas-kelas turunannya.\\
-Struktur utama kelas \textit{Benchmark} mencakup:\\
-\begin{packed_enum}
-	\item Fungsi inisialisasi
-	\begin{packed_enum}
-		\item Mengakomodasi parameter dasar yang umum digunakan dalam fungsi \text{benchmark} CEC dan COCO
-		\item Menerima parameter konfigurasi berupa:
-		\begin{packed_enum}
-			\item Dimensi (ukuran ruang pencarian)
-			\item Rotasi (matriks transformasi linear)
-			\item Shift (pergeseran titik optimal)
-			\item Bias (penyesuaian nilai dasar)
-		\end{packed_enum}
-	\end{packed_enum}
-	\item Transformasi khusus COCO:
-	\begin{packed_enum}
-		\item Mengimplementasikan metode transformasi standar dalam \textit{benchmarking}:
-		\begin{packed_enum}
-			\item Gram-Schmidt orthogonalization untuk dekomposisi matriks
-			\item \textit{Penalty function} untuk penanganan \textit{boundary constraints}
-			\item Transformasi osz (\textit{osz transformation}) untuk modifikasi nonlinear
-			\item Transformasi asy (\textit{asy transformation}) untuk distorsi asimetris
-		\end{packed_enum}
-		\item Setiap fungsi transformasi dioptimalkan untuk komputasi numerik yang efisien
-	\end{packed_enum}
-\end{packed_enum}
-Kelas ini menerapkan prinsip-prinsip:
-\begin{packed_enum}
-	\item \textit{Inheritance} yang jelas: Memisahkan fungsi umum dan spesifik secara hierarkis
-	\item \textit{Code reusability}: Meminimalisir duplikasi kode antar kelas turunan
-	\item \textit{Extensibility}: Memungkinkan penambahan fungsi baru dengan tetap mempertahankan antarmuka yang konsisten
-	\item Abstraksi yang tepat: Menyembunyikan detail implementasi sambil menyediakan antarmuka yang jelas
-\end{packed_enum}
-Pendekatan ini memungkinkan pengembangan berbagai varian fungsi \textit{benchmark} dengan:
-\begin{packed_enum}
-	\item Konsistensi dalam implementasi
-	\item Kemudahan pemeliharaan
-	\item Fleksibilitas dalam ekstensi fungsionalitas
-	\item Performa komputasi yang optimal melalui vektorisasi
-\end{packed_enum}
-\lstinputlisting[language=Python, caption=kode super atau parent class, label=lst:python_file]{kode/benchmark.py}
-\subsubsection{fungsi cec dan coco}
+\subsubsection{Konstruktor}
+\textit{Method} ini merupakan konstruktor utama dalam kelas Benchmark. Fungsi utamanya adalah untuk menerima parameter dimensi yang akan digunakan dalam proses evaluasi. Dimensi tersebut menjadi dasar perhitungan di seluruh kelas turunannya dalam implementasi fungsi CEC dan COCO. Syarat dimensi yang dimasukkan harus berupa bilangan bulat positif (\text{integer}) dengan nilai lebih besar dari 0. Selain itu, nilai dimensi tidak diperbolehkan berupa bilangan desimal (\textit{float/double}) maupun bilangan negatif, karena dapat mengganggu proses komputasi dan menghasilkan output yang tidak valid.
+\begin{lstlisting}[language=Python, caption=kontruktor kelas benchmark, label=lst:init_benchmark]
+    def __init__(self, dimension: int) -> None:
+        """
+        Initializes the Benchmark class with a rotation matrix and a shift vector.
+
+        Parameters:
+            dimension (int): The number of dimensions for the input space. Must be a positive integer.
+
+        Raises:
+            ValueError: If `dimension` is not a positive integer.
+        """
+        if not isinstance(dimension, int):
+            raise ValueError("dimension must be integer")
+        if dimension < 0:
+            raise ValueError("dimension must be positive integer")
+        if dimension < 1:
+            raise ValueError("dimension cannot be zero")
+        self.dimension = dimension
+\end{lstlisting}
+\subsubsection{cec\_init}
+\textit{Method} ini digunakan untuk menerima tiga parameter utama dalam fungsi CEC, yaitu \textit{shift, rotation, dan bias}. Parameter \textit{shift} berupa \textit{array} satu dimensi dengan jumlah elemen yang sesuai dengan nilai dimensi, berfungsi untuk menggeser posisi optimum. \textit{Rotation} berupa matriks dua dimensi berukuran dimensi$\times$dimensi, digunakan untuk merotasi ruang pencarian. \textit{Bias} dapat berupa bilangan bulat atau desimal yang berfungsi sebagai konstanta penambah pada nilai fungsi. Ukuran shift dan rotation harus sesuai dengan dimensi yang telah ditentukan.
+\begin{lstlisting}[language=Python, caption=\textit{method} untuk tambahan konstruktor untuk fungsi CEC, label=lst:init_cec]
+    def cec_init(self, rotation: np.ndarray, shift: np.ndarray, f_bias: float = 0) -> None:
+        """
+        Initializes the cec function class with a rotation matrix and a shift vector.
+
+        Parameters:
+            rotation (np.ndarray): The rotation matrix.
+            shift (np.ndarray): The shift vector.
+            f_bias (float): A bias term added to the benchmark function's output. Defaults to 0.
+        """
+        if not isinstance(rotation, np.ndarray) or rotation.ndim != 2:
+            raise ValueError(
+                "Rotation matrix must be a non-empty np.ndarray")
+        if rotation.shape[0] != self.dimension and shift.shape[0] != self.dimension:
+            raise ValueError(
+                "rotation dimension and shift dimension does not match dimension")
+        elif rotation.shape[0] != self.dimension:
+            raise ValueError(
+                "rotation dimension does not match dimension")
+        elif shift.shape[0] != self.dimension:
+            raise ValueError(
+                "shift dimension does not match dimension")
+        if rotation.shape[0] != rotation.shape[1]:
+            raise ValueError("Rotation matrix must be a square matrix")
+        if rotation.shape[0] != shift.shape[0]:
+            raise ValueError("rotation and shift has different dimensions")
+        self.rotation = rotation
+        self.shift = shift
+        if not isinstance(f_bias, (float, int)):
+            raise ValueError(
+                "f_bias must be float or int")
+        self.f_bias = float(f_bias)
+\end{lstlisting}
+\subsubsection{create\_diagonal\_matrix}
+\textit{Method} ini berfungsi untuk menghasilkan matriks diagonal khusus dengan nilai diagonal berupa pangkat dari parameter alpha ($\alpha $) untuk notasi $\Lambda^{\alpha}$. Matriks tersebut dipakai untuk melakukan transformasi \textit{conditioning} guna memperbesar pengaruh dimensi tertentu dibandingkan dimensi lainnya.
+\begin{lstlisting}[language=Python, caption=\textit{method} untuk menghasilkan matriks diagonal, label=lst:init_cec]
+    def create_diagonal_matrix(self, alpha: float) -> np.ndarray:
+        """
+        Creates a diagonal matrix Λ^α, where the diagonal elements are powers of α.
+
+        The diagonal elements are defined as:
+            Λ_ii = alpha^(0.5 * (i - 1) / (D - 1)) for i = 1, 2, ..., D,
+            where D is the dimension.
+
+        Parameters:
+            alpha (float): The base value for the diagonal elements.
+
+        Returns:
+            np.ndarray: A diagonal matrix of shape (D, D), where D is the dimension.
+
+        Notes:
+            - If the dimension is 1, the matrix is [[1]].
+            - If alpha is 0, the matrix is a zero matrix.
+        """
+        if self.dimension == 1:
+            return np.array([[1.0]])
+
+        if alpha == 0:
+            return np.zeros((self.dimension, self.dimension))
+
+        exponents = 0.5 * np.arange(self.dimension) / (self.dimension - 1)
+        diagonal = alpha ** exponents
+        return np.diag(diagonal)
+\end{lstlisting}
+\subsubsection{generate\_random\_matrix}
+\textit{Method} ini berfungsi menghasilkan matriks dua dimensi berukuran dimensi$\times$dimensi secara acak, yang nantinya akan digunakan sebagai nilai matriks $R$ dan $Q$.
+\begin{lstlisting}[language=Python, caption=\textit{method} untuk menghasilkan matriks dengan nilai acak, label=lst:init_cec]
+    def generate_random_matrix(self, D: int) -> np.ndarray:
+        """
+        Generates a random matrix with elements drawn from a standard normal distribution.
+
+        Parameters:
+            D (int): The size of the matrix (D x D).
+
+        Returns:
+            np.ndarray: A random matrix of shape (D, D).
+        """
+        return np.random.randn(D, D)
+\end{lstlisting}
+\subsubsection{T\_asy\_beta}
+\textit{Method} ini berfungsi untuk melakukan transformasi asimetris pada setiap elemen input. Ini berarti akan mengubah input dengan cara yang tidak seragam, di mana perubahan yang diterapkan pada satu sisi (atau arah) mungkin berbeda dengan sisi lainnya.
+\begin{lstlisting}[language=Python, caption=\textit{method} untuk menerapkan transformasi asimetris pada elemen input, label=lst:init_cec]
+    def T_asy_beta(self, beta: float, input_vector: np.ndarray) -> np.ndarray:
+        """
+        Applies the T_asy^beta transformation to a given input vector.
+
+        The transformation is defined as:
+            T_asy^beta(x_i) = x_i^(1 + beta * (i / (D - 1)) * sqrt(x_i)) if x_i > 0,
+            T_asy^beta(x_i) = x_i otherwise.
+
+        Parameters:
+            beta (float): The beta parameter controlling the transformation.
+            input_vector (np.ndarray): A vector of real numbers.
+
+        Returns:
+            np.ndarray: The transformed vector.
+
+        Notes:
+            - If the dimension is 1, the input vector is returned unchanged.
+        """
+        if self.dimension == 1:
+            return input_vector
+
+        i = np.arange(self.dimension)
+        mask = input_vector > 0
+        exponent = 1 + beta * (i / (self.dimension - 1)
+                               ) * np.sqrt(input_vector)
+        result = np.where(mask, input_vector ** exponent, input_vector)
+        return result
+\end{lstlisting}
+\subsubsection{T\_osz}
+\textit{Method} ini berfungsi untuk menerapkan transformasi non-linear pada elemen input, yang menghasilkan efek osilasi dan ketidakteraturan pada struktur fungsi. Transformasi ini meningkatkan kompleksitas permukaan fungsi, sehingga membuatnya lebih sulit untuk dioptimalkan.
+\begin{lstlisting}[language=Python, caption=\textit{method} untuk menerapkan transformasi non-linear pada elemen input, label=lst:init_cec]
+    def T_osz(self, input_vector: np.ndarray) -> np.ndarray:
+        """
+        Applies the T_osz transformation to a given input vector.
+
+        The transformation is defined as:
+            T_osz(x_i) = sign(x_i) * exp(x_hat + 0.049 * (sin(c1 * x_hat) + sin(c2 * x_hat))),
+            where x_hat = log(|x_i|) if x_i ≠ 0, and 0 otherwise.
+
+        Parameters:
+            input_vector (np.ndarray): A vector of real numbers.
+
+        Returns:
+            np.ndarray: The transformed vector.
+
+        Notes:
+            - The transformation is applied element-wise.
+            - If x_i is 0, the result is 0.
+        """
+        x_hat = np.where(input_vector == 0, 0, np.log(np.abs(input_vector)))
+        sign = np.sign(input_vector)
+        c1 = np.where(input_vector > 0, 10, 5.5)
+        c2 = np.where(input_vector > 0, 7.9, 3.1)
+        transformed = np.exp(
+            x_hat + 0.049 * (np.sin(c1 * x_hat) + np.sin(c2 * x_hat)))
+        return np.where(input_vector == 0, 0, sign * transformed)
+\end{lstlisting}
+\subsubsection{f\_pen}
+\textit{Method} ini berfungsi untuk menerapkan sistem penalti pada elemen input yang melampaui rentang $[-5,5]$. Penalti ini bertujuan mengurangi kemungkinan solusi berada di luar batas tersebut dengan memberikan nilai penalti yang mempengaruhi kualitas solusi. Mekanisme ini berfungsi sebagai pembatas yang mendorong algoritma optimisasi tetap mengeksplorasi dalam rentang yang valid.
+\begin{lstlisting}[language=Python, caption=\textit{method} untuk menerapkan penalti pada elemen input, label=lst:init_cec]
+    def f_pen(self, x: np.ndarray) -> float:
+        """
+        Computes the penalty function for a given input vector.
+
+        The penalty function is defined as:
+            f_pen(x) = sum(max(0, |x_i| - 5)^2).
+
+        Parameters:
+            x (np.ndarray): A vector of real numbers.
+
+        Returns:
+            float: The penalty value.
+        """
+        return np.sum(np.maximum(0, np.abs(x) - 5) ** 2)
+\end{lstlisting}
+\subsubsection{gram\_schmidt}
+\textit{Method} ini berfungsi melakukan proses ortonormalisasi menggunakan algoritma Gram-Schmidt terhadap matriks rotasi beserta elemen-elemen $R$ dan $Q$. Proses ortonormalisasi ini bertujuan untuk memastikan bahwa matriks yang dihasilkan memiliki sifat ortogonal dan ternormalisasi, dimana setiap vektor kolom atau baris saling tegak lurus dan memiliki panjang satuan. Penerapan algoritma Gram-Schmidt ini penting untuk menjaga stabilitas numerik dan validitas matematis dari transformasi rotasi yang akan digunakan dalam fungsi benchmark optimisasi.
+\begin{lstlisting}[language=Python, caption=\textit{method} untuk menerapkan penalti pada elemen input, label=lst:init_cec]
+    def gram_schmidt(self, matrix: np.ndarray) -> np.ndarray:
+        """
+        Applies the Gram-Schmidt process to a set of vectors.
+
+        This method orthogonalizes the input vectors (columns of the matrix) and normalizes them to unit length.
+
+        Parameters:
+            matrix (np.ndarray): A 2D array where each column is a vector.
+
+        Returns:
+            np.ndarray: A 2D array with orthogonal and normalized vectors as columns.
+
+        Notes:
+            - If the input vectors are linearly dependent, the output will contain zero vectors for dependent columns.
+            - Uses floating-point arithmetic, so results may have small numerical errors.
+        """
+        matrix = np.array(matrix, dtype=np.float64)
+        Q = np.zeros_like(matrix)
+
+        for j in range(matrix.shape[1]):
+            v = matrix[:, j]
+            for i in range(j):
+                v -= np.dot(Q[:, i], v) * Q[:, i]
+            norm = np.linalg.norm(v)
+            Q[:, j] = v / norm if norm > 1e-14 else 0
+
+        return Q
+\end{lstlisting}
+\subsection{fungsi CEC dan COCO}
 Fungsi-fungsi matematis CEC dan COCO yang telah dikumpulkan dan diidentifikasi sebelumnya diimplementasikan ke dalam sistem dengan pendekatan \textit{Object-Oriented Programming} (OOP) yang ketat. Setiap fungsi CEC dan COCO dikemas dalam kelas terpisah yang mengikuti prinsip \foreignlanguage{english}{\enquote{\textit{one class per file}}}, suatu \textit{best practice} dalam pengembangan perangkat lunak modern yang memberikan beberapa keuntungan penting:
 \begin{packed_enum}
 	\item Modularitas Tinggi:
@@ -1367,17 +1506,215 @@ Pendekatan ini memungkinkan:
 	\item Kemampuan pelacakan perubahan yang lebih baik melalui \textit{version control}
 	\item Integrasi yang lebih hasul dengan sistem testing otomatis
 \end{packed_enum}
-\lstinputlisting[language=Python, caption=kode salah satu fungsi dari CEC yaitu fungsi Sphere, label=lst:sphere]{kode/sphere.py}
-\lstinputlisting[language=Python, caption= kode salah satu fungsi dari COCO yaitu fungsi Attractive Sector, label=lst:attractive_sector]{kode/attractive_sector.py}
+\subsubsection{Konstruktor}
+\textit{Method} ini merupakan konstruktor utama dalam kelas fungsi CEC dan COCO. Fungsi utamanya adalah untuk menerima parameter dimensi yang akan digunakan dalam proses evaluasi. Dimensi tersebut menjadi dasar perhitungan di fungsi tersebut. Syarat dimensi yang dimasukkan harus berupa bilangan bulat positif (\text{integer}) dengan nilai lebih besar dari 0. Selain itu, nilai dimensi tidak diperbolehkan berupa bilangan desimal (\textit{float/double}) maupun bilangan negatif, karena dapat mengganggu proses komputasi dan menghasilkan output yang tidak valid. Untuk fungsi CEC menerima parameter \textit{shift} berupa \textit{array} satu dimensi dengan jumlah elemen yang sesuai dengan nilai dimensi, berfungsi untuk menggeser posisi optimum. \textit{Rotation} berupa matriks dua dimensi berukuran dimensi$\times$dimensi, digunakan untuk merotasi ruang pencarian. \textit{Bias} dapat berupa bilangan bulat atau desimal yang berfungsi sebagai konstanta penambah pada nilai fungsi. Ukuran shift dan rotation harus sesuai dengan dimensi yang telah ditentukan.
+\begin{lstlisting}[language=Python, caption=kontruktor kelas fungsi CEC, label=lst:init_cec]
+    def __init__(self, dimension: int, rotation: np.ndarray, shift: np.ndarray, f_bias: float = 0) -> None:
+        """
+        Initializes the Sphere class with a rotation matrix and a shift vector.
 
+        Parameters:
+            dimension (int): The number of dimensions for the input space. Must be a positive integer.
+            rotation (np.ndarray): The rotation matrix for transforming the input vector.
+            shift (np.ndarray): The shift vector for adjusting the input vector.
+            f_bias (float): A bias term added to the benchmark function's output. Defaults to 0.
+        """
+        super().__init__(dimension)
+        self.cec_init(rotation, shift, f_bias)
+\end{lstlisting}
+Sementara itu, pada fungsi COCO, beberapa variasi fungsi juga menerima parameter opsional seperti \textit{high conditioning}, \textit{adequate global structure}, dan \textit{ill conditioned} dalam bentuk \textit{boolean}, karena masing-masing fungsi dapat memiliki versi dengan atau tanpa karakteristik tersebut.
+\begin{lstlisting}[language=Python, caption=kontruktor kelas fungsi COCO, label=lst:init_cec]
+    def __init__(self, dimension: int) -> None:
+        """
+        Initializes the Sphere function with a given dimension.
+
+        Parameters:
+            dimension (int): The number of dimensions for the input space. Must be a positive integer.
+
+        Raises:
+            ValueError: If dimension is not a positive integer.
+        """
+        if not isinstance(dimension, int) or dimension <= 0:
+            raise ValueError("Dimension must be a positive integer")
+        super().__init__(dimension)
+        # Generate a random optimal solution vector x_opt within the range [-5, 5]
+        self.x_opt = np.random.uniform(-5, 5, dimension)
+
+        self.f_opt = self.raw(self.x_opt)
+\end{lstlisting}
+Konstruktor pada fungsi COCO juga menginisialisasi properti $\mathrm{x}^{\text{opt}}$ dan $f_{\text{opt}}$ sebagai titik dan nilai optimum. Selain itu, pada beberapa fungsi, konstruktor turut menginisialisasi properti seperti $R$, $Q$, $\Lambda^{\alpha}$, dan $s_i$ yang digunakan dalam proses transformasi input. Di samping itu, beberapa di fungsi juga menghitung dan menyimpan hasil perhitungan ke dalam variabel di awal untuk menghemat waktu komputasi selama evaluasi fungsi berlangsung.
+\begin{lstlisting}[language=Python, caption=kontruktor kelas fungsi COCO, label=lst:init_coco]
+    def __init__(self, dimension: int) -> None:
+        """
+        Initializes the Katsuura function with a given dimension.
+
+        Parameters:
+            dimension (int): The number of dimensions for the input space. Must be a positive integer.
+            high_conditioning (bool, optional): If `True`, applies a Gram-Schmidt transformation to increase problem conditioning. Defaults to `False`.
+
+        Raises:
+            ValueError: If dimension is not a positive integer.
+        """
+        if not isinstance(dimension, int) or dimension <= 0:
+            raise ValueError("Dimension must be a positive integer")
+        super().__init__(dimension)
+        self.powers_of_two = 2 ** np.arange(1, 33)
+        self.inverse_powers = 1 / self.powers_of_two
+        self.exponent = 10 / (self.dimension ** 1.2)
+        self.scale_factor = 10 / (self.dimension ** 2)
+        # Generate a random optimal solution vector x_opt within the range [-5, 5]
+        self.x_opt = np.random.uniform(-5, 5, dimension)
+
+        self.f_opt = self.raw(self.x_opt)
+
+        self.R = self.generate_random_matrix(dimension)
+        self.R = self.gram_schmidt(self.R)
+        self.Q = self.generate_random_matrix(dimension)
+        self.Q = self.gram_schmidt(self.Q)
+        self.diagonal_matrix = self.create_diagonal_matrix(100)
+\end{lstlisting}
+\subsubsection{raw}
+\textit{Method} ini adalah fungsi dasar yang beroperasi dalam bentuk paling sederhana tanpa melibatkan transformasi tambahan seperti transformasi input, $f_{\text{opt}}$, atau $f_{\text{pen}}$. Fungsi dasar ini berfungsi sebagai komponen inti yang akan dimanfaatkan untuk dua tujuan utama: menghitung nilai $f_{\text{opt}}$ dan melakukan evaluasi pada fungsi-fungsi yang memerlukan transformasi input. Dengan demikian, metode ini berperan sebagai fondasi perhitungan yang kemudian dapat dikembangkan dengan berbagai lapisan transformasi sesuai kebutuhan spesifik fungsi \textit{benchmark}.
+\begin{lstlisting}[language=Python, caption=\textit{method raw} fungsi Attractive sector, label=lst:raw_coco]
+    def raw(self, x: np.ndarray) -> float:
+        """
+        Evaluates the Attractive sector function at a given input vector without any shift.
+
+        The function is calculated as:
+            f(x) = T_{text{osz}}( sum_{i=1}^{D}( s_iz_i )^2 )^{0.9}
+
+        Parameters:
+            x (np.ndarray): A vector of real numbers representing a candidate solution.
+
+        Returns:
+            float: The function value at the given input vector.
+
+        Raises:
+            ValueError: If the input vector does not match the expected dimension.
+        """
+        if x.shape[0] != self.dimension:
+            raise ValueError(
+                f"Input vector must have {self.dimension} elements")
+
+        s = np.where((x * self.x_opt), 10 ** 2, 1)
+
+        result = np.sum((s * x) ** 2)
+        return result ** 0.9
+\end{lstlisting}
+\subsubsection{evaluate}
+\textit{Method} ini berfungsi mengevaluasi fungsi pada CEC dan COCO dengan menerapkan berbagai transformasi yang telah didefinisikan. Parameter input yang diterima berupa struktur array yang memiliki jumlah elemen sama dengan nilai dimensi yang telah ditetapkan saat konstruktor kelas diinisialisasi. Konsistensi antara ukuran input dan dimensi yang telah ditentukan merupakan persyaratan wajib untuk memastikan proses evaluasi berjalan dengan benar dan menghasilkan output yang valid.
+\begin{lstlisting}[language=Python, caption=\textit{method evaluate} fungsi sphere, label=lst:evaluate_cec]
+    def evaluate(self, input_vector: np.ndarray) -> float:
+        """
+        Evaluates the rotated and shifted sphere function at a given input vector.
+
+        Parameters:
+            input_vector (np.ndarray): The input vector [x1, x2, ..., xD].
+
+        Returns:
+            float: The result of the sphere function after applying rotation
+            and shift.
+        """
+        # Apply shift and rotation
+        shifted_rotated_vector = np.matmul(
+            self.rotation, input_vector - self.shift)
+
+        # Calculate the sum of squares
+        result = np.sum(shifted_rotated_vector ** 2)
+
+        return result + self.f_bias
+\end{lstlisting}
+\begin{lstlisting}[language=Python, caption=\textit{method evaluate} fungsi Attractive sector, label=lst:evaluate_coco]
+    def evaluate(self, input_vector: np.ndarray) -> float:
+        """
+        Evaluates the Attractive sector function at a given input vector.
+
+        The function is calculated as:
+            f(x) = T_{text{osz}}( sum_{i=1}^{D}( s_iz_i )^2 )^{0.9}+ f_opt
+
+        Parameters:
+            input_vector (np.ndarray): A vector of real numbers representing a candidate solution. Must have the same length as the dimension of the Attractive sector function.
+
+        Returns:
+            float: The function value at the given input vector.
+
+        Raises:
+            ValueError: If the input vector does not match the expected dimension.
+        """
+        if input_vector.shape[0] != self.dimension:
+            raise ValueError(
+                f"Input vector must have {self.dimension} elements")
+
+        z = self.Q @ self.diag_matrix @ self.R @ (input_vector - self.x_opt)
+        result = self.T_osz(self.raw(z)) + self.f_opt
+
+        return result
+\end{lstlisting}
 \subsection{Dokumentasi}
-Sphinx, yang merupakan salah satu alat dokumentasi standar dalam ekosistem Python. Dokumentasi ditulis dengan mengikuti format docstring yang terintegrasi langsung ke dalam kode sumber, khususnya di dalam setiap kelas dan fungsi yang merepresentasikan fungsi-fungsi \textit{benchmark}. Penjelasan mengenai masing-masing fungsi \textit{benchmark} dituliskan langsung pada kelas yang bersangkutan, bersamaan dengan penjabaran fungsionalitas serta parameter yang digunakan. Pendekatan ini tidak hanya mendukung keterbacaan kode, tetapi juga memungkinkan proses dokumentasi dilakukan secara otomatis.
+Sphinx digunakan sebagai alat dokumentasi standar dalam pengembangan \textit{library} Python CECO. Sistem dokumentasi ini menerapkan pendekatan terintegrasi dimana docstring ditulis langsung dalam \textit{source code}, khususnya pada setiap kelas dan fungsi yang merepresentasikan fungsi \textit{benchmark}. Setiap fungsi \textit{benchmark} memiliki penjelasan komprehensif yang mencakup deskripsi fungsionalitas, parameter yang digunakan, serta detail implementasi yang ditulis dalam kelas yang bersangkutan.
 
-Sphinx kemudian digunakan untuk secara otomatis menghasilkan dokumentasi dalam berbagai format (seperti HTML atau PDF) berdasarkan docstring yang tersedia. Hal ini memastikan bahwa dokumentasi selalu mutakhir dan selaras dengan implementasi kode.
+Contoh implementasi docstring dapat dilihat pada kelas Ackley yang ditunjukkan dalam \cref{lst:docstring}. Docstring pada kelas ini memberikan deskripsi lengkap tentang fungsi Ackley sebagai benchmark optimisasi, termasuk formula matematisnya yang kompleks dan multimodal. Dokumentasi juga menjelaskan bahwa kelas ini mewarisi dari kelas Benchmark dan menerapkan transformasi rotasi dan shift pada vektor input sebelum evaluasi fungsi. Setiap atribut seperti dimensi, \textit{rotation}, \textit{shift}, dan $f_\text{bias}$ dijelaskan dengan detail tipe data dan fungsinya.
 
-Sementara itu, bagian dokumentasi lainnya yang tidak terkait langsung dengan fungsi \textit{benchmark}—seperti panduan instalasi, struktur direktori, dan contoh penggunaan \textit{library} CECO—disusun dalam format reStructuredText (.rst), yang merupakan format standar yang didukung oleh Sphinx. Dengan memisahkan dokumentasi teknis internal (berbasis docstring) dan dokumentasi umum (berbasis .rst), \textit{library} CECO mampu menyediakan dokumentasi yang lengkap, terstruktur, dan mudah diakses baik oleh pengguna pemula maupun pengembang lanjutan. Dokumentasi ini diharapkan dapat meningkatkan kemudahan adopsi serta mempercepat proses integrasi \textit{library} dalam berbagai proyek atau penelitian yang melibatkan algoritma optimasi.
+Metode konstruktor juga didokumentasikan dengan jelas, menjelaskan parameter yang diterima dan validasi yang dilakukan untuk memastikan konsistensi antara matriks rotasi dan vektor \textit{shift}. Sphinx kemudian menggunakan docstring ini untuk secara otomatis menghasilkan dokumentasi dalam berbagai format seperti HTML atau PDF, memastikan dokumentasi selalu terkini dan selaras dengan implementasi kode.
+\begin{lstlisting}[language=Python, caption=Dokumentasi menggunakan docstring pada fungsi Ackley, label=lst:docstring]
+class Ackley(Benchmark):
+    """
+    A class representing the Ackley function, which is a benchmark function for optimization.
 
-\lstinputlisting[caption= kode salah satu fungsi dari COCO yaitu fungsi Attractive Sector, label=lst:dokumentasi]{kode/quick_start.rst}
+    The Ackley function is commonly used to test optimization algorithms due to its complex and multi-modal nature. The function is defined as:
+
+    F(X) = -20 * exp(-0.2 * sqrt((1/D) * sum_{i=1}^D x_i^2)) - exp((1/D) * sum_{i=1}^D cos(2 * pi * x_i)) + 20 + e,
+
+    where D is the dimensionality of the problem, and e is Euler's number (~2.71828).
+
+    The class inherits from the `Benchmark` class and applies rotation and shift transformations to the input vector before evaluating the function.
+
+    Attributes:
+        dimension (int): The number of dimensions for the input space. Must be a positive integer.
+        rotation (np.ndarray): A rotation matrix for transforming the input vector.
+        shift (np.ndarray): A shift vector for adjusting the input vector.
+        f_bias (float): A bias term added to the benchmark function's output. Defaults to 0.
+    """
+
+    def __init__(self, dimension: int, rotation: np.ndarray, shift: np.ndarray, f_bias: float = 0) -> None:
+        """
+        Initializes the Ackley class with a rotation matrix and a shift vector.
+
+        Ensures that the rotation matrix and shift vector have the same length. If their lengths do not match, a ValueError is raised.
+
+        Parameters:
+            dimension (int): The number of dimensions for the input space. Must be a positive integer.
+            rotation (np.ndarray): The rotation matrix for transforming the input vector.
+            shift (np.ndarray): The shift vector for adjusting the input vector.
+            f_bias (float): A bias term added to the benchmark function's output. Defaults to 0.
+        """
+        super().__init__(dimension)
+        self.cec_init(rotation, shift, f_bias)
+\end{lstlisting}
+
+Untuk dokumentasi yang tidak terkait langsung dengan fungsi benchmark seperti panduan instalasi, struktur direktori, dan contoh penggunaan \textit{library} CECO menggunakan format reStructuredText (.rst). Contoh \cref{lst:rst} menunjukkan bagaimana modul-modul dalam \textit{package} ceco.cec didokumentasikan menggunakan direktif \textit{automodule} yang secara otomatis mengekstrak \textit{members}, \textit{members} yang tidak memiliki dokumentasi docstring atau doc-comment, dan hierarki pewarisan dari setiap modul.
+\begin{lstlisting}[caption=Dokumentasi dengan \textit{reStructuredText}, label=lst:rst]
+ceco.cec package
+================
+
+Conference of Evolutional Computation (CEC) benchmark functions.
+----------------------------------------------------------------
+
+ceco.cec.ackley module
+----------------------
+.. automodule:: ceco.cec.ackley
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+ceco.cec.bent_cigar module
+--------------------------
+.. automodule:: ceco.cec.bent_cigar
+   :members:
+   :undoc-members:
+   :show-inheritance:
+\end{lstlisting}
+Pemisahan antara dokumentasi teknis internal berbasis docstring dan dokumentasi umum berbasis\ .rst menciptakan sistem dokumentasi yang komprehensif dan terstruktur. Pendekatan ini memungkinkan \textit{library} CECO menyediakan informasi yang mudah diakses baik untuk pengguna pemula maupun pengembang berpengalaman, sehingga meningkatkan kemudahan adopsi dan mempercepat integrasi dalam berbagai proyek penelitian optimisasi.
 
 \section{\textit{Benchmarking}}
 Dalam proses benchmarking, digunakan sebanyak 22 fungsi yang mencakup berbagai karakteristik, termasuk fungsi unimodal dan multimodal. Fungsi-fungsi ini memiliki berbagai tingkat kompleksitas dengan dimensi yang bervariasi, mulai dari 1, 2, 5, 10, 20, 25, 50, 100, 200, hingga 500. Keberagaman dimensi ini memungkinkan evaluasi algoritma dalam berbagai skenario optimasi, baik yang sederhana maupun kompleks.
@@ -1906,18 +2243,115 @@ function                                & dimension & best       & worst      & 
 
 \section{Pengujian}
 \subsection{\textit{Unit test}}
-Tahap awal pengujian dilaksanakan melalui implementasi \textit{unit test} yang komprehensif untuk memverifikasi kinerja fungsi \textit{benchmark}. Pengujian ini dirancang untuk mengevaluasi apakah fungsi-fungsi tersebut mampu menghasilkan nilai \textit{output} yang sesuai dengan ekspektasi ketika dihadapkan pada beragam parameter. Evaluasi mencakup variasi dimensi yang berbeda untuk menguji skalabilitas fungsi, beragam nilai input untuk memastikan konsistensi kalkulasi, berbagai nilai rotasi untuk mengukur invariansi rotasional, nilai-nilai shift untuk menguji pergeseran ruang pencarian, serta nilai bias yang bervariasi untuk mengonfirmasi pengaruhnya terhadap hasil akhir. Proses pengujian \textit{unit test} ini menjadi fundamental dalam memastikan keandalan dan akurasi fungsi \textit{benchmark} sebelum digunakan dalam skenario optimasi yang lebih kompleks, karena memungkinkan identifikasi dini terhadap potensi kesalahan perhitungan atau inkonsistensi perilaku pada kondisi input yang berbeda-beda. Dengan demikian, integritas fungsi-fungsi \textit{benchmark} dapat dijamin sebagai fondasi yang kokoh untuk analisis performa algoritma optimasi selanjutnya.
+Tahap awal pengujian dilakukan melalui implementasi \textit{unit test} untuk memverifikasi kinerja fungsi \textit{benchmark}. Pengujian ini mengevaluasi kemampuan fungsi menghasilkan \textit{output} sesuai ekspektasi dengan berbagai parameter, termasuk variasi dimensi untuk menguji skalabilitas, beragam nilai input untuk konsistensi kalkulasi, nilai rotasi dan \textit{shift} untuk mengukur invariansi transformasi, serta nilai bias yang bervariasi. Unit test ini fundamental untuk memastikan keandalan dan akurasi fungsi \textit{benchmark} sebelum digunakan dalam optimasi kompleks, memungkinkan identifikasi dini kesalahan perhitungan atau inkonsistensi perilaku. Dengan demikian, integritas fungsi \textit{benchmark} terjamin sebagai fondasi yang kokoh untuk analisis performa algoritma optimasi.
 
-\lstinputlisting[language=Python, caption=kode unit test untuk fungsi CEC Sphere, label=lst:unit_test_sphere]{kode/test_sphere.py}
+\textit{Method setup} berfungsi untuk menginisialisasi properti yang akan digunakan pada \textit{test case}. Properti yang diinisialisasi yaitu seperti dimensi untuk fungsi CEC dan COCO, rotasi, \textit{shift}, \textit{bias} untuk fungsi CEC seperti pada \cref{lst:setup_test_case_cec}, dan \textit{seed} untuk fungsi COCO pada \cref{lst:setup_test_case_coco}
+\begin{lstlisting}[language=Python, caption=\textit{setup unit test} fungsi CEC, label=lst:setup_test_case_cec]
+    def setUp(self):
+        # Example rotation matrix and shift vector for testing
+        # Identity matrix (no rotation)
+        self.rotation_identity = np.eye(2)
+        self.rotation_non_identity = np.array([[0, -1], [1, 0]])
+        self.shift = np.array([1, 1])
+        self.no_shift = np.zeros(2)
+        self.f_bias = 1.0
+        self.dimension = 2
+\end{lstlisting}
+\begin{lstlisting}[language=Python, caption=\textit{setup unit test} fungsi COCO, label=lst:setup_test_case_coco]
+    def setUp(self):
+        np.random.seed(42)
+\end{lstlisting}
+\textit{Test case} yang dirancang mencakup berbagai skenario untuk menguji fungsi benchmark dalam kondisi yang beragam. Setiap \textit{test case} mengevaluasi aspek spesifik dari fungsi untuk memastikan perilaku yang konsisten dan akurat.
+
+Pengujian tanpa transformasi ditunjukkan pada \textit{test case} pertama (\cref{lst:no_shift_no_rotation}) yang menggunakan matriks rotasi identitas dan tanpa \textit{shift}. Pada \cref{lst:no_shift_no_rotation} menguji fungsi Sphere dengan \textit{input} $[3.0, 2.0]$ dan memverifikasi bahwa hasil evaluasi sesuai dengan perhitungan manual yaitu 13.0. \textit{Test case} ini memastikan fungsi bekerja dengan benar dalam kondisi paling sederhana tanpa transformasi apapun.
+\begin{lstlisting}[language=Python, caption=\textit{Test case} tanpa rotasi dan \textit{shift}, label=lst:no_shift_no_rotation]
+    def test_evaluate_with_identity_rotation_and_no_shift(self):
+        sphere = Sphere(self.dimension, self.rotation_identity, self.no_shift)
+        input_vector = np.array([3.0, 2.0])
+        result = sphere.evaluate(input_vector)
+        expected_result = 13.0
+        self.assertAlmostEqual(result, expected_result, places=5)
+\end{lstlisting}
+Pengujian dengan transformasi lengkap didemonstrasikan pada \textit{test case} kedua (\cref{lst:shift_rotation}) yang menerapkan rotasi non-identitas dan \textit{shift}. Menggunakan \textit{input} yang sama $[3.0, 2.0]$, \textit{test case} ini memverifikasi bahwa transformasi rotasi dan \textit{shift} berfungsi dengan benar dengan hasil yang diharapkan 5.0. Ini menguji kemampuan fungsi dalam menangani transformasi ruang pencarian yang kompleks.
+\begin{lstlisting}[language=Python, caption=\textit{Test case} dengan rotasi dan \textit{shift}, label=lst:shift_rotation]
+    def test_evaluate_with_non_identity_rotation_and_shift(self):
+        sphere = Sphere(self.dimension, self.rotation_non_identity, self.shift)
+        input_vector = np.array([3.0, 2.0])
+        result = sphere.evaluate(input_vector)
+        expected_result = 5.0
+        self.assertAlmostEqual(result, expected_result, places=5)
+\end{lstlisting}
+\textit{Test case} untuk bias mengevaluasi pengaruh parameter $f_{\text{bias}}$ terhadap hasil akhir fungsi. Dengan menggunakan \textit{input} vector nol dan menambahkan nilai bias, \textit{test case} ini memastikan bahwa bias diterapkan dengan benar sebagai konstanta additif pada hasil evaluasi fungsi.
+\begin{lstlisting}[language=Python, caption=\textit{Test case} dengan \textit{bias}, label=lst:bias]
+    def test_evaluate_with_f_bias(self):
+        sphere = Sphere(self.dimension, self.rotation_identity,
+                        self.no_shift, self.f_bias)
+        input_vector = np.zeros(2)
+        result = sphere.evaluate(input_vector)
+        expected_result = 0.0 + self.f_bias
+        self.assertAlmostEqual(result, expected_result, places=5)
+\end{lstlisting}
+Pengujian dengan input khusus mencakup dua skenario: input bernilai nol (\cref{lst:nol}) dan input bernilai negatif (\cref{lst:shift_negative}). \textit{Test case} untuk input nol menggunakan fungsi Attractive sector yang lebih kompleks dengan transformasi multi-tahap meliputi matriks $Q$, diagonal matrix ($\Lambda^{\alpha}$), dan matriks $R$, diikuti dengan transformasi $T_{\text{osz}}$ dan penambahan $f_{\text{bias}}$. Test case untuk input negatif menggunakan skenario serupa dengan \textit{input} $[-3, -2]$ untuk memastikan fungsi dapat menangani nilai negatif dengan benar. Kedua \textit{test case} ini menghitung hasil yang diharapkan secara manual dan membandingkannya dengan output fungsi untuk memverifikasi akurasi implementasi.
+\begin{lstlisting}[language=Python, caption=\textit{Test case} dengan input bernilai nol, label=lst:nol]
+    def test_evaluate_at_zero_vector(self):
+        """
+        Test the evaluate method at the zero vector.
+        """
+        dimension = 2
+        test_func = Attractive_sector(dimension)
+        benchmark = Benchmark(dimension)
+
+        # Zero vector
+        input_vector = np.zeros(dimension)
+        result = test_func.evaluate(input_vector)
+
+        # Manually compute the expected result
+        z = test_func.Q @ test_func.diag_matrix @ test_func.R @ (
+            input_vector - test_func.x_opt)
+        s = np.where((z * test_func.x_opt), 10 ** 2, 1)
+
+        expected_result = np.sum((s * z) ** 2)
+        expected_result = benchmark.T_osz(
+            expected_result ** 0.9) + test_func.f_opt
+
+        self.assertAlmostEqual(result, expected_result, places=6)
+\end{lstlisting}
+\begin{lstlisting}[language=Python, caption=\textit{Test case} dengan input bernilai negatif, label=lst:negative]
+    def test_evaluate_with_negative_values(self):
+        dimension = 2
+        test_func = Attractive_sector(dimension)
+        benchmark = Benchmark(dimension)
+
+        # Input vector with negative values
+        input_vector = np.array([-3, -2])
+        result = test_func.evaluate(input_vector)
+
+        # Manually compute the expected result
+        z = test_func.Q @ test_func.diag_matrix @ test_func.R @ (
+            input_vector - test_func.x_opt)
+        s = np.where((z * test_func.x_opt), 10 ** 2, 1)
+
+        expected_result = np.sum((s * z) ** 2)
+        expected_result = benchmark.T_osz(
+            expected_result ** 0.9) + test_func.f_opt
+
+        self.assertAlmostEqual(result, expected_result, places=6)
+\end{lstlisting}
 
 \subsection{\textit{Compability test}}
-Setelah pengujian unit test, tahap evaluasi selanjutnya difokuskan pada pengujian kompatibilitas \textit{library} CECO untuk mengkaji tingkat kesesuaiannya dengan berbagai versi Python dan NumPy. Pengujian kompatibilitas ini diimplementasikan dengan memanfaatkan teknologi Docker sebagai platform utama. Pemilihan Docker sebagai infrastruktur pengujian didasarkan pada keunggulan sistem kontenerisasinya yang mampu menciptakan lingkungan terisolasi untuk setiap skenario pengujian. Pendekatan ini menawarkan beberapa keuntungan signifikan: pertama, kontenerisasi Docker memastikan bahwa proses pengujian tidak akan mempengaruhi atau merusak konfigurasi \textit{environment} pada perangkat utama yang digunakan untuk pengembangan. Kedua, arsitektur Docker memungkinkan pergantian versi Python dan NumPy secara cepat dan efisien tanpa perlu instalasi atau uninstalasi berulang pada sistem utama, yang secara substansial mempercepat siklus pengujian.
+Setelah seluruh fungsi diuji secara individual melalui \textit{unit test}, tahap berikutnya adalah pengujian kompatibilitas \textit{library} CECO terhadap berbagai versi Python dan NumPy. Tujuannya adalah memastikan bahwa \textit{library} dapat berjalan stabil dan konsisten di berbagai konfigurasi sistem yang umum digunakan oleh pengguna.
 
-Lebih lanjut, penggunaan Docker dalam proses pengujian kompatibilitas ini memungkinkan simulasi berbagai lingkungan operasional yang mungkin dihadapi oleh pengguna \textit{library} CECO. Dengan membuat \textit{container} yang dikonfigurasi dengan kombinasi spesifik versi Python dan NumPy, sehingga dapat mengidentifikasi potensi masalah kompatibilitas, dependensi yang tidak terpenuhi, atau perilaku yang tidak konsisten pada lingkungan yang berbeda. Pendekatan metodis ini memastikan bahwa \textit{library} CECO dapat berfungsi dengan handal di berbagai konfigurasi sistem, meningkatkan portabilitas dan aksesibilitasnya bagi komunitas peneliti dan praktisi algoritma optimasi yang lebih luas. Hasil dari serangkaian pengujian kompatibilitas ini menunjukkan bahwa versi minimum Python yang didukung oleh \textit{library} CECO adalah 3.6, dan versi minimum NumPy yang kompatibel adalah 1.19.0. Hasil ini kemudian didokumentasikan sebagai panduan teknis yang menyertai rilis \textit{library}, menyediakan informasi yang jelas tentang rentang versi Python dan NumPy yang didukung.
+Untuk mendukung proses ini, digunakan Docker sebagai \textit{platform} utama pengujian. Docker memungkinkan pembuatan lingkungan terisolasi (\textit{container}) yang dapat dikonfigurasi dengan versi Python dan NumPy tertentu tanpa mengganggu sistem utama. Pendekatan ini tidak hanya mengurangi risiko konflik dependensi, tetapi juga mempercepat proses pengujian karena versi lingkungan dapat diatur secara fleksibel dan otomatis.
 
+Pada \cref{lst:dockerfile} baris ke 1-2 menentukan \textit{base image} yang digunakan. Dengan menggunakan argumen BASE\_IMAGE, pengujian bisa dilakukan pada berbagai versi python, seperti python:3.6, python:3.8, python:3.10, dan versi lainnya. Pada \cref{lst:dockerfile} baris ke 4 merupakan perintah yang memastikan bahwa \textit{tools} penting untuk kompilasi dan instalasi tersedia di dalam kontainer. Pada \cref{lst:dockerfile} baris ke 6-8 akan menyalin seluruh isi direktori proyek ke dalam direktori kerja kontainer, yakni /app. Pada \cref{lst:dockerfile} baris ke 10-11 akan menggunakan argumen NUMPY\_VERSION untuk menginstal versi numpy tertentu, misalnya numpy==1.19.0 atau numpy==2.2, sesuai dengan konfigurasi pengujian. Pada \cref{lst:dockerfile} baris ke 13 akan menginstal \textit{library} CECO dalam mode \textit{editable}, sehingga perubahan lokal pada kode dapat langsung diuji. Pada \cref{lst:dockerfile} baris ke 15 akan mengeksekusi skrip pengujian \textit{unit test} setelah \textit{environment} siap.
 \lstinputlisting[caption=kode docker file, label=lst:dockerfile]{kode/dockerfile}
 
+Untuk mem\textit{build} dan menjalankan dockerfile tersebut digunakan perintah pada \textit{terminal} dengan \cref{lst:docker_build}. Pada \cref{lst:docker_build} baris pertama membuat \textit{image} baru bernama ceco-test:py39-np22 dengan python 3.9 dan numpy versi 2.2. Pada \cref{lst:docker_build} baris kedua menjalankan container berdasarkan \textit{image} yang telah dibuat, secara otomatis menjalankan pengujian pada lingkungan yang telah dikonfigurasi.
+
 \begin{lstlisting}[caption=Perintah untuk build dockerfile dan menjalankan container hasil build, label=lst:docker_build]
-NUMPY_VERSION="numpy==2.2" –t ceco-test:py39-np22 .
-docker run ceco-test:py313-np22
+docker build --build-arg BASE_IMAGE=python:3.9 --build-arg NUMPY_VERSION="numpy==2.2" -t ceco-test:py39-np22 .
+docker run ceco-test:py39-np22
 \end{lstlisting}
+
+
+Dengan menjalankan variasi \textit{build} semacam ini untuk berbagai kombinasi versi python dan numPy, pengembang dapat dengan cepat mengidentifikasi versi minimum yang didukung, serta memastikan tidak terjadi regresi pada versi-versi terbaru. Berdasarkan hasil pengujian ini, diketahui bahwa \textit{library} CECO kompatibel mulai dari Python 3.6 dan NumPy 1.19.0, informasi yang kemudian disertakan dalam dokumentasi resmi sebagai acuan pengguna.

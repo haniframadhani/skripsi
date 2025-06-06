@@ -104,11 +104,11 @@
 \usepackage{amssymb}
 
 % Pengaturan nomor pada persamaan matematika sesuai bab
-%\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
 \makeatletter
 \renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
 \renewcommand{\@eqnnum}{\theequation}
-\def\tagform@#1{\maketag@@@{#1}} % This line removes the parentheses
+% \def\tagform@#1{\maketag@@@{#1}} % This line removes the parentheses
 \makeatother
 
 % Untuk halaman berorientasi landscape

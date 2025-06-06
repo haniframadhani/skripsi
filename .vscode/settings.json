@@ -24,8 +24,9 @@
         "-sDEVICE=pdfwrite",
         "-dCompatibilityLevel=1.4",
         "-dPDFSETTINGS=/ebook",
+        "-dPreserveAnnots=true",
         "-dNOPAUSE",
-        "-dQUIET",
+        // "-dQUIET",
         "-dBATCH",
         "-sOutputFile=%DIR%/%DOCFILE%-compressed.pdf",
         "%DIR%/%DOCFILE%.pdf"
@@ -49,6 +50,10 @@
     {
       "name": "xelatex ➞ bibtex ➞ xelatex`×2 ➞ compress",
       "tools": ["xelatex", "bibtex", "xelatex", "xelatex", "ghostscript"]
+    },
+    {
+      "name": "compress",
+      "tools": ["ghostscript"]
     }
   ],
   "editor.formatOnSave": true,
