@@ -13,14 +13,14 @@
 \newcommand{\Jenis}{Laporan} %Pilih salah satu antara Proposal atau Laporan
 
 % === HANYA KOMPILE BAGIAN INI ===
-\includeonly{
-  b4-bab4
-}
-
+% \includeonly{
+%   b4-bab4
+% }
 \begin{document}
 
 	\include{untouch/xx-sampul-laporan}
 	\pagenumbering{roman}
+	\pagestyle{plain}
 	\include{untouch/xx-sampuldalam-laporan}
 
 	\include{untouch/xx-persetujuan-pembimbing}
@@ -39,6 +39,7 @@
 	\end{spacing}
 
 	\pagenumbering{arabic}
+	\pagestyle{normal}
 
 	\begin{spacing}{2}
 		\include{b1-bab1}
