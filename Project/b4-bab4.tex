@@ -1729,7 +1729,7 @@ Di sisi lain, algoritma \textit{Elephant Herding Optimization} (EHO) menggunakan
 Baik KMA maupun EHO melaksanakan proses pencarian solusi dengan batas maksimum sebanyak 100 iterasi. Dengan demikian, evaluasi performa kedua algoritma dilakukan secara adil dalam jumlah perulangan yang sama, sehingga hasil yang diperoleh dapat dibandingkan secara setara. Selain itu, untuk memastikan konsistensi dan reliabilitas hasil, setiap algoritma dijalankan sebanyak 30 kali pengujian terpisah. Pendekatan ini bertujuan untuk mengurangi pengaruh faktor kebetulan atau kondisi awal yang bersifat acak, serta memperoleh gambaran performa algoritma yang lebih akurat dan representatif. Detail lengkap mengenai konfigurasi parameter yang digunakan pada masing-masing algoritma dapat ditemukan dalam \cref{tab:pengaturan-parameter}
 
 % Please add the following required packages to your document preamble:
-% \usepackage{multirow}
+% \usepackage{multirow[t]}
 \begin{table}[h!]
 \centering
 \caption{pengaturan parameter}
@@ -1737,14 +1737,14 @@ Baik KMA maupun EHO melaksanakan proses pencarian solusi dengan batas maksimum s
 \begin{tabular}{|l|l|l|}
 \hline
 algoritma            & parameter                 & nilai \\ \hline
-\multirow{7}{*}{KMA} & populasi awal             & 5     \\ \cline{2-3} 
+\multirow[t]{7}{*}{KMA} & populasi awal             & 5     \\ \cline{2-3} 
                      & populasi minimal          & 5     \\ \cline{2-3} 
                      & populasi maksimal         & 200   \\ \cline{2-3} 
                      & tingkat mlipir            & 0.5   \\ \cline{2-3} 
                      & porsi komodo jantan besar & 0.5   \\ \cline{2-3} 
                      & perubahan populasi        & 5     \\ \cline{2-3} 
                      & maksimum iterasi          & 100   \\ \hline
-\multirow{5}{*}{EHO} & populasi                  & 50    \\ \cline{2-3} 
+\multirow[t]{5}{*}{EHO} & populasi                  & 50    \\ \cline{2-3} 
                      & jumlah suku               & 5     \\ \cline{2-3} 
                      & alpha                     & 0.5   \\ \cline{2-3} 
                      & beta                      & 0.1   \\ \cline{2-3} 
@@ -1763,7 +1763,7 @@ Pada pengujian ini juga ditemukan hasil invalid yang diakibatkan oleh \textit{ov
 
 Dengan demikian, dapat disimpulkan bahwa KMA lebih unggul dalam mencapai solusi optimal, sedangkan EHO memiliki kelebihan dalam hal kestabilan dan konsistensi performa di berbagai kondisi pengujian. Temuan ini menunjukkan bahwa meskipun KMA lebih sering mencapai hasil terbaik, EHO cenderung menghasilkan nilai yang lebih konsisten dan stabil, meskipun tidak selalu mencapai performa optimal.
 
-\begin{longtable}[c]{|m{3.5cm}|l|l|l|l|l|}
+\begin{longtable}[c]{|p{3.5cm}|l|l|l|l|l|}
 \caption{hasil \textit{benchmark} EHO}
 \label{tab:eho-result}\\
 \hline
@@ -1772,7 +1772,7 @@ function                                & dimension & best       & worst      & 
 %
 \endhead
 %
-\multirow{10}{*}{ackley}                & 1         & 1,92E-13   & 4,57E-08   & 1,69E-09   & 8,19E-09  \\ \cline{2-6} 
+\multirow[t]{10}{*}{ackley}                & 1         & 1,92E-13   & 4,57E-08   & 1,69E-09   & 8,19E-09  \\ \cline{2-6} 
                                         & 2         & 6,48E-09   & 8,12E-03   & 8,83E-04   & 1,91E-03  \\ \cline{2-6} 
                                         & 5         & 2,61E-03   & 1,09E-01   & 1,95E-02   & 2,07E-02  \\ \cline{2-6} 
                                         & 10        & 4,70E-03   & 1,18E-01   & 3,46E-02   & 2,56E-02  \\ \cline{2-6} 
@@ -1782,7 +1782,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 8,41E-03   & 1,98E-01   & 5,11E-02   & 4,34E-02  \\ \cline{2-6} 
                                         & 200       & 6,86E-03   & 1,23E-01   & 5,39E-02   & 3,17E-02  \\ \cline{2-6} 
                                         & 500       & 7,14E-03   & 1,39E-01   & 5,61E-02   & 3,03E-02  \\ \hline
-\multirow{10}{*}{bent cigar}            & 1         & 2,61E-27   & 2,59E-18   & 8,92E-20   & 4,65E-19  \\ \cline{2-6} 
+\multirow[t]{10}{*}{bent cigar}            & 1         & 2,61E-27   & 2,59E-18   & 8,92E-20   & 4,65E-19  \\ \cline{2-6} 
                                         & 2         & 9,96E-05   & 9,80E-01   & 1,41E-01   & 2,59E-01  \\ \cline{2-6} 
                                         & 5         & 2,04E-01   & 1,46E+02   & 2,06E+01   & 3,31E+01  \\ \cline{2-6} 
                                         & 10        & 8,20E+00   & 2,18E+03   & 3,43E+02   & 5,50E+02  \\ \cline{2-6} 
@@ -1792,7 +1792,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 2,27E+02   & 4,33E+04   & 9,69E+03   & 8,61E+03  \\ \cline{2-6} 
                                         & 200       & 1,04E+03   & 1,83E+05   & 4,62E+04   & 4,59E+04  \\ \cline{2-6} 
                                         & 500       & 2,74E+03   & 3,00E+05   & 9,45E+04   & 7,46E+04  \\ \hline
-\multirow{10}{*}{different power}       & 1         & 0.00E+00   & 1,87E-07   & 1,03E-08   & 3,92E-08  \\ \cline{2-6} 
+\multirow[t]{10}{*}{different power}       & 1         & 0.00E+00   & 1,87E-07   & 1,03E-08   & 3,92E-08  \\ \cline{2-6} 
                                         & 2         & 1,00E-10   & 5,89E-03   & 2,92E-04   & 1,05E-03  \\ \cline{2-6} 
                                         & 5         & 1,84E-06   & 1,27E-02   & 1,99E-03   & 2,61E-03  \\ \cline{2-6} 
                                         & 10        & 8,11E-05   & 2,38E-02   & 3,25E-03   & 4,49E-03  \\ \cline{2-6} 
@@ -1802,7 +1802,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 3,27E-03   & 6,03E-02   & 2,74E-02   & 1,68E-02  \\ \cline{2-6} 
                                         & 200       & 5,06E-03   & 9,12E-02   & 4,03E-02   & 2,32E-02  \\ \cline{2-6} 
                                         & 500       & 6,21E-03   & 1,86E-01   & 7,29E-02   & 5,18E-02  \\ \hline
-\multirow{10}{*}{discus}                & 1         & 0.00E+00   & 1,02E-09   & 0.00E+00   & 1,82E-10  \\ \cline{2-6} 
+\multirow[t]{10}{*}{discus}                & 1         & 0.00E+00   & 1,02E-09   & 0.00E+00   & 1,82E-10  \\ \cline{2-6} 
                                         & 2         & 1,05E-03   & 1,14E+00   & 1,98E-01   & 2,71E-01  \\ \cline{2-6} 
                                         & 5         & 2,97E-03   & 2,38E+00   & 3,68E-01   & 5,73E-01  \\ \cline{2-6} 
                                         & 10        & 2,42E-03   & 2,91E+00   & 5,56E-01   & 7,28E-01  \\ \cline{2-6} 
@@ -1812,7 +1812,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 3,57E-02   & 1,80E+00   & 6,83E-01   & 5,34E-01  \\ \cline{2-6} 
                                         & 200       & 4,05E-02   & 4,59E+00   & 6,60E-01   & 9,16E-01  \\ \cline{2-6} 
                                         & 500       & 1,19E-02   & 3,10E+00   & 8,40E-01   & 7,91E-01  \\ \hline
-\multirow{10}{*}{ellipsoid}             & 1         & 1,17E-27   & 1,37E-18   & 6,03E-20   & 2,53E-19  \\ \cline{2-6} 
+\multirow[t]{10}{*}{ellipsoid}             & 1         & 1,17E-27   & 1,37E-18   & 6,03E-20   & 2,53E-19  \\ \cline{2-6} 
                                         & 2         & 0.00E+00   & 1,05E-06   & 8,22E-08   & 2,56E-07  \\ \cline{2-6} 
                                         & 5         & 1,93E-07   & 1,85E-03   & 1,68E-04   & 3,31E-04  \\ \cline{2-6} 
                                         & 10        & 3,90E-05   & 3,34E-02   & 2,82E-03   & 6,14E-03  \\ \cline{2-6} 
@@ -1822,7 +1822,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 4,45E-02   & 2,63E+00   & 8,39E-01   & 6,82E-01  \\ \cline{2-6} 
                                         & 200       & 4,15E-01   & 9,33E+00   & 3,36E+00   & 2,38E+00  \\ \cline{2-6} 
                                         & 500       & 7,06E-01   & 1,12E+02   & 3,19E+01   & 2,52E+01  \\ \hline
-\multirow{10}{*}{elliptic}              & 1         & 6,46E-14   & 1,05E-02   & 3,68E-04   & 1,89E-03  \\ \cline{2-6} 
+\multirow[t]{10}{*}{elliptic}              & 1         & 6,46E-14   & 1,05E-02   & 3,68E-04   & 1,89E-03  \\ \cline{2-6} 
                                         & 2         & 2,53E-04   & 9,73E-01   & 1,22E-01   & 2,45E-01  \\ \cline{2-6} 
                                         & 5         & 3,20E-03   & 8,47E+00   & 1,13E+00   & 1,80E+00  \\ \cline{2-6} 
                                         & 10        & 2,21E-02   & 2,19E+02   & 1,03E+01   & 3,89E+01  \\ \cline{2-6} 
@@ -1832,7 +1832,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 6,34E+00   & 3,79E+03   & 6,71E+02   & 8,68E+02  \\ \cline{2-6} 
                                         & 200       & 2,19E+01   & 5,92E+03   & 1,66E+03   & 1,74E+03  \\ \cline{2-6} 
                                         & 500       & 2,46E+02   & 1,96E+04   & 6,67E+03   & 5,61E+03  \\ \hline
-\multirow{10}{*}{expanded schaffer f6}  & 1         & 0.00E+00   & 1,11E-16   & 3,70E-18   & 1,99E-17  \\ \cline{2-6} 
+\multirow[t]{10}{*}{expanded schaffer f6}  & 1         & 0.00E+00   & 1,11E-16   & 3,70E-18   & 1,99E-17  \\ \cline{2-6} 
                                         & 2         & 0.00E+00   & 1,94E-02   & 1,49E-02   & 8,22E-03  \\ \cline{2-6} 
                                         & 5         & 2,25E-05   & 1,38E+00   & 4,79E-01   & 3,12E-01  \\ \cline{2-6} 
                                         & 10        & 2,53E-05   & 3,72E+00   & 1,96E+00   & 1,02E+00  \\ \cline{2-6} 
@@ -1842,7 +1842,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 1,97E-03   & 4,50E+01   & 3,23E+01   & 1,79E+01  \\ \cline{2-6} 
                                         & 200       & 8,06E+01   & 9,47E+01   & 8,91E+01   & 3,42E+00  \\ \cline{2-6} 
                                         & 500       & 1,74E+00   & 2,41E+02   & 2,25E+02   & 4,18E+01  \\ \hline
-\multirow{10}{*}{griewank}              & 1         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
+\multirow[t]{10}{*}{griewank}              & 1         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
                                         & 2         & 0.00E+00   & 4,86E-02   & 8,69E-03   & 1,29E-02  \\ \cline{2-6} 
                                         & 5         & 3,73E-07   & 1,97E-01   & 6,61E-03   & 3,54E-02  \\ \cline{2-6} 
                                         & 10        & 1,97E-07   & 1,21E-03   & 1,17E-04   & 2,87E-04  \\ \cline{2-6} 
@@ -1852,7 +1852,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 5,52E-06   & 3,69E-03   & 4,51E-04   & 6,62E-04  \\ \cline{2-6} 
                                         & 200       & 2,35E-06   & 1,21E-03   & 2,73E-04   & 2,99E-04  \\ \cline{2-6} 
                                         & 500       & 1,02E-05   & 1,40E-03   & 6,23E-04   & 4,87E-04  \\ \hline
-\multirow{10}{*}{happycat}              & 1         & 1,01E-03   & 1,30E-02   & 3,18E-03   & 2,99E-03  \\ \cline{2-6} 
+\multirow[t]{10}{*}{happycat}              & 1         & 1,01E-03   & 1,30E-02   & 3,18E-03   & 2,99E-03  \\ \cline{2-6} 
                                         & 2         & 2,67E-03   & 2,68E-01   & 6,41E-02   & 6,44E-02  \\ \cline{2-6} 
                                         & 5         & 1,55E-01   & 1,25E+00   & 5,83E-01   & 2,61E-01  \\ \cline{2-6} 
                                         & 10        & 3,63E-01   & 1,42E+00   & 8,01E-01   & 2,64E-01  \\ \cline{2-6} 
@@ -1862,7 +1862,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 9,44E-01   & 1,40E+00   & 1,13E+00   & 1,11E-01  \\ \cline{2-6} 
                                         & 200       & 9,34E-01   & 1,67E+00   & 1,14E+00   & 1,65E-01  \\ \cline{2-6} 
                                         & 500       & 9,90E-01   & 1,77E+00   & 1,23E+00   & 1,97E-01  \\ \hline
-\multirow{10}{*}{hgbat}                 & 1         & 4,92E-06   & 7,97E-02   & 6,74E-03   & 1,76E-02  \\ \cline{2-6} 
+\multirow[t]{10}{*}{hgbat}                 & 1         & 4,92E-06   & 7,97E-02   & 6,74E-03   & 1,76E-02  \\ \cline{2-6} 
                                         & 2         & 7,11E-04   & 4,90E-01   & 1,23E-01   & 9,86E-02  \\ \cline{2-6} 
                                         & 5         & 2,47E-01   & 5,56E-01   & 4,46E-01   & 7,48E-02  \\ \cline{2-6} 
                                         & 10        & 4,01E-01   & 7,48E-01   & 5,27E-01   & 7,62E-02  \\ \cline{2-6} 
@@ -1872,7 +1872,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 5,06E-01   & 1,03E+00   & 5,69E-01   & 9,93E-02  \\ \cline{2-6} 
                                         & 200       & 5,03E-01   & 6,30E-01   & 5,40E-01   & 2,71E-02  \\ \cline{2-6} 
                                         & 500       & 5,16E-01   & 1,30E+00   & 5,81E-01   & 1,39E-01  \\ \hline
-\multirow{10}{*}{katsuura}              & 1         & 2,96E-09   & 3,50E-01   & 2,52E-02   & 7,37E-02  \\ \cline{2-6} 
+\multirow[t]{10}{*}{katsuura}              & 1         & 2,96E-09   & 3,50E-01   & 2,52E-02   & 7,37E-02  \\ \cline{2-6} 
                                         & 2         & 4,93E-05   & 1,42E+00   & 2,92E-01   & 3,65E-01  \\ \cline{2-6} 
                                         & 5         & 2,51E-01   & 1,39E+00   & 7,17E-01   & 2,77E-01  \\ \cline{2-6} 
                                         & 10        & 6,77E-01   & 2,97E+00   & 1,49E+00   & 5,42E-01  \\ \cline{2-6} 
@@ -1882,7 +1882,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 3,85E+00   & 6,28E+00   & 4,82E+00   & 6,27E-01  \\ \cline{2-6} 
                                         & 200       & 3,14E+00   & 4,39E+00   & 3,77E+00   & 3,33E-01  \\ \cline{2-6} 
                                         & 500       & 1,45E+00   & 1,77E+00   & 1,62E+00   & 7,80E-02  \\ \hline
-\multirow{10}{*}{levy}                  & 1         & 3,06E-26   & 3,36E-20   & 2,10E-21   & 7,55E-21  \\ \cline{2-6} 
+\multirow[t]{10}{*}{levy}                  & 1         & 3,06E-26   & 3,36E-20   & 2,10E-21   & 7,55E-21  \\ \cline{2-6} 
                                         & 2         & 8,81E-20   & 2,21E-04   & 1,83E-05   & 5,16E-05  \\ \cline{2-6} 
                                         & 5         & 4,24E-04   & 5,41E-02   & 7,87E-03   & 1,05E-02  \\ \cline{2-6} 
                                         & 10        & 5,36E-03   & 1,49E-01   & 3,49E-02   & 3,87E-02  \\ \cline{2-6} 
@@ -1892,7 +1892,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 4,75E-02   & 5,38E-01   & 1,87E-01   & 1,33E-01  \\ \cline{2-6} 
                                         & 200       & 9,44E-02   & 2,59E+00   & 4,72E-01   & 5,19E-01  \\ \cline{2-6} 
                                         & 500       & 2,80E-01   & 3,83E+00   & 1,03E+00   & 8,28E-01  \\ \hline
-\multirow{10}{*}{rastrigin}             & 1         & 0.00E+00   & 2,76E-12   & 9,52E-14   & 4,96E-13  \\ \cline{2-6} 
+\multirow[t]{10}{*}{rastrigin}             & 1         & 0.00E+00   & 2,76E-12   & 9,52E-14   & 4,96E-13  \\ \cline{2-6} 
                                         & 2         & 2,53E-10   & 1,20E+00   & 4,35E-02   & 2,14E-01  \\ \cline{2-6} 
                                         & 5         & 5,94E-04   & 1,73E+00   & 1,15E-01   & 3,18E-01  \\ \cline{2-6} 
                                         & 10        & 1,40E-03   & 1,77E+00   & 2,71E-01   & 3,70E-01  \\ \cline{2-6} 
@@ -1902,7 +1902,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 1,17E-01   & 1,31E+01   & 3,91E+00   & 3,17E+00  \\ \cline{2-6} 
                                         & 200       & 4,27E-01   & 3,46E+01   & 8,91E+00   & 8,13E+00  \\ \cline{2-6} 
                                         & 500       & 5,32E-01   & 1,12E+02   & 2,47E+01   & 2,37E+01  \\ \hline
-\multirow{10}{*}{rosenbrock}            & 1         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
+\multirow[t]{10}{*}{rosenbrock}            & 1         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
                                         & 2         & 5,12E-08   & 2,72E+01   & 2,52E+00   & 6,71E+00  \\ \cline{2-6} 
                                         & 5         & 5,29E-02   & 3,11E+00   & 6,11E-01   & 7,42E-01  \\ \cline{2-6} 
                                         & 10        & 2,24E-01   & 2,79E+00   & 1,20E+00   & 6,41E-01  \\ \cline{2-6} 
@@ -1912,7 +1912,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 1,01E+00   & 3,66E+01   & 1,64E+01   & 7,07E+00  \\ \cline{2-6} 
                                         & 200       & 4,22E+00   & 5,75E+01   & 3,01E+01   & 1,13E+01  \\ \cline{2-6} 
                                         & 500       & 1,16E+01   & 2,03E+02   & 7,63E+01   & 4,23E+01  \\ \hline
-\multirow{10}{*}{schwefel1.2 problem}   & 1         & 1,19E-26   & 1,32E-18   & 4,41E-20   & 2,37E-19  \\ \cline{2-6} 
+\multirow[t]{10}{*}{schwefel1.2 problem}   & 1         & 1,19E-26   & 1,32E-18   & 4,41E-20   & 2,37E-19  \\ \cline{2-6} 
                                         & 2         & 1,11E-12   & 9,16E-06   & 7,44E-07   & 1,99E-06  \\ \cline{2-6} 
                                         & 5         & 2,44E-06   & 2,01E-03   & 3,18E-04   & 4,77E-04  \\ \cline{2-6} 
                                         & 10        & 1,28E-05   & 5,92E-03   & 9,69E-04   & 1,22E-03  \\ \cline{2-6} 
@@ -1922,7 +1922,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 4,96E-02   & 3,75E+00   & 9,42E-01   & 9,98E-01  \\ \cline{2-6} 
                                         & 200       & 2,56E-01   & 3,12E+01   & 6,07E+00   & 6,31E+00  \\ \cline{2-6} 
                                         & 500       & 1,72E+00   & 4,76E+02   & 9,37E+01   & 1,23E+02  \\ \hline
-\multirow{10}{*}{schwefel 2.13 problem} & 1         & 1,84E-21   & 1,05E-02   & 3,49E-04   & 1,88E-03  \\ \cline{2-6} 
+\multirow[t]{10}{*}{schwefel 2.13 problem} & 1         & 1,84E-21   & 1,05E-02   & 3,49E-04   & 1,88E-03  \\ \cline{2-6} 
                                         & 2         & 1,02E-11   & 8,00E+00   & 7,57E-01   & 1,87E+00  \\ \cline{2-6} 
                                         & 5         & 1,23E+02   & 6,26E+03   & 2,63E+03   & 1,59E+03  \\ \cline{2-6} 
                                         & 10        & 7,28E+03   & 1,03E+05   & 5,20E+04   & 2,47E+04  \\ \cline{2-6} 
@@ -1932,7 +1932,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 2,79E+07   & 4,20E+07   & 3,57E+07   & 3,57E+06  \\ \cline{2-6} 
                                         & 200       & 1,55E+08   & 1,97E+08   & 1,75E+08   & 9,74E+06  \\ \cline{2-6} 
                                         & 500       & 1,16E+09   & 1,40E+09   & 1,32E+09   & 4,82E+07  \\ \hline
-\multirow{10}{*}{shubert}               & 1         & -1,45E+01  & -1,45E+01  & -1,45E+01  & 4,79E-03  \\ \cline{2-6} 
+\multirow[t]{10}{*}{shubert}               & 1         & -1,45E+01  & -1,45E+01  & -1,45E+01  & 4,79E-03  \\ \cline{2-6} 
                                         & 2         & -2,10E+02  & -1,45E+02  & -2,04E+02  & 1,39E+01  \\ \cline{2-6} 
                                         & 5         & -3,12E+05  & -2,24E+04  & -1,00E+05  & 7,84E+04  \\ \cline{2-6} 
                                         & 10        & -1,30E+10  & -2,81E+07  & -8,91E+08  & 2,33E+09  \\ \cline{2-6} 
@@ -1942,7 +1942,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & -2,42E+66  & -6,29E+51  & -8,08E+64  & 4,35E+65  \\ \cline{2-6} 
                                         & 200       & -7,43E+116 & -4,80E+97  & -2,48E+115 & 1,33E+116 \\ \cline{2-6} 
                                         & 500       & -4,09E+265 & -4,54E+228 & -1,36E+264 & INF       \\ \hline
-\multirow{10}{*}{sphere}                & 1         & 3,21E-26   & 6,19E-16   & 2,37E-17   & 1,12E-16  \\ \cline{2-6} 
+\multirow[t]{10}{*}{sphere}                & 1         & 3,21E-26   & 6,19E-16   & 2,37E-17   & 1,12E-16  \\ \cline{2-6} 
                                         & 2         & 6,31E-19   & 1,69E-06   & 1,27E-07   & 3,82E-07  \\ \cline{2-6} 
                                         & 5         & 4,46E-07   & 1,41E-03   & 1,03E-04   & 2,60E-04  \\ \cline{2-6} 
                                         & 10        & 1,73E-06   & 3,76E-03   & 4,73E-04   & 7,73E-04  \\ \cline{2-6} 
@@ -1952,7 +1952,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 3,09E-03   & 5,82E-02   & 1,71E-02   & 1,37E-02  \\ \cline{2-6} 
                                         & 200       & 1,44E-03   & 1,05E-01   & 3,08E-02   & 2,63E-02  \\ \cline{2-6} 
                                         & 500       & 1,12E-03   & 3,72E-01   & 9,30E-02   & 8,75E-02  \\ \hline
-\multirow{10}{*}{step function}         & 1         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
+\multirow[t]{10}{*}{step function}         & 1         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
                                         & 2         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
                                         & 5         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
                                         & 10        & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
@@ -1962,7 +1962,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
                                         & 200       & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
                                         & 500       & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \hline
-\multirow{10}{*}{vincent}               & 1         & -1,00E+00  & -1,00E+00  & -1,00E+00  & 0.00E+00  \\ \cline{2-6} 
+\multirow[t]{10}{*}{vincent}               & 1         & -1,00E+00  & -1,00E+00  & -1,00E+00  & 0.00E+00  \\ \cline{2-6} 
                                         & 2         & -1,00E+00  & -9,96E-01  & -1,00E+00  & 1,02E-03  \\ \cline{2-6} 
                                         & 5         & -9,93E-01  & -8,41E-01  & -9,43E-01  & 4,32E-02  \\ \cline{2-6} 
                                         & 10        & -9,99E-01  & -6,41E-01  & -8,05E-01  & 1,02E-01  \\ \cline{2-6} 
@@ -1972,7 +1972,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & -9,99E-01  & -1,99E-01  & -4,07E-01  & 2,62E-01  \\ \cline{2-6} 
                                         & 200       & -9,98E-01  & -1,59E-01  & -3,25E-01  & 2,62E-01  \\ \cline{2-6} 
                                         & 500       & -9,99E-01  & -1,44E-01  & -6,57E-01  & 3,90E-01  \\ \hline
-\multirow{10}{*}{weierstrass}           & 1         & 2,56E-11   & 4,37E-02   & 1,68E-03   & 7,85E-03  \\ \cline{2-6} 
+\multirow[t]{10}{*}{weierstrass}           & 1         & 2,56E-11   & 4,37E-02   & 1,68E-03   & 7,85E-03  \\ \cline{2-6} 
                                         & 2         & 6,51E-05   & 6,70E-01   & 1,20E-01   & 1,70E-01  \\ \cline{2-6} 
                                         & 5         & 1,55E+00   & 4,19E+00   & 2,77E+00   & 6,53E-01  \\ \cline{2-6} 
                                         & 10        & 6,75E+00   & 1,22E+01   & 9,87E+00   & 1,29E+00  \\ \cline{2-6} 
@@ -1982,7 +1982,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 1,59E+02   & 1,72E+02   & 1,66E+02   & 4,41E+00  \\ \cline{2-6} 
                                         & 200       & 3,44E+02   & 3,61E+02   & 3,52E+02   & 4,31E+00  \\ \cline{2-6} 
                                         & 500       & 9,01E+02   & 9,42E+02   & 9,25E+02   & 9,11E+00  \\ \hline
-\multirow{10}{*}{zakharov}              & 1         & 8,72E-26   & 9,54E-15   & 3,23E-16   & 1,71E-15  \\ \cline{2-6} 
+\multirow[t]{10}{*}{zakharov}              & 1         & 8,72E-26   & 9,54E-15   & 3,23E-16   & 1,71E-15  \\ \cline{2-6} 
                                         & 2         & 4,43E-14   & 2,91E-06   & 2,58E-07   & 7,07E-07  \\ \cline{2-6} 
                                         & 5         & 5,89E-06   & 1,22E-03   & 1,70E-04   & 2,52E-04  \\ \cline{2-6} 
                                         & 10        & 1,90E-05   & 2,36E-03   & 6,76E-04   & 6,40E-04  \\ \cline{2-6} 
@@ -1995,7 +1995,7 @@ function                                & dimension & best       & worst      & 
 \end{longtable}
 
 % |p{3cm}|l|p{3cm}|p{3cm}|p{3cm}|p{3cm}|
-\begin{longtable}[c]{|m{3.5cm}|l|l|l|l|l|}
+\begin{longtable}[c]{|p{3.5cm}|l|l|l|l|l|}
 \caption{hasil \textit{benchmark} KMA}
 \label{tab:kma-result}\\
 \hline
@@ -2004,7 +2004,7 @@ function                                & dimension & best       & worst      & 
 %
 \endhead
 %
-\multirow{10}{*}{ackley}                & 1         & 4,44E-16   & 6,55E-04   & 7,76E-05   & 1,51E-04  \\ \cline{2-6} 
+\multirow[t]{10}{*}{ackley}                & 1         & 4,44E-16   & 6,55E-04   & 7,76E-05   & 1,51E-04  \\ \cline{2-6} 
                                         & 2         & 4,44E-16   & 5,61E-02   & 9,25E-03   & 1,52E-02  \\ \cline{2-6} 
                                         & 5         & 2,50E-05   & 2,41E-02   & 4,87E-03   & 5,52E-03  \\ \cline{2-6} 
                                         & 10        & 2,00E-06   & 1,42E+00   & 6,95E-02   & 2,64E-01  \\ \cline{2-6} 
@@ -2014,7 +2014,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 1,58E-05   & 2,00E+01   & 2,87E+00   & 6,75E+00  \\ \cline{2-6} 
                                         & 200       & 1,90E-05   & 1,99E+01   & 1,41E+00   & 4,21E+00  \\ \cline{2-6} 
                                         & 500       & 6,49E-05   & 2,00E+01   & 8,25E-01   & 3,59E+00  \\ \hline
-\multirow{10}{*}{bent cigar}            & 1         & 0.00E+00   & 2,23E-07   & 9,57E-09   & 4,10E-08  \\ \cline{2-6} 
+\multirow[t]{10}{*}{bent cigar}            & 1         & 0.00E+00   & 2,23E-07   & 9,57E-09   & 4,10E-08  \\ \cline{2-6} 
                                         & 2         & 7,72E-07   & 5,23E+00   & 5,80E-01   & 1,30E+00  \\ \cline{2-6} 
                                         & 5         & 1,09E-04   & 3,78E+02   & 1,86E+01   & 6,79E+01  \\ \cline{2-6} 
                                         & 10        & 1,33E-03   & 1,39E+03   & 1,13E+02   & 3,11E+02  \\ \cline{2-6} 
@@ -2024,7 +2024,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 5,59E-04   & 1,74E+04   & 1,13E+03   & 3,27E+03  \\ \cline{2-6} 
                                         & 200       & 3,86E-02   & 4,95E+03   & 4,72E+02   & 1,02E+03  \\ \cline{2-6} 
                                         & 500       & 1,71E-03   & 3,86E+05   & 1,36E+04   & 6,91E+04  \\ \hline
-\multirow{10}{*}{different power}       & 1         & 0.00E+00   & 4,87E-04   & 3,27E-05   & 9,18E-05  \\ \cline{2-6} 
+\multirow[t]{10}{*}{different power}       & 1         & 0.00E+00   & 4,87E-04   & 3,27E-05   & 9,18E-05  \\ \cline{2-6} 
                                         & 2         & 4,98E-08   & 5,64E-04   & 7,94E-05   & 1,50E-04  \\ \cline{2-6} 
                                         & 5         & 3,91E-06   & 5,75E-03   & 6,58E-04   & 1,33E-03  \\ \cline{2-6} 
                                         & 10        & 1,74E-06   & 6,95E-03   & 1,16E-03   & 1,93E-03  \\ \cline{2-6} 
@@ -2034,7 +2034,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 1,13E-05   & 2,33E-02   & 2,61E-03   & 4,68E-03  \\ \cline{2-6} 
                                         & 200       & 2,24E-06   & 1,83E-02   & 2,70E-03   & 4,25E-03  \\ \cline{2-6} 
                                         & 500       & 4,30E-06   & 6,61E-02   & 6,03E-03   & 1,29E-02  \\ \hline
-\multirow{10}{*}{discus}                & 1         & 0.00E+00   & 1,70E-01   & 7,25E-03   & 3,07E-02  \\ \cline{2-6} 
+\multirow[t]{10}{*}{discus}                & 1         & 0.00E+00   & 1,70E-01   & 7,25E-03   & 3,07E-02  \\ \cline{2-6} 
                                         & 2         & 6,93E-10   & 7,74E+00   & 5,38E-01   & 1,49E+00  \\ \cline{2-6} 
                                         & 5         & 5,87E-07   & 9,69E-01   & 1,78E-01   & 3,06E-01  \\ \cline{2-6} 
                                         & 10        & 7,08E-06   & 3,66E+00   & 3,50E-01   & 9,01E-01  \\ \cline{2-6} 
@@ -2044,7 +2044,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 2,30E-08   & 7,93E+01   & 3,91E+00   & 1,46E+01  \\ \cline{2-6} 
                                         & 200       & 3,87E-07   & 8,08E+01   & 3,10E+00   & 1,45E+01  \\ \cline{2-6} 
                                         & 500       & 1,06E-04   & 1,23E+02   & 7,19E+00   & 2,66E+01  \\ \hline
-\multirow{10}{*}{ellipsoid}             & 1         & 0.00E+00   & 5,83E-08   & 3,75E-09   & 1,18E-08  \\ \cline{2-6} 
+\multirow[t]{10}{*}{ellipsoid}             & 1         & 0.00E+00   & 5,83E-08   & 3,75E-09   & 1,18E-08  \\ \cline{2-6} 
                                         & 2         & 9,27E-13   & 1,51E-04   & 6,41E-06   & 2,69E-05  \\ \cline{2-6} 
                                         & 5         & 1,55E-11   & 1,19E-03   & 8,32E-05   & 2,59E-04  \\ \cline{2-6} 
                                         & 10        & 1,49E-09   & 4,68E-01   & 1,57E-02   & 8,40E-02  \\ \cline{2-6} 
@@ -2054,7 +2054,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 9,82E-07   & 3,55E-01   & 2,84E-02   & 7,47E-02  \\ \cline{2-6} 
                                         & 200       & 6,24E-06   & 4,31E+00   & 2,05E-01   & 7,75E-01  \\ \cline{2-6} 
                                         & 500       & 2,37E-06   & 4,15E+02   & 1,67E+01   & 7,46E+01  \\ \hline
-\multirow{10}{*}{elliptic}              & 1         & 0.00E+00   & 3,35E+03   & 2,27E+02   & 7,45E+02  \\ \cline{2-6} 
+\multirow[t]{10}{*}{elliptic}              & 1         & 0.00E+00   & 3,35E+03   & 2,27E+02   & 7,45E+02  \\ \cline{2-6} 
                                         & 2         & 8,39E-10   & 1,83E+00   & 1,82E-01   & 3,71E-01  \\ \cline{2-6} 
                                         & 5         & 2,17E-05   & 4,07E+01   & 3,30E+00   & 8,35E+00  \\ \cline{2-6} 
                                         & 10        & 1,85E-06   & 5,27E+02   & 1,87E+01   & 9,43E+01  \\ \cline{2-6} 
@@ -2064,7 +2064,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 2,50E-07   & 6,10E+02   & 5,24E+01   & 1,27E+02  \\ \cline{2-6} 
                                         & 200       & 5,00E-04   & 2,86E+03   & 1,67E+02   & 5,39E+02  \\ \cline{2-6} 
                                         & 500       & 3,39E-05   & 1,35E+04   & 6,70E+02   & 2,46E+03  \\ \hline
-\multirow{10}{*}{expanded schaffer f6}  & 1         & 0.00E+00   & 1,18E-02   & 2,02E-03   & 3,67E-03  \\ \cline{2-6} 
+\multirow[t]{10}{*}{expanded schaffer f6}  & 1         & 0.00E+00   & 1,18E-02   & 2,02E-03   & 3,67E-03  \\ \cline{2-6} 
                                         & 2         & 0.00E+00   & 1,61E-01   & 3,51E-02   & 3,18E-02  \\ \cline{2-6} 
                                         & 5         & 3,01E-02   & 1,94E+00   & 8,00E-01   & 4,77E-01  \\ \cline{2-6} 
                                         & 10        & 2,05E-01   & 4,28E+00   & 2,75E+00   & 8,06E-01  \\ \cline{2-6} 
@@ -2074,7 +2074,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 2,94E-02   & 4,78E+01   & 3,59E+01   & 1,54E+01  \\ \cline{2-6} 
                                         & 200       & 3,56E+00   & 9,50E+01   & 7,60E+01   & 2,87E+01  \\ \cline{2-6} 
                                         & 500       & 7,99E+00   & 2,41E+02   & 1,98E+02   & 6,49E+01  \\ \hline
-\multirow{10}{*}{griewank}              & 1         & 0.00E+00   & 3,23E-02   & 4,51E-03   & 7,32E-03  \\ \cline{2-6} 
+\multirow[t]{10}{*}{griewank}              & 1         & 0.00E+00   & 3,23E-02   & 4,51E-03   & 7,32E-03  \\ \cline{2-6} 
                                         & 2         & 1,63E-09   & 1,34E-01   & 3,46E-02   & 3,02E-02  \\ \cline{2-6} 
                                         & 5         & 1,16E-09   & 6,40E-01   & 1,93E-01   & 2,13E-01  \\ \cline{2-6} 
                                         & 10        & 6,05E-09   & 1,66E-04   & 1,39E-05   & 3,71E-05  \\ \cline{2-6} 
@@ -2084,7 +2084,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 0.00E+00   & 9,77E-05   & 1,01E-05   & 2,48E-05  \\ \cline{2-6} 
                                         & 200       & 1,61E-09   & 6,94E-05   & 9,49E-06   & 2,00E-05  \\ \cline{2-6} 
                                         & 500       & 4,66E-09   & 2,21E-04   & 1,83E-05   & 4,42E-05  \\ \hline
-\multirow{10}{*}{happycat}              & 1         & 1,16E-02   & 2,76E-01   & 1,17E-01   & 6,90E-02  \\ \cline{2-6} 
+\multirow[t]{10}{*}{happycat}              & 1         & 1,16E-02   & 2,76E-01   & 1,17E-01   & 6,90E-02  \\ \cline{2-6} 
                                         & 2         & 7,92E-02   & 5,96E-01   & 2,73E-01   & 1,42E-01  \\ \cline{2-6} 
                                         & 5         & 1,04E-01   & 1,23E+00   & 4,92E-01   & 2,83E-01  \\ \cline{2-6} 
                                         & 10        & 1,56E-01   & 1,13E+00   & 6,30E-01   & 2,68E-01  \\ \cline{2-6} 
@@ -2094,7 +2094,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 4,13E-01   & 1,43E+00   & 9,34E-01   & 2,88E-01  \\ \cline{2-6} 
                                         & 200       & 5,07E-01   & 2,01E+00   & 1,16E+00   & 3,69E-01  \\ \cline{2-6} 
                                         & 500       & 3,75E-01   & 2,17E+00   & 1,39E+00   & 4,15E-01  \\ \hline
-\multirow{10}{*}{hgbat}                 & 1         & 2,59E-04   & 1,66E-01   & 2,12E-02   & 3,10E-02  \\ \cline{2-6} 
+\multirow[t]{10}{*}{hgbat}                 & 1         & 2,59E-04   & 1,66E-01   & 2,12E-02   & 3,10E-02  \\ \cline{2-6} 
                                         & 2         & 1,18E-02   & 5,01E-01   & 2,58E-01   & 1,66E-01  \\ \cline{2-6} 
                                         & 5         & 6,84E-02   & 5,30E-01   & 4,64E-01   & 9,68E-02  \\ \cline{2-6} 
                                         & 10        & 3,89E-01   & 5,50E-01   & 4,96E-01   & 2,60E-02  \\ \cline{2-6} 
@@ -2104,7 +2104,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 5,00E-01   & 1,31E+00   & 5,70E-01   & 1,69E-01  \\ \cline{2-6} 
                                         & 200       & 5,00E-01   & 1,88E+00   & 6,21E-01   & 2,91E-01  \\ \cline{2-6} 
                                         & 500       & 5,01E-01   & 5,54E+00   & 8,74E-01   & 9,94E-01  \\ \hline
-\multirow{10}{*}{katsuura}              & 1         & 0.00E+00   & 5,64E-01   & 6,33E-02   & 1,49E-01  \\ \cline{2-6} 
+\multirow[t]{10}{*}{katsuura}              & 1         & 0.00E+00   & 5,64E-01   & 6,33E-02   & 1,49E-01  \\ \cline{2-6} 
                                         & 2         & 0.00E+00   & 2,58E+00   & 5,51E-01   & 8,79E-01  \\ \cline{2-6} 
                                         & 5         & 0.00E+00   & 2,63E+00   & 2,89E-01   & 7,50E-01  \\ \cline{2-6} 
                                         & 10        & 0.00E+00   & 1,49E+00   & 9,70E-02   & 3,34E-01  \\ \cline{2-6} 
@@ -2114,7 +2114,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 0.00E+00   & 3,87E-04   & 3,07E-05   & 7,44E-05  \\ \cline{2-6} 
                                         & 200       & 0.00E+00   & 2,20E-05   & 2,74E-06   & 5,80E-06  \\ \cline{2-6} 
                                         & 500       & 0.00E+00   & 1,31E-05   & 9,11E-07   & 2,38E-06  \\ \hline
-\multirow{10}{*}{levy}                  & 1         & 3,84E-18   & 1,20E-06   & 9,61E-08   & 2,72E-07  \\ \cline{2-6} 
+\multirow[t]{10}{*}{levy}                  & 1         & 3,84E-18   & 1,20E-06   & 9,61E-08   & 2,72E-07  \\ \cline{2-6} 
                                         & 2         & 5,05E-06   & 1,07E-01   & 2,44E-02   & 3,12E-02  \\ \cline{2-6} 
                                         & 5         & 5,40E-04   & 5,77E-01   & 1,20E-01   & 1,10E-01  \\ \cline{2-6} 
                                         & 10        & 2,75E-04   & 3,72E-01   & 1,27E-01   & 1,11E-01  \\ \cline{2-6} 
@@ -2124,7 +2124,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 3,80E-03   & 5,18E+00   & 1,21E+00   & 1,29E+00  \\ \cline{2-6} 
                                         & 200       & 1,49E-03   & 8,73E+00   & 2,59E+00   & 2,31E+00  \\ \cline{2-6} 
                                         & 500       & 7,62E-02   & 1,91E+01   & 6,28E+00   & 5,23E+00  \\ \hline
-\multirow{10}{*}{rastrigin}             & 1         & 0.00E+00   & 5,82E-03   & 4,46E-04   & 1,43E-03  \\ \cline{2-6} 
+\multirow[t]{10}{*}{rastrigin}             & 1         & 0.00E+00   & 5,82E-03   & 4,46E-04   & 1,43E-03  \\ \cline{2-6} 
                                         & 2         & 6,57E-09   & 5,01E+00   & 1,15E+00   & 1,18E+00  \\ \cline{2-6} 
                                         & 5         & 5,58E-08   & 2,77E+01   & 5,14E+00   & 8,62E+00  \\ \cline{2-6} 
                                         & 10        & 9,67E-07   & 8,59E+01   & 1,16E+01   & 2,22E+01  \\ \cline{2-6} 
@@ -2134,7 +2134,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 1,64E-06   & 8,90E+01   & 8,40E+00   & 2,34E+01  \\ \cline{2-6} 
                                         & 200       & 1,80E-06   & 5,55E+01   & 2,03E+00   & 9,96E+00  \\ \cline{2-6} 
                                         & 500       & 1,73E-04   & 1,05E+01   & 4,83E-01   & 1,88E+00  \\ \hline
-\multirow{10}{*}{rosenbrock}            & 1         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
+\multirow[t]{10}{*}{rosenbrock}            & 1         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
                                         & 2         & 1,21E-05   & 5,34E+01   & 5,58E+00   & 1,31E+01  \\ \cline{2-6} 
                                         & 5         & 9,59E-06   & 3,96E+00   & 6,85E-01   & 1,20E+00  \\ \cline{2-6} 
                                         & 10        & 1,62E-03   & 8,96E+00   & 2,03E+00   & 3,02E+00  \\ \cline{2-6} 
@@ -2144,7 +2144,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 6,96E-05   & 1,00E+02   & 3,76E+01   & 4,14E+01  \\ \cline{2-6} 
                                         & 200       & 3,21E-01   & 2,00E+02   & 6,24E+01   & 7,30E+01  \\ \cline{2-6} 
                                         & 500       & 1,47E-01   & 4,96E+02   & 1,47E+02   & 1,85E+02  \\ \hline
-\multirow{10}{*}{schwefel1.2 problem}   & 1         & 0.00E+00   & 2,49E-05   & 8,33E-07   & 4,47E-06  \\ \cline{2-6} 
+\multirow[t]{10}{*}{schwefel1.2 problem}   & 1         & 0.00E+00   & 2,49E-05   & 8,33E-07   & 4,47E-06  \\ \cline{2-6} 
                                         & 2         & 2,65E-11   & 4,44E-04   & 2,01E-05   & 7,94E-05  \\ \cline{2-6} 
                                         & 5         & 6,70E-09   & 4,48E-03   & 2,25E-04   & 8,03E-04  \\ \cline{2-6} 
                                         & 10        & 4,19E-11   & 1,76E-02   & 1,80E-03   & 4,46E-03  \\ \cline{2-6} 
@@ -2154,7 +2154,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 3,04E-08   & 1,08E+01   & 4,81E-01   & 1,94E+00  \\ \cline{2-6} 
                                         & 200       & 4,42E-08   & 3,48E+02   & 1,44E+01   & 6,22E+01  \\ \cline{2-6} 
                                         & 500       & 9,23E-06   & 5,99E+02   & 4,69E+01   & 1,32E+02  \\ \hline
-\multirow{10}{*}{schwefel 2.13 problem} & 1         & 4,40E-09   & 4,99E-01   & 3,79E-02   & 1,11E-01  \\ \cline{2-6} 
+\multirow[t]{10}{*}{schwefel 2.13 problem} & 1         & 4,40E-09   & 4,99E-01   & 3,79E-02   & 1,11E-01  \\ \cline{2-6} 
                                         & 2         & 9,10E-01   & 3,44E+02   & 3,11E+01   & 6,48E+01  \\ \cline{2-6} 
                                         & 5         & 2,33E+02   & 2,04E+04   & 7,66E+03   & 4,42E+03  \\ \cline{2-6} 
                                         & 10        & 4,57E+04   & 1,54E+05   & 9,48E+04   & 2,60E+04  \\ \cline{2-6} 
@@ -2164,7 +2164,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 3,47E+07   & 4,62E+07   & 4,16E+07   & 3,16E+06  \\ \cline{2-6} 
                                         & 200       & 1,75E+08   & 2,22E+08   & 2,01E+08   & 1,02E+07  \\ \cline{2-6} 
                                         & 500       & 1,32E+09   & 1,48E+09   & 1,41E+09   & 4,38E+07  \\ \hline
-\multirow{10}{*}{shubert}               & 1         & -1,45E+01  & -1,43E+01  & -1,45E+01  & 4,55E-02  \\ \cline{2-6} 
+\multirow[t]{10}{*}{shubert}               & 1         & -1,45E+01  & -1,43E+01  & -1,45E+01  & 4,55E-02  \\ \cline{2-6} 
                                         & 2         & -2,10E+02  & -1,15E+02  & -1,82E+02  & 2,67E+01  \\ \cline{2-6} 
                                         & 5         & -4,67E+05  & -1,26E+04  & -6,06E+04  & 8,60E+04  \\ \cline{2-6} 
                                         & 10        & -7,43E+10  & -8,99E+06  & -5,02E+09  & 1,49E+10  \\ \cline{2-6} 
@@ -2174,7 +2174,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & -1,07E+116 & -2,14E+50  & -4,15E+114 & 1,94E+115 \\ \cline{2-6} 
                                         & 200       & -4,66E+231 & -1,73E+96  & -1,55E+230 & INF       \\ \cline{2-6} 
                                         & 500       & -INF       & -3,23E+231 & -INF       &           \\ \hline
-\multirow{10}{*}{sphere}                & 1         & 0.00E+00   & 6,88E-07   & 3,97E-08   & 1,48E-07  \\ \cline{2-6} 
+\multirow[t]{10}{*}{sphere}                & 1         & 0.00E+00   & 6,88E-07   & 3,97E-08   & 1,48E-07  \\ \cline{2-6} 
                                         & 2         & 4,80E-09   & 8,08E-05   & 6,38E-06   & 1,58E-05  \\ \cline{2-6} 
                                         & 5         & 1,92E-13   & 2,86E-03   & 1,00E-04   & 5,13E-04  \\ \cline{2-6} 
                                         & 10        & 1,01E-09   & 3,80E-03   & 1,84E-04   & 7,01E-04  \\ \cline{2-6} 
@@ -2184,7 +2184,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 1,91E-09   & 3,11E-03   & 1,53E-04   & 5,62E-04  \\ \cline{2-6} 
                                         & 200       & 2,53E-10   & 1,20E-02   & 8,97E-04   & 2,71E-03  \\ \cline{2-6} 
                                         & 500       & 6,71E-09   & 4,24E-02   & 1,83E-03   & 7,60E-03  \\ \hline
-\multirow{10}{*}{step function}         & 1         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
+\multirow[t]{10}{*}{step function}         & 1         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
                                         & 2         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
                                         & 5         & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
                                         & 10        & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
@@ -2194,7 +2194,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
                                         & 200       & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \cline{2-6} 
                                         & 500       & 0.00E+00   & 0.00E+00   & 0.00E+00   & 0.00E+00  \\ \hline
-\multirow{10}{*}{vincent}               & 1         & -1,00E+00  & -1,00E+00  & -1,00E+00  & 9,70E-05  \\ \cline{2-6} 
+\multirow[t]{10}{*}{vincent}               & 1         & -1,00E+00  & -1,00E+00  & -1,00E+00  & 9,70E-05  \\ \cline{2-6} 
                                         & 2         & -1,00E+00  & -9,14E-01  & -9,81E-01  & 2,51E-02  \\ \cline{2-6} 
                                         & 5         & -1,00E+00  & -6,82E-01  & -8,87E-01  & 8,80E-02  \\ \cline{2-6} 
                                         & 10        & -9,98E-01  & -3,11E-01  & -7,95E-01  & 1,55E-01  \\ \cline{2-6} 
@@ -2204,7 +2204,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & -9,99E-01  & -3,11E-01  & -7,71E-01  & 2,05E-01  \\ \cline{2-6} 
                                         & 200       & -9,99E-01  & -3,94E-01  & -7,68E-01  & 1,74E-01  \\ \cline{2-6} 
                                         & 500       & -1,00E+00  & -4,08E-01  & -7,89E-01  & 1,44E-01  \\ \hline
-\multirow{10}{*}{weierstrass}           & 1         & 0.00E+00   & 1,42E-01   & 1,76E-02   & 3,22E-02  \\ \cline{2-6} 
+\multirow[t]{10}{*}{weierstrass}           & 1         & 0.00E+00   & 1,42E-01   & 1,76E-02   & 3,22E-02  \\ \cline{2-6} 
                                         & 2         & 0.00E+00   & 9,98E-01   & 2,73E-01   & 3,56E-01  \\ \cline{2-6} 
                                         & 5         & 0.00E+00   & 4,82E+00   & 5,23E-01   & 1,35E+00  \\ \cline{2-6} 
                                         & 10        & 0.00E+00   & 1,23E+01   & 1,26E+00   & 3,31E+00  \\ \cline{2-6} 
@@ -2214,7 +2214,7 @@ function                                & dimension & best       & worst      & 
                                         & 100       & 3,41E-13   & 1,75E+02   & 8,60E+00   & 3,26E+01  \\ \cline{2-6} 
                                         & 200       & 5,68E-14   & 2,49E+02   & 8,36E+00   & 4,48E+01  \\ \cline{2-6} 
                                         & 500       & 2,50E-12   & 1,99E+00   & 3,14E-01   & 6,10E-01  \\ \hline
-\multirow{10}{*}{zakharov}              & 1         & 0.00E+00   & 2,71E-07   & 1,09E-08   & 4,91E-08  \\ \cline{2-6} 
+\multirow[t]{10}{*}{zakharov}              & 1         & 0.00E+00   & 2,71E-07   & 1,09E-08   & 4,91E-08  \\ \cline{2-6} 
                                         & 2         & 0.00E+00   & 1,99E-03   & 9,87E-05   & 3,83E-04  \\ \cline{2-6} 
                                         & 5         & 2,34E-12   & 6,24E-03   & 2,46E-04   & 1,12E-03  \\ \cline{2-6} 
                                         & 10        & 2,12E-09   & 1,31E-02   & 6,41E-04   & 2,37E-03  \\ \cline{2-6} 
