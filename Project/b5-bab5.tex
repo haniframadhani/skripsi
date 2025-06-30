@@ -6,37 +6,11 @@
 \chapter[KESIMPULAN DAN SARAN]{\\ KESIMPULAN DAN SARAN}
 
 \section{Kesimpulan}
-Bagian kesimpulan menyajikan ringkasan dari temuan dan hasil yang diperoleh selama pelaksanaan proyek. Kesimpulan ini menjawab tujuan proyek dan masalah yang telah diidentifikasi di awal laporan, serta mengonfirmasi pencapaian yang telah diraih berdasarkan hasil implementasi dan pengujian. Kesimpulan harus ditarik secara objektif, didasarkan pada data dan hasil yang telah diperoleh, serta tidak memasukkan opini atau asumsi yang tidak didukung oleh hasil pengujian.
-
-Kesimpulan harus dibuat dengan singkat dan jelas, mencakup poin-poin utama yang berhasil dicapai dalam proyek, seperti:
-\begin{packed_item}
-    \item Capaian utama yang menunjukkan bahwa proyek berhasil memenuhi spesifikasi yang ditetapkan
-    \item Efektivitas sistem dalam menjalankan fungsinya berdasarkan hasil pengujian
-    \item Kesesuaian hasil proyek dengan teori dan standar yang telah diuraikan sebelumnya
-\end{packed_item}
-
-Selain itu, kesimpulan juga membahas keterkaitan dengan hasil-hasil penelitian atau proyek serupa yang telah dilakukan sebelumnya, untuk menunjukkan kontribusi dan relevansi dari proyek ini dalam konteks yang lebih luas. Bagian ini juga bisa mencakup hal-hal baru yang ditemukan selama proyek yang dapat memberikan kontribusi positif dalam pengembangan teknologi atau aplikasi di masa mendatang.
-
-Secara keseluruhan, kesimpulan harus memberikan gambaran yang menyeluruh mengenai efektivitas, pencapaian, dan kontribusi proyek terhadap bidang yang diteliti, sekaligus merangkum seluruh hasil dengan ringkas namun komprehensif.
+Penelitian ini telah berhasil mengembangkan sebuah \textit{library} Python yang mengintegrasikan berbagai fungsi \textit{benchmark} dari dua kerangka kerja utama dalam evaluasi algoritma optimasi, yakni \textit{Congress on Evolutionary Computation} (CEC) dan \textit{COmparing Continuous Optimizers} (COCO), ke dalam satu platform terpadu. Integrasi ini memberikan kemudahan bagi para peneliti dan praktisi dalam melakukan pengujian algoritma metaheuristik secara efisien tanpa perlu berpindah antar \textit{library} yang berbeda. \textit{Library} ini dirancang dengan pendekatan modular dan prinsip \textit{object-oriented programming} (OOP), yang memungkinkan perluasan fitur, pemeliharaan kode, dan pengujian sistem dilakukan dengan lebih terstruktur. Setiap fungsi \textit{benchmark} diimplementasikan dalam kelas tersendiri yang diturunkan dari kelas induk \textit{Benchmark}, sehingga menjamin konsistensi struktur dan kemudahan dalam penggunaannya. Untuk dokumentasi, \textit{library} ini memanfaatkan Sphinx, yang memungkinkan pembuatan dokumentasi teknis secara otomatis berdasarkan docstring. Dokumentasi tersebut mencakup penjelasan rinci mengenai setiap fungsi, panduan instalasi, serta contoh penggunaan, sehingga mendukung keberlanjutan dan kemudahan adopsi \textit{library} oleh komunitas pengguna.
 
 \section{Saran}
-Bagian saran menyajikan rekomendasi untuk pengembangan lebih lanjut yang dapat dilakukan berdasarkan temuan dan hasil yang diperoleh dalam proyek ini. Saran diberikan untuk membantu pembaca memahami langkah-langkah tambahan atau perbaikan yang dapat dilakukan untuk menyempurnakan proyek ini atau untuk membuka peluang penelitian atau pengembangan lebih lanjut.
+Sebagai tindak lanjut dari penelitian ini, disarankan agar pengembangan \textit{library} CECO diperluas ke berbagai bahasa pemrograman lain, seperti MATLAB, C, Java, dan bahasa lainnya. Diversifikasi platform ini bertujuan untuk meningkatkan fleksibilitas dan memperluas jangkauan pengguna, sehingga \textit{library} tidak hanya terbatas pada ekosistem Python yang saat ini menjadi basis utama pengembangannya. Dengan demikian, CECO dapat diakses dan dimanfaatkan oleh komunitas ilmiah yang lebih luas dan beragam, termasuk peneliti dan praktisi yang bekerja dalam lingkungan non-Python.
 
-Saran yang diberikan sebaiknya mencakup hal-hal berikut:
-\begin{packed_item}
-    \item Pengembangan lanjutan pada sistem atau perangkat, seperti peningkatan teknologi atau penambahan fitur yang belum sempat diimplementasikan dalam proyek ini.
-    \item Pengujian lebih lanjut di berbagai kondisi atau lingkungan yang berbeda, untuk memastikan sistem mampu beradaptasi dalam berbagai situasi dan meningkatkan keandalannya.
-    \item Penelitian tambahan untuk menggali aspek-aspek yang belum sepenuhnya terjawab dalam proyek ini atau untuk memvalidasi hasil yang telah diperoleh.
-    \item Pengembangan aplikasi sistem yang lebih luas di bidang lain yang relevan, agar hasil proyek ini dapat memberikan manfaat yang lebih besar di luar bidang awal yang menjadi fokus.
-\end{packed_item}
+Selain perluasan platform, perlu juga dilakukan pengayaan terhadap koleksi fungsi \textit{benchmark} yang tersedia dalam \textit{library} . Penambahan variasi fungsi uji ini akan memungkinkan evaluasi algoritma optimasi dilakukan secara lebih komprehensif, mencakup berbagai jenis karakteristik permasalahan optimasi, baik dari segi unimodalitas, multimodalitas, hingga kompleksitas dimensi. Dengan cakupan \textit{benchmark} yang lebih luas, hasil evaluasi algoritma akan menjadi lebih representatif dan relevan.
 
-Selain itu, saran juga dapat mencakup rekomendasi untuk mengatasi keterbatasan yang ditemui selama proyek, seperti:
-\begin{packed_item}
-    \item Penyempurnaan metode atau pendekatan yang digunakan, jika ditemukan kelemahan dalam tahap implementasi atau pengujian
-    \item Peningkatan perangkat keras atau perangkat lunak untuk meningkatkan performa sistem secara keseluruhan
-    \item Pemanfaatan teknologi atau metode baru yang relevan untuk memperbaiki atau menambah kapabilitas sistem
-\end{packed_item}
-
-Saran harus dibahas dalam konteks tujuan proyek dan masalah yang diidentifikasi, serta didasarkan pada hasil yang diperoleh. Rekomendasi juga perlu realistis dan dapat diimplementasikan dalam kondisi praktis, agar memberikan panduan yang bermanfaat bagi pengembangan lebih lanjut atau implementasi yang lebih luas.
-
-Secara keseluruhan, saran ini bertujuan untuk memberikan arah bagi pengembangan proyek atau penelitian selanjutnya, sekaligus menunjukkan bagaimana hasil dari proyek ini dapat dioptimalkan dan memberikan kontribusi yang lebih besar dalam bidang yang terkait.
+Hasil pengujian sebelumnya menunjukkan adanya nilai invalid yang muncul akibat \textit{overflow} pada tipe data float64 maupun longdouble di NumPy, terutama ketika fungsi \textit{benchmark} seperti Shubert diuji dalam dimensi yang sangat tinggi. Fenomena ini mengindikasikan perlunya peningkatan stabilitas numerik dalam implementasi \textit{library}. Oleh karena itu, penelitian selanjutnya dapat difokuskan pada pengembangan strategi mitigasi terhadap masalah numerik, seperti \textit{overflow}, \textit{underflow}, atau ketidakakuratan akibat keterbatasan presisi data tipe \textit{floating point}. Pendekatan yang dapat diterapkan antara lain mencakup penggunaan tipe data dengan presisi lebih tinggi, penerapan teknik normalisasi input, serta penyusunan ulang formulasi matematis untuk menjaga kestabilan komputasi. Upaya-upaya ini diharapkan mampu meningkatkan keandalan dan akurasi perhitungan, serta memperluas penerapan CECO pada kasus-kasus ekstrem atau kompleks secara numerik.

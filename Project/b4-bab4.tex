@@ -2226,6 +2226,1525 @@ function                                & dimension & best       & worst      & 
                                         & 500       & 1,14E-09   & 7,12E+02   & 2,95E+01   & 1,29E+02  \\ \hline
 \end{longtable}
 
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Ackley},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_ackley.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_ackley.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_ackley.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_ackley.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_ackley.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_ackley.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Ackley}
+\label{fig:graph_ackley}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Bent Cigar},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_bent_cigar.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_bent_cigar.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_bent_cigar.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_bent_cigar.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_bent_cigar.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_bent_cigar.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Bent Cigar}
+\label{fig:graph_bent_cigar}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Different Power},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_different_power.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_different_power.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_different_power.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_different_power.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_different_power.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_different_power.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Different Power}
+\label{fig:graph_different_power}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Discus},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_discus.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_discus.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_discus.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_discus.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_discus.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_discus.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Discus}
+\label{fig:graph_discus}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Ellipsoid},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_ellipsoid.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_ellipsoid.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_ellipsoid.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_ellipsoid.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_ellipsoid.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_ellipsoid.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Ellipsoid}
+\label{fig:graph_ellipsoid}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Elliptic},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_elliptic.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_elliptic.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_elliptic.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_elliptic.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_elliptic.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_elliptic.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Elliptic}
+\label{fig:graph_elliptic}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Expanded Schaffer F6},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_expanded_schaffer_f6.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_expanded_schaffer_f6.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_expanded_schaffer_f6.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_expanded_schaffer_f6.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_expanded_schaffer_f6.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_expanded_schaffer_f6.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Expanded Schaffer F6}
+\label{fig:graph_expanded_schaffer_f6}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Griewank},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_griewank.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_griewank.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_griewank.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_griewank.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_griewank.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_griewank.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Griewank}
+\label{fig:graph_griewank}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Happycat},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_happycat.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_happycat.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_happycat.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_happycat.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_happycat.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_happycat.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Happycat}
+\label{fig:graph_happycat}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Hgbat},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_hgbat.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_hgbat.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_hgbat.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_hgbat.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_hgbat.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_hgbat.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Hgbat}
+\label{fig:graph_hgbat}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Katsuura},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,  
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_katsuura.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_katsuura.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_katsuura.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_katsuura.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_katsuura.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_katsuura.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Katsuura}
+\label{fig:graph_katsuura}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Levy},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_levy.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_levy.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_levy.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_levy.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_levy.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_levy.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Levy}
+\label{fig:graph_levy}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Rastrigin},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_rastrigin.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_rastrigin.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_rastrigin.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_rastrigin.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_rastrigin.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_rastrigin.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Rastrigin}
+\label{fig:graph_rastrigin}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Rosenbrock},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_rosenbrock.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_rosenbrock.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_rosenbrock.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_rosenbrock.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_rosenbrock.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_rosenbrock.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Rosenbrock}
+\label{fig:graph_rosenbrock}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Schwefel 1.2 problem},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_schwefel_1_2_problem.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_schwefel_1_2_problem.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_schwefel_1_2_problem.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_schwefel_1_2_problem.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_schwefel_1_2_problem.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_schwefel_1_2_problem.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Schwefel 1.2 problem}
+\label{fig:graph_bent_cigar}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Schwefel 2.13 problem},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_schwefel_2_13_problem.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_schwefel_2_13_problem.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_schwefel_2_13_problem.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_schwefel_2_13_problem.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_schwefel_2_13_problem.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_schwefel_2_13_problem.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Schwefel 2.13 problem}
+\label{fig:graph_schwefel_2_13_problem}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Shubert},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_shubert.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_shubert.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_shubert.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_shubert.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_shubert.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_shubert.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Shubert}
+\label{fig:graph_shubert}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Sphere},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_sphere.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_sphere.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_sphere.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_sphere.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_sphere.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_sphere.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Sphere}
+\label{fig:graph_sphere}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Step function},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_step_function.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_step_function.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_step_function.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_step_function.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_step_function.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_step_function.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Step function}
+\label{fig:graph_step_function}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Vincent},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_vincent.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_vincent.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_vincent.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_vincent.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_vincent.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_vincent.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Vincent}
+\label{fig:graph_vincent}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Weierstrass},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_weierstrass.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_weierstrass.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_weierstrass.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_weierstrass.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_weierstrass.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_weierstrass.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Weierstrass}
+\label{fig:graph_weierstrass}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Hasil \textit{benchmarking} fungsi Zakharov},
+    legend entries={{KMA Best}, {KMA Worst}, {KMA Avg}, {EHO Best}, {EHO Worst}, {EHO Avg}},
+    legend pos = outer north east,
+    xlabel = Dimensi,
+    ylabel = Nilai solusi,
+    symbolic x coords={1,2,5,10,20,25,50,100,200,500},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    enlargelimits=0.05
+    ]
+    
+    % KMA Best
+    \addplot[blue,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/kma_zakharov.tsv};
+    
+    % KMA Worst
+    \addplot[green,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/kma_zakharov.tsv};
+    
+    % KMA Avg
+    \addplot[orange,mark=diamond*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/kma_zakharov.tsv};
+    
+    % EHO Best
+    \addplot[red,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=2,
+    ] {data/eho_zakharov.tsv};
+    
+    % EHO Worst
+    \addplot[magenta,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=3,
+    ] {data/eho_zakharov.tsv};
+    
+    % EHO Avg
+    \addplot[cyan,mark=square*] table[
+      col sep=tab,
+      skip first n=1,
+      x index=1,
+      y index=4,
+    ] {data/eho_zakharov.tsv};
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{Grafik hasil \textit{benchmarking} fungsi Zakharov}
+\label{fig:graph_zakharov}
+\end{figure}
+
 \begin{table}[h!]
     \centering
     \caption{rangkuman hasil \textit{benchmarking}}
