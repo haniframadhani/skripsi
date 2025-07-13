@@ -5,1258 +5,6 @@
 
 \chapter[HASIL DAN PEMBAHASAN]{\\ HASIL DAN PEMBAHASAN}
 
-\section{Fungsi \textit{Benchmark}}
-Fungsi-fungsi yang disajikan berikut ini merupakan bagian dari kumpulan fungsi yang tersedia di CECO.\ Fungsi-fungsi tersebut dirancang untuk digunakan dalam proses \textit{benchmarking} dan pengujian performa berbagai algoritma optimasi. Pada bagian selanjutnya, fungsi-fungsi ini akan digunakan sebagai fungsi evaluasi untuk mengukur efektivitas dan efisiensi algoritma yang diuji dalam menyelesaikan berbagai permasalahan optimasi.
-\subsection{Fungsi Congress on Evolutionary Computation}
-\vspace*{-4.5em}
-\begin{flalign*}
-  &D: \text{dimensi}&&\\
-  &\mathrm{x}=[x_1, x_2, \ldots, x_D]: \text{input}&&\\
-  &\mathrm{o}=[o_1, o_2, \ldots, o_D]: \text{shift}&&\\
-  &R: \text{Matriks rotasi}&&\\
-  &\mathrm{z}=R\times (\mathrm{x}-\mathrm{o}): \text{Matriks rotasi}&&\\
-  &f_{\text{bias}}: \text{bias}&&
-\end{flalign*}
-
-\subsubsection{Ackley}
-\noindent Properti:
-\begin{packed_item}
-  \item multimodal
-  \item non-separable
-  \item non-convex
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/ackley_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:ackley-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/ackley_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:ackley-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Ackley pada dimensi dua (\cref{fig:ackley-2d}) dan tiga (\cref{fig:ackley-3d})}
-	\label{fig:ackley}
-\end{figure}
-\begin{equation}
-  f_{\text{Ackley}}(\mathrm{x})=-20\exp\left(-0.2\sqrt{\frac{1}{D}\sum_{i=1}^{D}z_i^2} \right)-\exp\left( \frac{1}{D}\sum_{i=1}^{D}\cos\left(2\pi z_i \right) \right) + 20 + e +f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Bent Cigar}
-\noindent Properti:
-\begin{packed_item}
-  \item unimodal
-  \item non-separable
-  \item convex
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/bent_cigar_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:bentcigar-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/bent_cigar_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:bentcigar-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Bent Cigar pada dimensi dua (\cref{fig:bentcigar-2d}) dan tiga (\cref{fig:bentcigar-3d})}
-	\label{fig:bentcigar}
-\end{figure}
-\begin{equation}
-  f_{\text{Bent cigar}}(\mathrm{x})=z_1^2+10^6\sum_{i=2}^{D}z_i^2+f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Different Power}
-\noindent Properti:
-\begin{packed_item}
-  \item unimodal
-  \item separable
-  \item convex
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/different_power_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:diffpower-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/different_power_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:diffpower-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Different Power pada dimensi dua (\cref{fig:diffpower-2d}) dan tiga (\cref{fig:diffpower-3d})}
-	\label{fig:diffpower}
-\end{figure}
-\begin{equation}
-  f_{\text{Different power}}(\mathrm{x})=\sqrt{\sum_{i=1}^{D}\left| z_i \right|^{2+4\frac{i-1}{D-1}} }+f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Discus}
-\noindent Properti:
-\begin{packed_item}
-  \item unimodal
-  \item non-separable
-  \item convex
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/discus_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:discus-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/discus_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:discus-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Discus pada dimensi dua (\cref{fig:discus-2d}) dan tiga (\cref{fig:discus-3d})}
-	\label{fig:discus}
-\end{figure}
-\begin{equation}
-  f_{\text{Discus}}(\mathrm{x})=10^6z_1^2+\sum_{i=2}^{D}z_i^2+f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Ellipsoid}
-\noindent Properti:
-\begin{packed_item}
-  \item unimodal
-  \item convex
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/ellipsoid_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:ellipsoid-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/ellipsoid_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:ellipsoid-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Ellipsoid pada dimensi dua (\cref{fig:ellipsoid-2d}) dan tiga (\cref{fig:ellipsoid-3d})}
-	\label{fig:ellipsoid}
-\end{figure}
-\begin{equation}
-  f_{\text{Ellipsoid}}(\mathrm{x})=\sum_{i=1}^{D}iz_i^2  +f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Elliptic}
-\noindent Properti:
-\begin{packed_item}
-  \item unimodal
-  \item convex
-  \item non-separable
-  \item quadric ill-conditioned
-  \item smooth local irregularities
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/elliptic_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:elliptic-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/elliptic_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:elliptic-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Elliptic pada dimensi dua (\cref{fig:elliptic-2d}) dan tiga (\cref{fig:elliptic-3d})}
-	\label{fig:elliptic}
-\end{figure}
-\begin{equation}
-  f_{\text{Elliptic}}(\mathrm{x})= \sum_{i=1}^{D} \left( 10^6\right)^{\frac{i-1}{D-1}} z_i^2 +f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Expanded schaffer f6}
-\noindent Properti:
-\begin{packed_item}
-  \item multimodal
-  \item non-convex
-  \item non-separable
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/expanded_schaffer_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:schaffer-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/expanded_schaffer_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:schaffer-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Expanded schaffer f6 pada dimensi dua (\cref{fig:schaffer-2d}) dan tiga (\cref{fig:schaffer-3d})}
-	\label{fig:schaffer}
-\end{figure}
-\begin{equation}
-  \begin{split}
-    g\left(x,y \right) &= 0.5+\frac{\sin^2\left(\sqrt{x^2+y^2} \right)-0.5 }{\left( 1+0.0001\left(x^2+y^2 \right) \right)^2 }\\
-    f_{\text{Expanded schaffer f6}}(\mathrm{x}) &= g\left(z_1,z_2 \right)+\cdots+g\left(z_D,z_1 \right)+f_{\text{bias}}
-  \end{split}
-\end{equation}
-
-\subsubsection{Griewank}
-\noindent Properti:
-\begin{packed_item}
-  \item multimodal
-  \item non-convex
-  \item non-separable
-  \item scalable
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/griewank_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:griewank-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/griewank_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:griewank-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Griewank pada dimensi dua (\cref{fig:griewank-2d}) dan tiga (\cref{fig:griewank-3d})}
-	\label{fig:griewank}
-\end{figure}
-\begin{equation}
-  f_{\text{Griewank}}(\mathrm{x})=\sum_{i=1}^{D}\frac{z_i^2}{4000}-\prod_{i=1}^{D}\cos\left( \frac{z_i}{\sqrt{i}}\right)+1 +f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Happycat}
-\noindent Properti:
-\begin{packed_item}
-  \item multimodal
-  \item non-convex
-  \item non-separable
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/happycat_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:happycat-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/happycat_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:happycat-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Happycat pada dimensi dua (\cref{fig:happycat-2d}) dan tiga (\cref{fig:happycat-3d})}
-	\label{fig:happycat}
-\end{figure}
-\begin{equation}
-  f_{\text{Happycat}}(\mathrm{x})=\left|\sum_{i=1}^{D}z_i^2-D \right|^{1/4}+\left(0.5\sum_{i=1}^{D}z_i+\sum_{i=1}^{D}z_i \right)/D+0.5+f_{\text{bias}}
-\end{equation}
-
-\subsubsection{HGbat}
-\noindent Properti:
-\begin{packed_item}
-  \item multimodal
-  \item non-convex
-  \item non-separable
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/hgbat_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:hgbat-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/hgbat_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:hgbat-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi HGbat pada dimensi dua (\cref{fig:hgbat-2d}) dan tiga (\cref{fig:hgbat-3d})}
-	\label{fig:hgbat}
-\end{figure}
-\begin{equation}
-  f_{\text{HGbat}}(\mathrm{x})=\left|\left( \sum_{i=1}^{D}z_i^2\right)^2-\left(\sum_{i=1}^{D}z_i \right)^2  \right|^{1/2}+\left(0.5\sum_{i=1}^{D}z_i+\sum_{i=1}^{D}z_i \right)/D+0.5+f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Katsuura}
-\noindent Properti:
-\begin{packed_item}
-  \item multimodal
-  \item non-convex
-  \item non-separable
-  \item Continuous everywhere yet differentiable nowhere
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/katsuura_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:katsuura-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/katsuura_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:katsuura-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Katsuura pada dimensi dua (\cref{fig:katsuura-2d}) dan tiga (\cref{fig:katsuura-3d})}
-	\label{fig:katsuura}
-\end{figure}
-\begin{equation}
-  f_{\text{Katsuura}}(\mathrm{x})=\frac{10}{D^2}\prod_{i=1}^{D}\left( 1+i\sum_{j=1}^{32}\frac{\left|2^j z_i-\text{round}\left( 2^jz_i\right)  \right| }{2^j}\right)^{\frac{10}{D^{1.2}}}+f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Levy}
-\noindent Properti:
-\begin{packed_item}
-  \item multimodal
-  \item non-convex
-  \item non-separable
-  \item Local optima's number is huge
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/levy_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:levy-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/levy_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:levy-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Levy pada dimensi dua (\cref{fig:levy-2d}) dan tiga (\cref{fig:levy-3d})}
-	\label{fig:levy}
-\end{figure}
-\begin{equation}
-  f_{\text{Levy}}(\mathrm{x})=\sin^2\left(\pi w_1 \right)+\sum_{i=1}^{D-1}\left(w_i-1 \right)^2\left[1+10\sin^2\left( \pi w_i+1\right)\right]+\left(w_D-1 \right)\left[1+\sin^2\left( 2\pi w_D\right)  \right]+f_{\text{bias}}
-\end{equation}
-dimana $w_i=1+\frac{z_i-1}{4},\forall i=1,\ldots,D$
-
-\subsubsection{Rastrigin}
-\noindent Properti:
-\begin{packed_item}
-  \item multimodal
-  \item non-convex
-  \item non-separable
-  \item Local optima's number is huge
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/rastrigin_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:rastrigin-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/rastrigin_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:rastrigin-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Rastrigin pada dimensi dua (\cref{fig:rastrigin-2d}) dan tiga (\cref{fig:rastrigin-3d})}
-	\label{fig:rastrigin}
-\end{figure}
-\begin{equation}
-  f_{\text{Rastrigin}}(\mathrm{x})=\sum_{i=1}^{D}\left(z_i^2-10\cos\left(2\pi z_i \right)+10\right) +f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Rosenbrock}
-\noindent Properti:
-\begin{packed_item}
-  \item multimodal
-  \item non-convex
-  \item non-separable
-  \item Local optima's number is huge
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/rosenbrock_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:rosenbrock-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/rosenbrock_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:rosenbrock-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Rosenbrock pada dimensi dua (\cref{fig:rosenbrock-2d}) dan tiga (\cref{fig:rosenbrock-3d})}
-	\label{fig:rosenbrock}
-\end{figure}
-\begin{equation}
-  f_{\text{Rosenbrock}}(\mathrm{x})=\sum_{i=1}^{D-1}\left(100\left(z_i^2-z_{i+1} \right)^2+\left( z_i-1\right)^2 \right) +f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Schwefel 1.2 Problem}
-\noindent Properti:
-\begin{packed_item}
-  \item unimodal
-  \item convex
-  \item non-separable
-  \item scalable
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/schwefel1_2_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:schwefel1_2-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/schwefel1_2_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:schwefel1_2-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Schwefel 1.2 Problem pada dimensi dua (\cref{fig:schwefel1_2-2d}) dan tiga (\cref{fig:schwefel1_2-3d})}
-	\label{fig:schwefel1_2}
-\end{figure}
-\begin{equation}
-  f_{\text{Schwefel 1.2}}(\mathrm{x})=\sum_{i=1}^{D}\left(\sum_{j=1}^{i}z_j \right)^2 +f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Schwefel 2.13 Problem}
-\noindent Properti:
-\begin{packed_item}
-  \item multimodal
-  \item non-convex
-  \item non-separable
-  \item scalable
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/schwefel2_13_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:schwefel2_13-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/schwefel2_13_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:schwefel2_13-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Schwefel 2.13 Problem pada dimensi dua (\cref{fig:schwefel2_13-2d}) dan tiga (\cref{fig:schwefel2_13-3d})}
-	\label{fig:schwefel2_13}
-\end{figure}
-\begin{flalign}
-  f_{\text{Schwefel 2.13}}(\mathrm{x})=\sum_{i=1}^{D}\left(\mathrm{A}_i-\mathrm{B}_i\left(z \right)\right)^2 +f_{\text{bias}}
-\end{flalign}
-$\mathrm{A}_i=\sum_{j=1}^{D}\left(a_{ij}\sin\alpha_j+b_{ij}\cos\alpha_j \right),\mathrm{B}_i\left(z \right)=\sum_{j=1}^{D}\left(a_{ij}\sin z_j+b_{ij}\cos z_j \right)$, untuk $i=1,\ldots,D$\\
-$\mathrm{A}, \mathrm{B}$ adalah dua $D*D$ matriks, $a_{ij}$, $b_{ij}$ adalah bilangan bulat acak dalam rentang $\left[-100,100 \right]$\\
-$\alpha=\left[\alpha_1,\alpha_2,\ldots,\alpha_D \right],\alpha_j$ adalah angka acak dalam rentang $\left[ -\pi,\pi\right]$
-
-\subsubsection{Shubert}
-\noindent Properti:
-\begin{packed_item}
-  \item multimodal
-  \item non-convex
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/shubert_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:shubert-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/shubert_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:shubert-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Shubert pada dimensi dua (\cref{fig:shubert-2d}) dan tiga (\cref{fig:shubert-3d})}
-	\label{fig:shubert}
-\end{figure}
-\begin{equation}
-  f_{\text{Shubert}}(\mathrm{x})=-\prod_{i=1}^{D}\sum_{j=i}^{5}j\cos\left[\left(j+1 \right)z_i+j  \right]  +f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Sphere}
-\noindent Properti:
-\begin{packed_item}
-  \item unimodal
-  \item convex
-  \item separable
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/sphere_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:sphere-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/sphere_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:sphere-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Sphere pada dimensi dua (\cref{fig:sphere-2d}) dan tiga (\cref{fig:sphere-3d})}
-	\label{fig:sphere}
-\end{figure}
-\begin{equation}
-  f_{\text{Sphere}}(\mathrm{x})=\sum_{i=1}^{D}z_i^2+f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Step Function}
-\noindent Properti:
-\begin{packed_item}
-  \item unimodal
-  \item convex
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/step_function_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:step-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/step_function_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:step-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Step Function pada dimensi dua (\cref{fig:step-2d}) dan tiga (\cref{fig:step-3d})}
-	\label{fig:step-function}
-\end{figure}
-\begin{equation}
-  f_{\text{Step function}}(\mathrm{x})=\sum_{i=1}^{D}\left(\left\lfloor z_i + 0.5 \right\rfloor \right)^2+f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Vincent}
-\noindent Properti:
-\begin{packed_item}
-  \item multimodal
-  \item non-convex
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/vincent_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:vincent-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/vincent_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:vincent-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Vincent pada dimensi dua (\cref{fig:vincent-2d}) dan tiga (\cref{fig:vincent-3d})}
-	\label{fig:vincent}
-\end{figure}
-\begin{equation}
-  f_{\text{Vincent}}(\mathrm{x})=\frac{1}{D}\sum_{i=1}^{D}\sin\left(10 \log\left(z_i \right)  \right) +f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Weierstrass}
-\noindent Properti:
-\begin{packed_item}
-  \item multimodal
-  \item non-convex
-  \item non-separable
-  \item Continuous but differentiable only on a set of points
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/weierstrass_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:weierstrass-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/weierstrass_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:weierstrass-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Weierstrass pada dimensi dua (\cref{fig:weierstrass-2d}) dan tiga (\cref{fig:weierstrass-3d})}
-	\label{fig:weierstrass}
-\end{figure}
-\begin{equation}
-  f_{\text{Weierstrass}}(\mathrm{x})=\sum_{i=1}^{D}\left(\sum_{k=0}^{k\ \text{max}}\left[a^k\cos\left(2\pi b^k\left( z_i+0.5\right)  \right)  \right]  \right)-D\sum_{i=0}^{k \text{max}}\left[ a^k\cos\left(2\pi b^k\cdot0.5 \right) \right]  +f_{\text{bias}}
-\end{equation}
-
-\subsubsection{Zakharov}
-\noindent Properti:
-\begin{packed_item}
-  \item unimodal
-  \item convex
-  \item non-separable
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/zakharov_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:zakharov-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{cec/zakharov_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:zakharov-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Zakharov pada dimensi dua (\cref{fig:zakharov-2d}) dan tiga (\cref{fig:zakharov-3d})}
-	\label{fig:zakharov}
-\end{figure}
-\begin{equation}
-  f_{\text{Zakharov}}(\mathrm{x})=\sum_{i=1}^{D}z_i^2+\left(\sum_{i=1}^{D}0.5z_i \right)^2+\left(\sum_{i=1}^{D}0.5z_i \right)^4+f_{\text{bias}}
-\end{equation}
-
-\subsection{Fungsi COmparing Continuous Optimizers}
-Simbol dan definisi yang digunakan dalam fungsi COCO:\\
-Lokasi optimal $\mathrm{x}^{\text{opt}}$ dan $f_{\text{opt}} = f(\mathrm{x}^{\text{opt}})$: Semua fungsi memiliki optimum global dalam $[-5, 5]^D$. Sebagian besar fungsi memiliki optimum global dalam $[-4, 4]^D$, dan untuk banyak di antaranya, $\mathrm{x}^{\text{opt}}$ diambil secara seragam dari kompak ini.\\
-\noindent$\otimes$ menunjukkan perkalian per elemen antara dua vektor berdimensi $D$, $\otimes:R^D\times R^D\to R^D, (\mathrm{x},\mathrm{y})\mapsto \text{diag}(\mathrm{x})\times\mathrm{y}=(x_i\times y_i)_{i=1},\ldots,D$\\
-$||\cdot||$ menunjukkan Euclidean norm, $||\mathrm{x}||^2=\sum_{i}x^2_i$\\
-$\left[\cdot\right]$ menunjukkan nilai bilangan bulat terdekat\\
-$\textbf{0}=(0,\ldots,0)^{\mathrm{T}}$ vektor yang semuanya bernilai 0\\
-$\textbf{1}=(1,\ldots,1)^{\mathrm{T}}$ vektor yang semuanya bernilai 1\\
-$\Lambda^{\alpha}$ adalah sebuah matriks diagonal berdimensi $D$ dengan elemen diagonal ke-$i$ sebagai $\lambda_{ii}=\alpha^{\frac{1}{2}\frac{i-1}{D-1}}$, untuk $i=1,\ldots,D$\\
-$f_{\text{pen}}:\mathcal{R}^D\to \mathcal{R}, \mathrm{x}\mapsto\sum_{i=1}^{D}\max(0,\left|x_i\right|-5)^2$\\
-$\textbf{1}\pm$ sebuah vektor berdimensi $D$ dengan entri bernilai $-1$ atau $1$ yang diambil secara independen dengan peluang yang sama.\\
-$\bf{Q, R}$ matriks ortogonal (matriks rotasi). Untuk satu fungsi dalam satu dimensi, realisasi yang berbeda untuk $Q$ dan $R$ masing-masing digunakan untuk setiap perwujudan fungsi tersebut. Ortogonal matriks dihasilkan dari entri berdistribusi normal standar melalui ortonormalisasi gram-schmidt. Kolom dan baris pada matriks ortogonal membentuk basis ortonormal.\\
-$\bf{R}$ lihat $\bf{Q}$\\
-$T_{\text{asy}}^{\beta}:\mathcal{R}^D\to \mathcal{R}^D,x_i\mapsto \begin{cases}
-  x_i^{1+\beta\frac{i-1}{D-1}\sqrt{x_i}} & \text{jika } x_i > 0\\
-  x_i & \text{selain itu}
-\end{cases}, \text{untuk } i=1,\ldots,D$.\\
-$T_{\text{osz}}:\mathcal{R}^n\to \mathcal{R}^n$, untuk sembarang bilangan bulat positif $n(n=1 \text{ dan } n=D \text{ yang digunakan berikut ini})$ peta kan \textit{element-wise}\\
-\vspace*{-2.5em}
-\[x\mapsto \sign(x) \exp(\hat{x}+0.049(\sin(c_1\hat{x})+\sin(c_2\hat{x})))\]
-dengan $\hat{x}=\begin{cases}
-  \log(\left|x\right|) & \text{jika } x > 0\\
-  0 & \text{selain itu}
-\end{cases}, \sign(x)=\begin{cases}
-  -1 & \text{jika } x < 0\\
-  0 & \text{jika } x = 0\\
-  1 & \text{selain itu}
-\end{cases},c_1=\begin{cases}
-  10 & \text{jika } x > 0\\
-  5.5 & \text{selain itu}
-\end{cases}\text{ dan}\\ c_2=\begin{cases}
-  7.9 & \text{jika } x > 0\\
-  3.1 & \text{selain itu}
-\end{cases}$.\\
-$\mathrm{x}^{\text{opt}}$ vektor solusi optimal, sehingga $f(\mathrm{x}^{\text{opt}})$ adalah minimal.
-
-\subsubsection{Attractive sector}
-\noindent Properti:
-fungsi dengan asimetris tingkat tinggi, di mana hanya terdapat satu \textit{hyperplane} bervolume sekitar $\frac{1}{2}^D$ yang memberikan nilai fungsi kecil.
-\begin{packed_item}
-  \item unimodal
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/attr_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:attr-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/attr_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:attr-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Attractive sector pada dimensi dua (\cref{fig:attr-2d}) dan tiga (\cref{fig:attr-3d}) tanpa transformasi input}
-	\label{fig:atrr}
-\end{figure}
-\begin{equation}
-  f_{\text{Attractive sector}}(\mathrm{x})=\mathrm{T}_{\text{osz}}(\sum_{i=1}^{D}(s_iz_i)^2)^{0.9}+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\mathrm{z}=Q\Lambda^{10}R(\mathrm{x}-\mathrm{x}^{\text{opt}})$
-    \item $s_i\begin{cases}
-      10^2 & \text{jika }z_i\times x_i^{\text{opt}}>0\\
-      1 & \text{selain itu}
-    \end{cases}$
-\end{packed_item}
-
-\subsubsection{Bent cigar}
-\noindent Properti:
-\begin{packed_item}
-  \item unimodal
-  \item struktur ketergantungan \textit{tri-band}, pada dimensi yang lebih tinggi fungsi ini memiliki optimal lokal dengan volume daya tarik sebesar 25\%
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/bent_cigar_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:bent-cigar-coco-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/bent_cigar_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:bent-cigar-coco-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Bent cigar pada dimensi dua (\cref{fig:bent-cigar-coco-2d}) dan tiga (\cref{fig:bent-cigar-coco-3d}) tanpa transformasi input}
-	\label{fig:bent_cigar_coco}
-\end{figure}
-\begin{equation}
-  f_{\text{Bent cigar}}(\mathrm{x})=\sum_{i=1}^{D-1}(100(z_i^2-z_{i+1})^2+(z_i-1)^2)+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\mathrm{z}=\max(1,\frac{\sqrt{D}}{8})(\mathrm{x}-\mathrm{x}^{\text{opt}})+1$
-    \item $\mathrm{z}^{\text{opt}}=1$
-\end{packed_item}
-
-\subsubsection{Büche-Rastrigin}
-\noindent Properti:
-\begin{packed_item}
-  \item sekitar $10^D$ optimum lokal, faktor pengkodisian sekitar 10, faktor \textit{skew} sekitar 10 di ruang ruang-$x$ dan 100 di ruang-$f$ 
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/buche_rastrigin_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:buche-rastrigin-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/buche_rastrigin_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:buche-rastrigin-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Büche-Rastrigin pada dimensi dua (\cref{fig:buche-rastrigin-2d}) dan tiga (\cref{fig:buche-rastrigin-3d}) tanpa transformasi input}
-	\label{fig:buche_rastrigin}
-\end{figure}
-\begin{equation}
-  f_{\text{Büche-Rastrigin}}(\mathrm{x})=10(D-\sum_{i=1}^{D}\cos(2\pi z_i))+\sum_{i=1}^{D}z_i^2+100f_{\text{pen}}(\mathrm{x})+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $z_i=s_iT_{\text{osz}}(\mathrm{x}-\mathrm{x}^{\text{opt}})$ untuk $i=1,\ldots,D$
-    \item $s_i=\begin{cases}
-      10\times 10^{\frac{1}{2}\frac{i-1}{D-1}} & \text{jika }z_i > 0 \text{ dan } i=1,3,5,\ldots\\
-      10^{\frac{1}{2}\frac{i-1}{D-1}} & \text{selain itu}
-    \end{cases} \text{ untuk }i=1,\ldots,D$
-\end{packed_item}
-
-\subsubsection{Composite griewank-rosenbrock function F8F2}
-\noindent Properti:
-menyerupai fungsi rosenbrock dengan dalam sifat yang sangat multimodal
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/griewank_rosenbrock_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:griewank-rosenbrock-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/griewank_rosenbrock_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:griewank-rosenbrock-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Composite griewank-rosenbrock function F8F2 pada dimensi dua (\cref{fig:griewank-rosenbrock-2d}) dan tiga (\cref{fig:griewank-rosenbrock-3d}) tanpa transformasi input}
-	\label{fig:griewank_rosenbrock}
-\end{figure}
-\begin{equation}
-  f_{\text{Büche-Rastrigin}}(\mathrm{x})=\frac{10}{D-1}\sum_{i=1}^{D-1}(\frac{s_i}{4000}-\cos(s_i))+10+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\mathrm{z}=\max(1,\frac{\sqrt{D}}{8})R\mathrm{x}+0.5$
-    \item $s_i=100(z_i^2-z_{i+1})^2+(z_i-1)^2$ untuk $i=1,\ldots,D$
-    \item $\mathrm{z}^{\text{opt}}=1$
-\end{packed_item}
-
-\subsubsection{Different power}
-\noindent Properti:
-karena perbedaan exponen, sensitivitas variabel $z_i$ menjadi semakin berbeda ketika mendekati titik optimum.
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/different_power_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:dp_2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/different_power_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:dp_3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Different power pada dimensi dua (\cref{fig:dp_2d}) dan tiga (\cref{fig:dp_3d}) tanpa transformasi input}
-	\label{fig:different_power_coco}
-\end{figure}
-\begin{equation}
-  f_{\text{Different power}}(\mathrm{x})=\sqrt{\sum_{i=1}^{D}|z_i|^{2+4\frac{i-1}{D-1}}}+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\mathrm{z}=R(\mathrm{x}-\mathrm{x}^{\text{opt}})$
-\end{packed_item}
-
-\subsubsection{Discus}
-\noindent Properti:
-Fungsi yang secara global kuadratik namun memiliki penyimpangan lokal. Terdapat satu arah tertentu dalam ruang pencarian yang kepekaannya seribu kali lipat lebih besar daripada arah lainnya.
-\begin{packed_item}
-  \item nilai pengkondisian sekitar $10^6$
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/discus_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:discus_coco_2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/discus_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:discus_coco_3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Discus pada dimensi dua (\cref{fig:discus_coco_2d}) dan tiga (\cref{fig:discus_coco_3d}) tanpa transformasi input}
-	\label{fig:discus_coco}
-\end{figure}
-\begin{equation}
-  f_{\text{Discus}}(\mathrm{x})=10^6z_1^2+\sum_{i=2}^{D}z_i^2+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\mathrm{z}=T_{\text{osz}}(R(\mathrm{x}-\mathrm{x}^{\text{opt}}))$
-\end{packed_item}
-
-\subsubsection{Ellipsoidal}
-\noindent Properti:
-(Separable) Fungsi kuadratik global dengan pengkondisian buruk dan ketidakteraturan lokal yang halus.\\
-(With high conditioning and unimodal) Fungsi kuadratik global berkondisi buruk dengan ketidakteraturan lokal halus, merupakan pasangan non-separable dari fungsi f2.
-\begin{packed_item}
-  \item unimodal
-  \item nilai pengkondisian sekitar $10^6$
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/ellipsoidal_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:ellipsoidal_2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/ellipsoidal_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:ellipsoidal_3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Ellipsoidal pada dimensi dua (\cref{fig:ellipsoidal_2d}) dan tiga (\cref{fig:ellipsoidal_3d}) tanpa transformasi input}
-	\label{fig:ellipsoidal}
-\end{figure}
-\begin{equation}
-  f_{\text{Ellipsoidal}}(\mathrm{x})=\sum_{i=2}^{D}10^{6\frac{i-1}{D-1}}+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\mathrm{z}=T_{\text{osz}}(\mathrm{x}-\mathrm{x}^{\text{opt}})\text{ (separable)}$\\
-    \item $\mathrm{z}=T_{\text{osz}}(R(\mathrm{x}-\mathrm{x}^{\text{opt}}))\text{ (with high conditioning and unimodal)}$
-\end{packed_item}
-
-\subsubsection{Katsuura}
-\noindent Properti:
-Fungsi dengan tingkat kekasaran dan repetisi tinggi yang memiliki lebih dari $10^D$ optimum global, dikembangkan berdasarkan konsep dalam \citep{Katsuura:1991:CND}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/katsuura_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:katsuura_coco_2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/katsuura_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:katsuura_coco_3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Katsuura pada dimensi dua (\cref{fig:katsuura_coco_2d}) dan tiga (\cref{fig:katsuura_coco_3d}) tanpa transformasi input}
-	\label{fig:katsuura_coco}
-\end{figure}
-\begin{equation}
-  f_{\text{Sphere}}(\mathrm{x})=\frac{10}{D}\prod_{i=1}^{D}(1+i\sum_{j=1}^{32}\frac{|2^jz_i-[2^jz_i]|}{2^j})^{\frac{10}{D^{1.2}}}+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\mathrm{z}=Q\Lambda^{100}R(\mathrm{x}-\mathrm{x}^{\text{opt}})$
-\end{packed_item}
-
-\subsubsection{Linear slope}
-\noindent Properti:
-Fungsi linear sepenuhnya yang bertujuan menguji apakah proses pencarian mampu keluar dari \textit{convex hull} solusi awal dan mencapai batas domain.
-\begin{packed_item}
-  \item $\mathrm{x}^{\text{opt}}$ berada di batas domain.
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/linear_slope_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:linear_slope_2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/linear_slope_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:linear_slope_3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Linear slope pada dimensi dua (\cref{fig:linear_slope_2d}) dan tiga (\cref{fig:linear_slope_3d}) tanpa transformasi input}
-	\label{fig:linear_slope}
-\end{figure}
-\begin{equation}
-  f_{\text{Linear Slope}}(\mathrm{x})=\sum_{i=1}^{D}5|s_i|-s_iz_i+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $z_i=x_i$ jika $x_i^{\text{opt}}x_i < 5^2$ dan selain itu $z_i=x_i^{\text{opt}}$, untuk $i=1,\ldots,D$. Dengan kata lain, apabila $x_i$ melebihi $x_i^{\text{opt}}$, nilai ini akan dikembalikan ke dalam domain dan fungsi akan tampak konstan pada arah ini.
-    \item $s_i=\sign(x_i^{\text{opt}})10^{\frac{i-1}{D-1}}$ untuk $i=1,\ldots,D$
-    \item $\mathrm{x}^{\text{opt}}=\mathrm{z}^{\text{opt}}=5\times 1 \pm$
-\end{packed_item}
-
-\subsubsection{Rastrigin}
-\noindent Properti:
-(Separable) Fungsi dengan multimodalitas tinggi namun memiliki struktur penempatan titik optimum yang cenderung teratur. Transformasi $T_{\text{asy}}$ dan $T_{\text{osz}}$ berperan untuk mereduksi sifat simetris dan keteraturan pada fungsi Rastrigin versi awal.\\
-(Multi-modal function with adequate global structure) Fungsi prototipikal yang sangat multimodal yang awalnya memiliki struktur penempatan optimum sangat teratur dan simetris. Transformasi $T_{\text{asy}}$ dan $T_{\text{osz}}$ mereduksi simetri dan keteraturan dari fungsi Rastrigin asli.
-\begin{packed_item}
-  \item sekitar $10^D$ optimum lokal
-  \item nilai pengkondisian sekitar $10$
-  \item Versi tidak-terpisah dan lebih tidak reguler dari f3
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/rastrigin_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:rastrigin_coco_2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/rastrigin_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:rastrigin_coco_3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Rastrigin pada dimensi dua (\cref{fig:rastrigin_coco_2d}) dan tiga (\cref{fig:rastrigin_coco_3d}) tanpa transformasi input}
-	\label{fig:rastrigin_coco}
-\end{figure}
-\begin{equation}
-  f_{\text{Rastrigin}}(\mathrm{x})=10(D-\sum_{i=1}^{D}\cos(2\pi z_i))+\|\mathrm{z}\|^2+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\mathrm{z}=\Lambda^{10}T_{\text{asy}}^{0.2}T_{\text{osz}}(\mathrm{x}-\mathrm{x}^{\text{opt}})\text{ (separable)}$\\
-    \item $\mathrm{z}=R\Lambda^{10}Q T_{\text{asy}}^{0.2}(T_{\text{osz}}(R(\mathrm{x}-\mathrm{x}^{\text{opt}})))\\\text{(Multi-modal function with adequate global structure)}$
-\end{packed_item}
-
-\subsubsection{Rosenbrock}
-\noindent Properti:
-(Original) Disebut fungsi pisang karena garis kontur dua dimensinya membentuk bentuk seperti punggungan/lembah yang melengkung \citep{Rosenbrock:1960:AMF}. Tahap awal didominasi oleh suku pertama fungsi yang mengarahkan ke titik $\mathrm{z} = 0$, kemudian dilanjutkan dengan melalui lembah panjang berkelok untuk mencapai titik optimal global. Orientasi punggungan ini berubah $D-1$ kali. Uniknya, dalam fungsi ini $\mathrm{x}^{\text{opt}}\in[-3, 3]^D$.\\
-(Rotated) Versi terotasi dari fungsi Rosenbrock yang telah didefinisikan sebelumnya
-\begin{packed_item}
-  \item Struktur ketergantungan \textit{tri-band}, pada dimensi yang lebih besar fungsi ini memiliki optimum lokal dengan volume atraksi sekitar 25\%.
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/rosenbrock_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:rosenbrock_coco_2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/rosenbrock_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:rosenbrock_coco_3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Rosenbrock pada dimensi dua (\cref{fig:rosenbrock_coco_2d}) dan tiga (\cref{fig:rosenbrock_coco_3d}) tanpa transformasi input}
-	\label{fig:rosenbrock_coco}
-\end{figure}
-\begin{equation}
-  f_{\text{Rosenbrock}}(\mathrm{x})=\sum_{i=1}^{D-1}(100(z_i^2-z_{i+1})^2+(z_i-1)^2)+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\mathrm{z}=\max(1,\frac{\sqrt{D}}{8})(\mathrm{x}-\mathrm{x}^{\text{opt}})+1\text{ (original)}$\\
-    \item $\mathrm{z}=\max(1,\frac{\sqrt{D}}{8})R\mathrm{x}+\frac{1}{2}\text{ (rotated)}$
-    \item $\mathrm{z}^{\text{opt}}=1$
-\end{packed_item}
-
-\subsubsection{Schaffer f7}
-\noindent Properti:
-(original) Fungsi yang sangat multimodal dengan frekuensi dan amplitudo modulasi yang bervariasi.\\
-(moderately ill-conditioned) Versi dari fungsi $f_{17}$ yang berkondisi agak buruk
-\begin{packed_item}
-  \item asimetris, diputar
-  \item pengkondisian rendah
-  \item nilai pengkondisian sekitar $1000$
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/schaffer_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:schaffer_2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/schaffer_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:schaffer_3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Schaffer f7 pada dimensi dua (\cref{fig:schaffer_2d}) dan tiga (\cref{fig:schaffer_3d}) tanpa transformasi input}
-	\label{fig:schaffer_f7}
-\end{figure}
-\begin{equation}
-  f_{\text{Schaffer f7}}(\mathrm{x})=(\frac{1}{D-1}\sum_{i=1}^{D-1}\sqrt{s_i}+\sqrt{s_i}\sin^2(50s_i^{\frac{1}{5}}))^2+10f_{\text{pen}}(\mathrm{x})+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-  \item $\mathrm{z}=\Lambda^{10}QT_{\text{asy}}^{0.5}(R(\mathrm{x}-\mathrm{x}^{\text{opt}}))\text{ (original)}$\\
-  \item $\mathrm{z}=\Lambda^{1000}QT_{\text{asy}}^{0.5}(R(\mathrm{x}-\mathrm{x}^{\text{opt}}))\text{ (moderately ill-conditioned)}$\\
-  \item $s_i=\sqrt{z_i^2+z_{i+1}^2}$ for $i=1,\ldots,D$
-\end{packed_item}
-
-\subsubsection{Schwefel}
-\noindent Properti:
-Titik minimum 2D yang paling signifikan berada cukup dekat dengan pojok area pencarian tanpa penalti, berdasarkan \citep{Schwefel1981}
-\begin{packed_item}
-  \item Penalti bersifat esensial sebab jika tidak, akan terdapat lebih banyak titik minimum dengan kualitas lebih baik yang letaknya semakin jauh dari pusat ruang pencarian.
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/schwefel_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:schwefel_coco_2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/schwefel_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:schwefel_coco_3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Schwefel pada dimensi dua (\cref{fig:schwefel_coco_2d}) dan tiga (\cref{fig:schwefel_coco_3d}) tanpa transformasi input}
-	\label{fig:schwefel_coco}
-\end{figure}
-\begin{equation}
-  f_{\text{Schwefel}}(\mathrm{x})=-\frac{1}{100D}\sum_{i=1}^{D}z_i\sin(\sqrt{|z_i|})+4.189828872724339+100f_{\text{pen}}(\frac{\mathrm{z}}{100})+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\hat{\mathrm{x}}=2\times 1\pm\otimes\mathrm{x}$
-    \item $\hat{z_i}=\hat{x_i},\hat{z_{i+1}}=\hat{x_{i+1}}+0.25(\hat{x_i}-[x_i^{\text{opt}}\to]2|x_i^{\text{opt}}|)$ untuk $i=1,\ldots,D-1$
-    \item $\mathrm{z}=100(\Lambda^{10}(\hat{\mathrm{z}}-[\mathrm{x}^{\text{opt}}\to]2|\mathrm{x}^{\text{opt}}|)+[\mathrm{x}^{\text{opt}}\to]2|\mathrm{x}^{\text{opt}}|)$
-    \item $\mathrm{x}^{\text{opt}}=4.2096874633/2\ 1\pm$, dimana $1\pm$ sama dengan realisasi di atas
-\end{packed_item}
-
-\subsubsection{Sharp ridge}
-\noindent Properti:
-Seperti pada fungsi Bent Cigar, sebuah punggungan (\textit{ridge}) yang didefinisikan sebagai $\sum_{i=2}^{D}z_i^2= 0$ harus diikuti. Punggungan ini tidak dapat diturunkan (non-differentiable) dan gradiennya konstan saat punggungan didekati dari titik mana pun. Mengikuti gradien menjadi tidak efektif di dekat punggungan, di mana punggungan perlu diikuti dalam arah $z_1$ menuju nilai optimumnya. Perubahan yang diperlukan dalam `perilaku pencarian" di dekat punggungan sulit didiagnosis, karena gradien menuju punggungan tidak melandai.
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/sharp_ridge_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:sharp_ridge_2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/sharp_ridge_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:sharp_ridge_3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Sharp ridge pada dimensi dua (\cref{fig:sharp_ridge_2d}) dan tiga (\cref{fig:sharp_ridge_3d}) tanpa transformasi input}
-	\label{fig:sharp_ridge}
-\end{figure}
-\begin{equation}
-  f_{\text{Sharp ridge}}(\mathrm{x})=z_1^2+100\sqrt{\sum_{i=2}^{D}z_i^2}+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\mathrm{z}=Q\Lambda^{10}R(\mathrm{x}-\mathrm{x}^{\text{opt}})$
-\end{packed_item}
-
-\subsubsection{Sphere}
-\noindent Properti:
-Kemungkinan merupakan masalah pencarian dalam domain kontinu yang paling sederhana, dengan catatan volume ruang solusi yang dicari kecil (yakni saat pencarian acak Monte Carlo murni menjadi tidak efisien).
-\begin{packed_item}
-  \item unimodal
-  \item sangat simetris, khususnya invarian terhadap rotasi dan invarian terhadap skala
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/sphere_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:sphere-coco-2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/sphere_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:sphere-coco-3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Sphere pada dimensi dua (\cref{fig:sphere-coco-2d}) dan tiga (\cref{fig:sphere-coco-3d}) tanpa transformasi input}
-	\label{fig:sphere_coco}
-\end{figure}
-\begin{equation}
-  f_{\text{Sphere}}(\mathrm{x})=\|\mathrm{x}\|^2+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\mathrm{z}=\mathrm{x}-\mathrm{x}^{\text{opt}}$
-\end{packed_item}
-
-\subsubsection{Step Ellipsoidal}
-\noindent Properti:
-Fungsi ini terdiri dari banyak plateau dengan berbagai ukuran. Kecuali di area kecil di dekat optimum global, gradiennya hampir nol di seluruh bagian.
-\begin{packed_item}
-  \item unimodal, non-separable, pengkondisian sekitar $100$
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/step_ellipsoidal_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:step_ellipsoidal_coco_2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/step_ellipsoidal_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:step_ellipsoidal_coco_3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Step Ellipsoidal pada dimensi dua (\cref{fig:step_ellipsoidal_coco_2d}) dan tiga (\cref{fig:step_ellipsoidal_coco_3d}) tanpa transformasi input}
-	\label{fig:step_ellipsoidal_coco}
-\end{figure}
-\begin{equation}
-  f_{\text{Step Ellipsoidal}}(\mathrm{x})=0.1\max(|\hat{z_1}|/10^4,\sum_{i=1}^{D}10^{2\frac{i-1}{D-1}}z_i^2)+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\hat{\mathrm{z}}=\Lambda^{10}R(\mathrm{x}-\mathrm{x}^{\text{opt}})$
-    \item $\tilde{z_i}=\begin{cases}
-      \lfloor 0.5+\hat{z_i}\rfloor & \text{jika }[\hat{z_i}\to]|\hat{z_i}| > 0.5\\
-      \lfloor 0.5+10\hat{z_i}\rfloor/10 & \text{selain itu}
-    \end{cases}$ untuk $i=1,\ldots,D$\\menunjukkan prosedur pembulatan untuk menghasilkan plateau
-\end{packed_item}
-
-\subsubsection{Weierstrass}
-\noindent Properti:
-Lanskap yang sangat kasar dan cukup repetitif, di mana optimum globalnya tidak unik.
-\begin{packed_item}
-  \item suku $\sum_{k}^{}1/2^k\cos(2\pi 3^k\ldots)$ memperkenalkan kekasaran, di mana frekuensi lebih rendah memiliki bobot lebih besar $1/2^k$.
-  \item diputar, tidak teratur secara lokal, optimum global tidak unik
-\end{packed_item}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/weierstrass_2d.png}
-		\caption{Dimensi 2}
-		\label{fig:weierstrass_coco_2d}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{coco/weierstrass_3d.png}
-		\caption{Dimensi 3}
-		\label{fig:weierstrass_coco_3d}
-	\end{subfigure}
-	\caption{Tampilan grafik fungsi Weierstrass pada dimensi dua (\cref{fig:weierstrass_coco_2d}) dan tiga (\cref{fig:weierstrass_coco_3d}) tanpa transformasi input}
-	\label{fig:weierstrass_coco}
-\end{figure}
-\begin{equation}
-  f_{\text{Weierstrass}}(\mathrm{x})=10(\frac{1}{D}\sum_{i=1}^{D}\sum_{k=0}^{11}1/2^k\cos(2\pi 3^k(z_i+1/2))-f_{0})^3+\frac{10}{D}f_{\text{pen}}(\mathrm{x})+f_{\text{opt}}
-\end{equation}
-\begin{packed_item}
-    \item $\mathrm{z}=R\Lambda^{1/100}QT_{\text{osz}}(R(\mathrm{x}-\mathrm{x}^{\text{opt}}))$
-    \item $f_0=\sum_{k=0}^{11}1/2^k\cos(2\pi 3^k1/2)$
-\end{packed_item}
-
 \section{Implementasi fungsi \textit{benchmark}}
 Fungsi-fungsi \textit{benchmark} yang telah dikumpulkan dan dijelaskan pada bagian sebelumnya kemudian diimplementasikan ke dalam kode program menggunakan bahasa pemrograman Python. Proses implementasi dilakukan dengan memperhatikan struktur modular agar memudahkan pemeliharaan, pengujian, dan pengembangan lebih lanjut. Dalam pengembangannya, beberapa dependensi utama digunakan untuk mendukung fungsionalitas dan keandalan \text{library}.\ \text{Library} NumPy digunakan sebagai basis dalam pengolahan data numerik, mengingat kemampuannya dalam menangani operasi matematis dan array berdimensi tinggi secara efisien. Untuk keperluan pengujian fungsionalitas dan validasi unit dari setiap fungsi \textit{benchmark}, digunakan unittest, modul bawaan Python yang mendukung penerapan prinsip pengujian berbasis test case secara sistematis. Sementara itu, dokumentasi teknis dari \text{library} disusun menggunakan Sphinx, sebuah generator dokumentasi yang mampu menghasilkan dokumentasi dalam berbagai format seperti HTML dan PDF, sehingga memudahkan pengguna dan pengembang dalam memahami struktur serta cara penggunaan \text{library}. Dengan kombinasi alat bantu ini, proses pengembangan \text{library} CECO menjadi lebih terstruktur, terdokumentasi, dan dapat diandalkan untuk digunakan dalam berbagai eksperimen optimasi.
 
@@ -1721,7 +469,7 @@ Dalam proses benchmarking, digunakan sebanyak 22 fungsi yang mencakup berbagai k
 
 Untuk melakukan benchmarking, digunakan dua algoritma optimasi, yaitu \textit{Komodo Mlipir Algorithm} (KMA) \citep{Suyanto_2022} dan \textit{Elephant Herding Optimization} (EHO) \citep{Wang_2015}. KMA terinspirasi dari pergerakan komodo dalam berburu mangsanya, sedangkan EHO didasarkan pada perilaku sosial kawanan gajah dalam mencari sumber daya. Kedua algoritma ini dipilih untuk menguji efektivitas dalam menyelesaikan permasalahan optimasi pada berbagai jenis fungsi \textit{benchmark} yang telah ditentukan.
 
-\subsubsection{Pengaturan Parameter}
+\subsection{Pengaturan Parameter}
 Pada algoritma \textit{Komodo Mlipir Algorithm} (KMA), jumlah populasi awal yang digunakan adalah 5 individu, dengan batas minimum populasi tetap 5 dan batas maksimum 200, serta mengalami perubahan populasi secara bertahap sebesar 5 individu. Selain itu, algoritma ini memiliki parameter tingkat mlipir untuk komodo kecil sebesar 0.5, sementara porsi komodo besar juga ditetapkan pada nilai yang sama, yaitu 0.5.
 
 Di sisi lain, algoritma \textit{Elephant Herding Optimization} (EHO) menggunakan populasi 50 individu, yang dikelompokkan ke dalam 5 suku. Parameter tambahan dalam algoritma ini meliputi alpha dengan nilai 0.1 dan beta sebesar 0.1, yang mengatur dinamika eksplorasi dan eksploitasi selama proses optimasi berlangsung.
@@ -1752,14 +500,14 @@ algoritma            & parameter                 & nilai \\ \hline
 \end{tabular}
 \end{table}
 
-\subsubsection{Hasil \textit{Benchmark}}
-Berdasarkan hasil pengujian, \textit{Komodo Mlipir Algorithm} (KMA) menunjukkan performa yang lebih unggul dalam hal nilai terbaik (\textit{best result}) dibandingkan \textit{Elephant Herding Optimization} (EHO). KMA berhasil meraih 163 hasil terbaik dari 220 percobaan, sedangkan EHO hanya mencatatkan 42 hasil terbaik dari 220 percobaan.
+\subsection{Hasil \textit{Benchmark}}
+Berdasarkan hasil pengujian, \textit{Komodo Mlipir Algorithm} (KMA) menunjukkan performa yang lebih unggul dalam hal nilai terbaik (\textit{best result}) dibandingkan \textit{Elephant Herding Optimization} (EHO). KMA berhasil meraih 163 hasil terbaik dari 220 percobaan, sedangkan EHO hanya mencatatkan 42 hasil terbaik dari 220 percobaan yaitu pada fungsi different power dimensi 2 dan 5 (\cref{tab:eho-result} dan \cref{fig:graph_different_power}), ellipsoid dimensi 2 (\cref{tab:eho-result} dan \cref{fig:graph_different_power}), expanded schaffer f6 dimensi 5, 10, 20, 25, 100, 500 (\cref{tab:eho-result} dan \cref{fig:graph_expanded_schaffer_f6}), griewank dimensi 2 (\cref{tab:eho-result} dan \cref{fig:graph_griewank}), happycat dimensi 1 dan 2 (\cref{tab:eho-result} dan \cref{fig:graph_happycat}), hgbat dimensi 1, 2, 50 (\cref{tab:eho-result} dan \cref{fig:graph_hgbat}), levy dimensi 1, 2, 5, 25 (\cref{tab:eho-result} dan \cref{fig:graph_levy}), rastrigin dimensi 2 (\cref{tab:eho-result} dan \cref{fig:graph_rastrigin}), schwefel 1.2 problem dimensi 2, 20, 25 (\cref{tab:eho-result} dan \cref{fig:graph_schwefel_1_2_problem}), schwefel 2.13 di semua dimensi (\cref{tab:eho-result} dan \cref{fig:graph_schwefel_2_13_problem}), shubert dimensi 1 dan 2 (\cref{tab:eho-result} dan \cref{fig:graph_shubert}), sphere dimensi 2 (\cref{tab:eho-result} dan \cref{fig:graph_sphere}), vincent dimensi 1, 2, 10, 100 (\cref{tab:eho-result} dan \cref{fig:graph_vincent}).
 
-Namun demikian, apabila dilihat dari aspek hasil terburuk (\textit{worst result}), rata-rata (\textit{mean}), dan simpangan baku (\textit{standard deviation}), EHO menunjukkan performa yang lebih stabil dibandingkan KMA.\ Secara rinci, EHO mencatat hasil terburuk sebanyak 149 dari 220, rata-rata sebesar 108 dari 220, dan simpangan baku sebesar 144 dari 220. Sementara itu, KMA memperoleh hasil terburuk sebesar 60 dari 220, rata-rata sebesar 100 dari 220, dan simpangan baku sebesar 63 dari 220.
+Namun demikian, apabila dilihat dari aspek hasil terburuk (\textit{worst result}), rata-rata (\textit{mean}), dan simpangan baku (\textit{standard deviation}), EHO menunjukkan performa yang lebih stabil dibandingkan KMA.\ Secara rinci, EHO mencatat hasil terburuk sebanyak 149 dari 220, rata-rata sebesar 108 dari 220, dan simpangan baku sebesar 144 dari 220. Sementara itu, KMA memperoleh hasil terburuk sebesar 60 dari 220 yaitu pada ackley dimensi 5 (\cref{tab:kma-result} dan \cref{fig:graph_ackley}), bent cigar dimensi 10, 20, 50, 100, 200 (\cref{tab:kma-result} dan \cref{fig:graph_bent_cigar}), different power pada semua dimensi kecuali dimensi 1 (\cref{tab:kma-result} dan \cref{fig:graph_different_power}), discus dimensi 5 dan 20 (\cref{tab:kma-result} dan \cref{fig:graph_discus}), ellipsoid dimensi 5, 100, 200 (\cref{tab:kma-result} dan \cref{fig:graph_ellipsoid}), elliptic dimensi 100, 200, 500 (\cref{tab:kma-result} dan \cref{fig:graph_elliptic}), griewank semua dimensi kecuali dimensi 1, 2, 5 (\cref{tab:kma-result} dan \cref{fig:graph_griewank}), happycat dimensi 5, 10, 25 (\cref{tab:kma-result} dan \cref{fig:graph_happycat}), hgbat dimensi 5, 10, 20 (\cref{tab:kma-result} dan \cref{fig:graph_hgbat}), katsuura dimensi 2, 10, 100, 200, 500 (\cref{tab:kma-result} dan \cref{fig:graph_katsuura}), rastrigin dimensi 500 (\cref{tab:kma-result} dan \cref{fig:graph_rastrigin}), sphere di semua dimensi kecuali dimensi 1, 2, 5, 10 (\cref{tab:kma-result} dan \cref{fig:graph_sphere}), vincent dimensi 25, 100, 200, 500 (\cref{tab:kma-result} dan \cref{fig:graph_vincent}), weierstrass dimensi 20, 25, 50, 200, 500 (\cref{tab:kma-result} dan \cref{fig:graph_weierstrass}), zakharov dimensi 25, 50, 100 (\cref{tab:kma-result} dan \cref{fig:graph_zakharov}), rata-rata sebesar 100 dari 220, dan simpangan baku sebesar 63 dari 220 yaitu pada ackley dimensi 5 (\cref{tab:kma-result} dan \cref{fig:graph_ackley}), bent cigar semua dimensi kecuali dimensi 1, 2, 5 (\cref{tab:kma-result} dan \cref{fig:graph_bent_cigar}), different power semua dimensi kecuali dimensi 1 (\cref{tab:kma-result} dan \cref{fig:graph_different_power}), discus dimensi 5, 20 (\cref{tab:kma-result} dan \cref{fig:graph_discus}), ellipsoid dimensi 5, 25, 100, 200 (\cref{tab:kma-result} dan \cref{fig:graph_ellipsoid}), elliptic dimensi 20, 100, 200, 500 (\cref{tab:kma-result} dan \cref{fig:graph_elliptic}), expanded schaffer f6 dimensi 10, 20, 50, 100 (\cref{tab:kma-result} dan \cref{fig:graph_expanded_schaffer_f6}), griewank semua dimensi kecuali dimensi 1, 2, 5 (\cref{tab:kma-result} dan \cref{fig:graph_griewank}), hgbat dimensi 10, 20 (\cref{tab:kma-result} dan \cref{fig:graph_hgbat}), katsuura dimensi 2, 10, 100, 200, 500 (\cref{tab:kma-result} dan \cref{fig:graph_katsuura}), rastrigin dimensi 500 (\cref{tab:kma-result} dan \cref{fig:graph_rastrigin}), schwefel 1.2 problem dimensi 100 dan 500 (\cref{tab:kma-result} dan \cref{fig:graph_schwefel_1_2_problem}), sphere semua dimensi kecuali dimensi 1, 2, 5 (\cref{tab:kma-result} dan \cref{fig:graph_sphere}), vincent dimensi 100, 200, 500 (\cref{tab:kma-result} dan \cref{fig:graph_vincent}), weierstrass dimensi 500 (\cref{tab:kma-result} dan \cref{fig:graph_weierstrass}), zakharov dimensi 25, 50, 100, 200 (\cref{tab:kma-result} dan \cref{fig:graph_zakharov}).
 
-Selain itu, terdapat hasil seri yang menunjukkan nilai sama antara kedua algoritma, yaitu 14 dari 220 untuk nilai terbaik, 11 dari 220 untuk hasil terburuk, 11 dari 220 untuk rata-rata, dan 11 dari 220 untuk simpangan baku.
+Selain itu, terdapat hasil seri yang menunjukkan nilai sama antara kedua algoritma, yaitu 14 dari 220 untuk nilai terbaik yaitu pada step function semua dimensi (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_step_function}), expanded schaffer f6 dimensi 1 (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_expanded_schaffer_f6}), griewank dimensi 1 (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_griewank}), rastrigin dimensi 1 (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_rastrigin}), rosenbrock dimensi 1 (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_rosenbrock}), 11 dari 220 untuk hasil terburuk yaitu pada step function semua dimensi (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_step_function}) dan rosenbrock dimensi 1 (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_rosenbrock}), 11 dari 220 untuk rata-rata  yaitu pada step function semua dimensi (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_step_function}) dan rosenbrock dimensi 1 (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_rosenbrock}), dan 11 dari 220 untuk simpangan baku yaitu pada step function semua dimensi (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_step_function}) dan rosenbrock dimensi 1 (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_rosenbrock}).
 
-Pada pengujian ini juga ditemukan hasil invalid yang diakibatkan oleh \textit{overflow} nilai float64 dan longdouble pada \textit{library} Numpy, yaitu 1 dari 220 untuk nilai terbaik, 0 dari 220 untuk hasil terburuk, 1 dari 220 untuk rata-rata, dan 2 dari 220 untuk simpangan baku. Nilai-nilai ini perlu diperhatikan karena dapat memengaruhi validitas evaluasi.
+Pada pengujian ini juga ditemukan hasil invalid yang diakibatkan oleh \textit{overflow} nilai float64 dan longdouble pada \textit{library} Numpy, yaitu 1 dari 220 untuk nilai terbaik pada fungsi shubert dimensi 500 (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_shubert}), 0 dari 220 untuk hasil terburuk, 1 dari 220 untuk rata-rata pada fungsi shubert dimensi 500 (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_shubert}), dan 2 dari 220 untuk simpangan bakupada fungsi shubert dimensi 200 dan 500 (\cref{tab:eho-result}, \cref{tab:kma-result} dan \cref{fig:graph_shubert}). Nilai-nilai ini perlu diperhatikan karena dapat memengaruhi validitas evaluasi. Hasil lengkap \textit{benchmarking} pada dilihat pada \cref{tab:eho-result}, \cref{tab:kma-result}.
 
 Dengan demikian, dapat disimpulkan bahwa KMA lebih unggul dalam mencapai solusi optimal, sedangkan EHO memiliki kelebihan dalam hal kestabilan dan konsistensi performa di berbagai kondisi pengujian. Temuan ini menunjukkan bahwa meskipun KMA lebih sering mencapai hasil terbaik, EHO cenderung menghasilkan nilai yang lebih konsisten dan stabil, meskipun tidak selalu mencapai performa optimal.
 
@@ -2001,9 +749,9 @@ function                                & dimension & best       & worst      & 
 \hline
 function                                & dimension & best       & worst      & avg        & std       \\ \hline
 \endfirsthead
-%
+% 
 \endhead
-%
+% 
 \multirow[t]{10}{*}{ackley}                & 1         & 4,44E-16   & 6,55E-04   & 7,76E-05   & 1,51E-04  \\ \cline{2-6} 
                                         & 2         & 4,44E-16   & 5,61E-02   & 9,25E-03   & 1,52E-02  \\ \cline{2-6} 
                                         & 5         & 2,50E-05   & 2,41E-02   & 4,87E-03   & 5,52E-03  \\ \cline{2-6} 
@@ -2226,7 +974,7 @@ function                                & dimension & best       & worst      & 
                                         & 500       & 1,14E-09   & 7,12E+02   & 2,95E+01   & 1,29E+02  \\ \hline
 \end{longtable}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -2295,7 +1043,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_ackley}
 \end{figure}
 
-\begin{figure}[!htbp]
+EHO menunjukkan performa yang sangat stabil dan konsisten di berbagai dimensi, selalu mendekati nilai optimum, sehingga lebih dapat diandalkan untuk penyelesaian fungsi Ackley. Sementara itu, KMA mampu menemukan solusi optimal pada percobaan tertentu (\textit{best}), tetapi memiliki variasi hasil yang tinggi (\textit{avg} dan \textit{worst}), terutama pada dimensi 20, 50, dan 100. \cref{fig:graph_ackley} mengonfirmasi bahwa stabilitas EHO lebih baik dibandingkan KMA dalam menyelesaikan fungsi Ackley, meskipun KMA tetap memiliki potensi mencapai solusi optimal, tetapi dengan stabilitas yang lebih rendah.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -2364,7 +1114,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_bent_cigar}
 \end{figure}
 
-\begin{figure}[!htbp]
+Baik EHO maupun KMA menunjukkan performa yang baik pada dimensi rendah dengan nilai solusi mendekati optimum. Namun, pada dimensi tinggi, stabilitas kedua algoritma mengalami penurunan, terlihat dari kenaikan signifikan pada nilai \textit{worst} dan \textit{avg}, terutama pada dimensi 500. Meski demikian, nilai \textit{best} yang tetap mendekati nol pada kedua algoritma menunjukkan bahwa potensi untuk mencapai solusi optimal masih ada, walaupun diiringi dengan peningkatan ketidakstabilan pada fungsi Bent Cigar.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -2433,8 +1185,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_different_power}
 \end{figure}
 
+Baik EHO maupun KMA dapat menangani fungsi Different Power dengan baik pada dimensi rendah hingga sedang, dengan nilai solusi mendekati optimal. Namun, pada dimensi tinggi, EHO menunjukkan kenaikan yang lebih signifikan pada nilai \textit{worst} dan \textit{avg} dibandingkan KMA, menunjukkan penurunan stabilitas pada dimensi tinggi. KMA cenderung lebih stabil pada dimensi tinggi daripada EHO untuk fungsi ini. Meskipun demikian, nilai \textit{best} kedua algoritma tetap optimal, mengindikasikan bahwa potensi mencapai solusi terbaik tetap ada pada keduanya meskipun variasi nilai solusi meningkat.
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -2503,7 +1256,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_discus}
 \end{figure}
 
-\begin{figure}[!htbp]
+Pada fungsi Discus, EHO menunjukkan performa yang secara konsisten lebih stabil di semua dimensi dibandingkan KMA. KMA sendiri menunjukkan ketidakstabilan yang signifikan pada dimensi tinggi (500), dengan nilai \textit{worst} yang sangat besar, mengindikasikan kesulitan algoritma ini dalam mempertahankan kualitas solusi pada kondisi tertentu. Meskipun demikian, nilai \textit{best} kedua algoritma tetap sangat baik di semua dimensi, menunjukkan bahwa keduanya memiliki potensi untuk menemukan solusi optimal meskipun ketidakstabilan muncul pada kondisi \textit{worst} di dimensi tinggi. Secara keseluruhan, EHO terbukti lebih konsisten daripada KMA dalam menangani fungsi Discus di seluruh variasi dimensi.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -2572,7 +1327,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_ellipsoid}
 \end{figure}
 
-\begin{figure}[!htbp]
+Pada fungsi Ellipsoid, EHO menunjukkan kestabilan yang lebih baik dibanding KMA, terutama pada dimensi tinggi. KMA mengalami degradasi performa yang signifikan pada kondisi terburuk saat dimensi mencapai 500, ditandai dengan lonjakan drastis pada nilai \textit{worst}. Meskipun demikian, nilai \textit{best} kedua algoritma tetap rendah, menunjukkan bahwa keduanya masih mampu menemukan solusi optimal. Secara keseluruhan, EHO lebih konsisten dan stabil pada fungsi Ellipsoid, terutama pada dimensi tinggi, sementara KMA lebih cocok digunakan pada dimensi rendah hingga sedang dan membutuhkan perbaikan untuk meningkatkan kestabilannya pada dimensi tinggi.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -2641,7 +1398,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_elliptic}
 \end{figure}
 
-\begin{figure}[!htbp]
+Pada fungsi Elliptic, KMA memiliki kestabilan yang lebih baik dibandingkan EHO pada dimensi tinggi. EHO menunjukkan performa baik pada dimensi rendah, tetapi mengalami degradasi stabilitas signifikan pada kondisi \textit{worst} ketika dimensi mencapai 500. KMA menunjukkan pertumbuhan nilai solusi yang lebih terkendali dibandingkan EHO pada dimensi tinggi, walaupun keduanya mengalami kenaikan. Kedua algoritma mampu menemukan nilai \textit{best} yang rendah meskipun terjadi ketidakstabilan pada nilai \textit{avg} dan kondisi \textit{worst}.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -2710,7 +1469,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_expanded_schaffer_f6}
 \end{figure}
 
-\begin{figure}[!htbp]
+Semakin tinggi dimensi, semakin besar nilai solusi fungsi Expanded Schaffer F6, menunjukkan fungsi ini cukup sensitif terhadap kenaikan dimensi. KMA menunjukkan performa lebih stabil dan konsisten dibandingkan EHO, terutama terlihat pada nilai \textit{best} dan \textit{avg} pada dimensi tinggi. EHO menunjukkan ketidakstabilan pada kondisi \textit{worst} saat dimensi sangat tinggi, tetapi masih mampu menghasilkan nilai \textit{best} yang rendah pada beberapa iterasi. Nilai \textit{avg} EHO tetap lebih tinggi dibandingkan KMA pada dimensi tinggi, menunjukkan rata-rata hasil EHO lebih buruk dalam menyelesaikan fungsi ini pada dimensi tinggi.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -2779,7 +1540,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_griewank}
 \end{figure}
 
-\begin{figure}[!htbp]
+Fungsi Griewank menunjukkan karakteristik yang relatif stabil dan mudah diselesaikan oleh kedua algoritma, KMA maupun EHO, bahkan ketika dimensi meningkat. Perbedaan performa hanya terlihat pada dimensi sangat rendah (2–10), kemungkinan dipengaruhi oleh sensitivitas awal fungsi dan kondisi populasi awal algoritma. Pada dimensi tinggi, fungsi Griewank tidak memperlihatkan peningkatan kesulitan yang signifikan, sehingga menjadi pilihan yang baik untuk menguji stabilitas algoritma dalam skenario berdimensi tinggi. Baik KMA maupun EHO mampu menemukan solusi optimal dengan nilai mendekati nol secara stabil meskipun dimensi bertambah, menunjukkan bahwa kedua algoritma bekerja sangat baik pada fungsi ini.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -2848,7 +1611,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_happycat}
 \end{figure}
 
-\begin{figure}[!htbp]
+KMA menunjukkan keunggulan dalam pencapaian solusi optimal dengan nilai terbaik (\textit{Best}) yang lebih rendah dibandingkan EHO pada semua dimensi, membuktikan kemampuannya menemukan solusi lebih optimal untuk fungsi Happycat. Namun, nilai rata-rata (\textit{Avg}) dan terburuk (\textit{Worst}) KMA lebih tinggi daripada EHO, terutama pada dimensi yang lebih besar, mengindikasikan variasi hasil yang lebih lebar dan stabilitas yang lebih rendah. Di sisi lain, EHO mencatat performa yang stabil dengan rata-rata (\textit{Avg}) dan nilai terburuk (\textit{Worst}) yang konsisten, meskipun solusi terbaiknya (\textit{Best}) tetap kurang optimal dibandingkan KMA.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -2917,7 +1682,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_hgbat}
 \end{figure}
 
-\begin{figure}[!htbp]
+Dalam evaluasi fungsi Hgbat, KMA menunjukkan keunggulan dalam menemukan nilai solusi terbaik (\textit{Best}) yang konsisten lebih rendah dibandingkan EHO di semua dimensi, sejalan dengan performa optimalnya. Namun, KMA menunjukkan ketidakstabilan signifikan pada dimensi tinggi (terutama 500), di mana nilai terburuknya (\textit{Worst}) meningkat drastis. Sebaliknya, EHO mempertahankan pola yang lebih stabil, dengan nilai rata-rata dan terburuk yang relatif berdekatan, meskipun nilai terbaik EHO tetap lebih tinggi daripada KMA.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -2986,7 +1753,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_katsuura}
 \end{figure}
 
-\begin{figure}[!htbp]
+Fungsi Katsuura merupakan fungsi \textit{benchmark} yang sangat menantang, terutama pada dimensi tinggi dan menengah, di mana EHO menunjukkan peningkatan drastis pada nilai solusi. Dalam menghadapi tantangan ini, KMA mampu mempertahankan performa yang lebih baik dan stabil di semua dimensi, sehingga unggul secara signifikan dibandingkan EHO. EHO mengalami fluktuasi dan ketidakkonsistenan, terutama pada metrik \textit{Worst} dan \textit{Avg}, dengan penurunan stabilitas yang terlihat jelas pada rentang dimensi 25–100. Berdasarkan hasil ini, KMA terbukti lebih layak digunakan untuk optimasi fungsi kompleks seperti Katsuura, terutama dalam kondisi dengan jumlah dimensi yang tinggi.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -3055,7 +1824,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_levy}
 \end{figure}
 
-\begin{figure}[!htbp]
+Fungsi Levy menjadi semakin menantang pada dimensi tinggi, terutama bagi algoritma KMA yang sebelumnya menunjukkan performa sangat baik pada dimensi rendah dan menengah. Namun, KMA mengalami degradasi signifikan pada dimensi 200 dan 500, menandakan penurunan stabilitas dan kemampuan adaptasi. Sebaliknya, EHO menunjukkan performa yang lebih stabil dan konsisten dari dimensi rendah hingga tinggi, dengan peningkatan nilai solusi yang jauh lebih moderat. Hal ini menunjukkan bahwa pada fungsi Levy, EHO lebih unggul dalam hal kestabilan serta adaptabilitas terhadap peningkatan dimensi, sementara KMA meskipun lebih baik di dimensi rendah, mulai kehilangan konsistensinya saat dimensi meningkat drastis.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -3124,7 +1895,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_rastrigin}
 \end{figure}
 
-\begin{figure}[!htbp]
+Fungsi Rastrigin terbukti sangat multimodal dan menantang untuk stabilitas algoritma, khususnya pada dimensi menengah hingga tinggi. KMA menunjukkan performa yang sangat baik pada nilai \textit{Best} dan \textit{Avg}, namun justru sangat tidak stabil pada skenario \textit{Worst}, terutama pada dimensi 50. Di sisi lain, EHO menunjukkan kestabilan yang lebih baik, khususnya pada dimensi menengah, meskipun performa terburuknya meningkat pada dimensi ekstrem (500). Secara keseluruhan, EHO lebih stabil, sedangkan KMA lebih akurat tetapi berisiko menghasilkan outlier ekstrem.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -3193,7 +1966,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_rosenbrock}
 \end{figure}
 
-\begin{figure}[!htbp]
+Fungsi Rosenbrock menjadi semakin sulit dioptimasi seiring bertambahnya dimensi. KMA memiliki performa terbaik pada \textit{Best}, tetapi sangat tidak stabil pada \textit{Worst}, terutama pada dimensi tinggi. EHO lebih stabil secara keseluruhan, walaupun tidak selalu memberikan nilai \textit{Best} paling rendah. Dalam konteks fungsi Rosenbrock, konsistensi EHO membuatnya lebih andal pada skenario berdimensi besar, sementara KMA cenderung tidak \textit{robust} terhadap peningkatan kompleksitas.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -3259,10 +2034,12 @@ function                                & dimension & best       & worst      & 
   \end{axis}
 \end{tikzpicture}
 \caption{Grafik hasil \textit{benchmarking} fungsi Schwefel 1.2 problem}
-\label{fig:graph_bent_cigar}
+\label{fig:graph_schwefel_1_2_problem}
 \end{figure}
 
-\begin{figure}[!htbp]
+Fungsi Schwefel 1.2 problem menunjukkan karakteristik sensitif terhadap peningkatan dimensi, terutama pada metrik \textit{Worst} dan \textit{Avg}. KMA bekerja sangat baik pada dimensi kecil-menengah, tetapi tidak stabil pada dimensi tinggi, khususnya pada kondisi \textit{Worst}. EHO lebih stabil dalam \textit{Best}, tetapi pada dimensi tinggi \textit{Avg} dan \textit{Worst}-nya tetap mengalami degradasi. Pada dimensi 500, EHO lebih unggul dibanding KMA secara keseluruhan, terutama karena \textit{Worst}-nya lebih rendah dan \textit{Best} tetap stabil.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -3331,7 +2108,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_schwefel_2_13_problem}
 \end{figure}
 
-\begin{figure}[!htbp]
+Fungsi Schwefel 2.13 problem tergolong mudah untuk dioptimasi, bahkan pada dimensi tinggi. Dalam kasus ini, KMA dan EHO menunjukkan performa yang sangat mirip, dengan nilai solusi yang rendah dan tren peningkatan yang seimbang. Baik nilai \textit{Best}, \textit{Avg}, maupun \textit{Worst} dari kedua algoritma tetap dalam kisaran kecil (kurang dari 1.5), menunjukkan tingkat kestabilan dan akurasi yang tinggi. Ini berarti tidak ada algoritma yang secara signifikan lebih unggul, keduanya sama-sama efektif dan efisien dalam menyelesaikan fungsi ini.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -3400,7 +2179,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_shubert}
 \end{figure}
 
-\begin{figure}[!htbp]
+Kedua algoritma menunjukkan stabilitas dalam menyelesaikan fungsi Shubert pada dimensi rendah hingga sedang. Namun, terjadi error numerik pada EHO Best di dimensi tinggi (500), yang menghasilkan nilai negatif besar akibat \textit{overflow}. Sementara itu, KMA menunjukkan stabilitas yang lebih baik dalam menangani fungsi Shubert berdimensi tinggi. \cref{fig:graph_shubert} menegaskan perlunya penanganan numerik seperti \textit{clipping}, \textit{casting}, atau limitasi domain pada fungsi Shubert untuk dimensi besar agar dapat menghindari \textit{overflow} saat \textit{benchmarking}.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -3469,7 +2250,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_sphere}
 \end{figure}
 
-\begin{figure}[!htbp]
+Fungsi Sphere merupakan fungsi konveks sederhana dan mudah dioptimasi, di mana kedua algoritma (KMA dan EHO) bekerja sangat baik dalam menemukan solusi optimal terutama pada \textit{Best} dan \textit{Avg} di dimensi rendah, dengan KMA lebih stabil pada semua dimensi terutama dalam mengontrol kasus \textit{Worst}, sementara EHO menunjukkan penurunan performa pada dimensi tinggi dalam kasus \textit{Worst} namun tetap kompetitif pada \textit{Best} dan \textit{Avg}.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -3538,7 +2321,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_step_function}
 \end{figure}
 
-\begin{figure}[!htbp]
+Fungsi Step sangat mudah dioptimasi oleh kedua algoritma (KMA dan EHO), bahkan pada dimensi sangat tinggi (500), tanpa menimbulkan tantangan berarti terhadap proses pencarian solusi baik dari segi akurasi maupun kestabilan, dan tidak ditemukan perbedaan performa antara KMA dan EHO karena keduanya mampu mencapai hasil optimal pada semua kondisi.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -3607,7 +2392,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_vincent}
 \end{figure}
 
-\begin{figure}[!htbp]
+Fungsi Vincent mampu menguji kestabilan algoritma terhadap dimensi dan \textit{noise} dalam hasil pencarian, di mana KMA menunjukkan performa yang lebih stabil dan konsisten dibandingkan EHO pada seluruh dimensi, sementara EHO memiliki kemampuan eksplorasi yang kuat dengan \textit{Best} mendekati -1 namun kurang konsisten pada nilai \textit{Avg} dan \textit{Worst}, sehingga secara keseluruhan KMA lebih unggul terutama dalam kestabilan dan ketahanan terhadap peningkatan dimensi.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -3676,7 +2463,9 @@ function                                & dimension & best       & worst      & 
 \label{fig:graph_weierstrass}
 \end{figure}
 
-\begin{figure}[!htbp]
+Fungsi Weierstrass menunjukkan peningkatan kesulitan optimasi yang signifikan seiring pertambahan dimensi, terutama bagi algoritma EHO. KMA terbukti lebih stabil dengan nilai \textit{Avg} yang tetap rendah, meskipun terdapat variasi signifikan pada kondisi \textit{Worst}. Di sisi lain, EHO menunjukkan sensitivitas tinggi terhadap kenaikan dimensi, di mana nilai \textit{Avg} dan \textit{Worst} meningkat tajam mengindikasikan potensi masalah dalam eksploitasi atau proses konvergensi.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   \begin{axis}[
@@ -3744,6 +2533,8 @@ function                                & dimension & best       & worst      & 
 \caption{Grafik hasil \textit{benchmarking} fungsi Zakharov}
 \label{fig:graph_zakharov}
 \end{figure}
+
+Pada fungsi Zakharov, kedua algoritma menunjukkan kestabilan hingga dimensi 200, dengan peningkatan kecil pada nilai \textit{best} EHO dan nilai \textit{avg} KMA. Namun, KMA mengalami degradasi performa yang signifikan pada kondisi terburuk saat dimensi mencapai 500, ditandai dengan lonjakan drastis pada nilai \textit{worst}. Meskipun demikian, kedua algoritma masih mampu mempertahankan nilai \textit{best} yang rendah, menunjukkan kemampuan keduanya dalam menemukan solusi optimal. Secara keseluruhan, EHO lebih konsisten dan stabil pada fungsi Zakharov, terutama pada dimensi tinggi, sementara KMA tetap cocok digunakan pada dimensi rendah hingga sedang.
 
 \begin{table}[h!]
     \centering

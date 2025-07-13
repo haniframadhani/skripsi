@@ -29,16 +29,16 @@ Alat yang akan digunakan ditunjukan pada daftar di bawah. Penggunaan sistem oper
   \item 12gb ram DDR4 (10gb \textit{usable})
   \item SSD Kingston OM8PCP3512F-AB 512gb (windows)
   \item SSD Adata SU750 1tb (windows)
-  \item SSD TeamGroup CX2 256gb via enclosure USB 2.0 (linux)
+  \item SSD TeamGroup CX2 256gb via enclosure USB 3.0 (linux)
 \end{packed_enum}
 
 \section{Perancangan}
 Sebelum memulai tahapan pengembangan, perencanaan dan desain \textit{library} dilakukan secara menyeluruh. Proses perencanaan meliputi pembuatan backlog produk yang berisi daftar fitur dan tugas yang harus diselesaikan, estimasi waktu pengerjaan untuk setiap tugas, pembuatan \textit{roadmap} yang menggambarkan alur pengembangan, identifikasi risiko potensial yang dapat menghambat proses, serta penyiapan lingkungan pengembangan yang diperlukan.
 
-Desain \textit{library} mencakup beberapa aspek penting, seperti pendefinisian tujuan dan kebutuhan yang harus dipenuhi oleh \textit{library}, arsitektur dan desain sistem yang akan digunakan, perancangan (\textit{Application Programming Interface}) API yang memungkinkan integrasi dan penggunaan \textit{library} dengan mudah, serta penyusunan rencana dokumentasi yang komprehensif untuk membantu pengguna memahami dan memanfaatkan \textit{library} dengan efektif.
+Desain \textit{library} mencakup beberapa aspek penting, seperti pendefinisian tujuan dan kebutuhan yang harus dipenuhi oleh \textit{library}, arsitektur dan desain sistem yang akan digunakan, serta penyusunan rencana dokumentasi yang komprehensif untuk membantu pengguna memahami dan memanfaatkan \textit{library} dengan efektif.
 
 \section{Implementasi}
-Proses pengembangan dilakukan dengan menuliskan kode dalam bahasa Python. Tahapan ini mengikuti perencanaan dan desain yang telah disusun sebelumnya. Dalam pengembangan ini, diterapkan paradigma Pemrograman Berorientasi Objek (\textit{Object Oriented Programming} atau OOP) agar \textit{library} yang dikembangkan memiliki arsitektur yang bersih (\textit{clean architecture}) dan terstruktur. Penggunaan OOP bertujuan untuk mempermudah proses pengembangan, pemeliharaan, pengujian, serta awakutu (\textit{debugging}) pada \textit{library}. Dengan pendekatan ini, setiap komponen \textit{library} dapat dikembangkan secara modular, sehingga memudahkan dalam melakukan pengujian unit (\textit{unit testing}) dan mempercepat proses awakutu. \textit{Clean architecture} juga memungkinkan pengembang lain untuk dengan mudah memahami dan mengembangkan lebih lanjut \textit{library} tersebut sesuai kebutuhan.
+Proses pengembangan dilakukan dengan menuliskan kode dalam bahasa Python. Tahapan ini mengikuti perencanaan dan desain yang telah disusun sebelumnya. Dalam pengembangan ini, diterapkan paradigma Pemrograman Berorientasi Objek (\textit{Object Oriented Programming} atau OOP) agar \textit{library} yang dikembangkan memiliki arsitektur yang bersih (\textit{clean architecture}) dan terstruktur. Penggunaan OOP bertujuan untuk mempermudah proses pengembangan, pemeliharaan, pengujian, serta awakutu (\textit{debugging}) pada \textit{library}. Dengan pendekatan ini, setiap komponen \textit{library} dapat dikembangkan secara modular, sehingga memudahkan dalam melakukan pengujian unit (\textit{unit testing}) dan mempercepat proses awakutu. Daftar fungsi \textit{benchmark} lengkap dapat dilihat di lampiran. \textit{Clean architecture} juga memungkinkan pengembang lain untuk dengan mudah memahami dan mengembangkan lebih lanjut \textit{library} tersebut sesuai kebutuhan.
 
 \section{Pengujian}
 Pengujian \textit{library} yang dikembangkan dilakukan menggunakan \textit{unit testing}. Pendekatan ini dipilih karena \textit{unit testing} menguji setiap fungsi (unit) secara individu, memastikan bahwa setiap fungsi dalam \textit{library} bekerja dengan baik dan menghasilkan hasil yang konsisten untuk berbagai parameter yang diberikan.
