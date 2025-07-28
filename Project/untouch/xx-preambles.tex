@@ -104,11 +104,11 @@
 \usepackage{amssymb}
 
 % Pengaturan nomor pada persamaan matematika sesuai bab
-%\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
 \makeatletter
 \renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
 \renewcommand{\@eqnnum}{\theequation}
-\def\tagform@#1{\maketag@@@{#1}} % This line removes the parentheses
+% \def\tagform@#1{\maketag@@@{#1}} % This line removes the parentheses
 \makeatother
 
 % Untuk halaman berorientasi landscape
@@ -227,4 +227,16 @@
 
 \DeclareMathOperator{\sign}{sign}
 
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{% Style for chapter pages
+    \fancyhf{} % Clear all headers and footers
+    \renewcommand{\headrulewidth}{0pt} % No header rule
+    \fancyfoot[C]{\thepage} % Page number centered at bottom
+}
+\fancypagestyle{normal}{% Style for regular pages
+    \fancyhf{} % Clear all headers and footers
+    \fancyhead[R]{\thepage} % Page number at top right
+    \renewcommand{\headrulewidth}{0pt} % No header rule
+}
+\pagestyle{normal} % Set default page style to normal
 %% DILARANG EDIT BAGIAN INI
